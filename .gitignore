@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+
+# Ambiente / segredos
+.env
+frontend/.env
+
+# Dados: os PDFs ficam fora do repo (recriáveis com backend.ingestion.sources); o texto processado
+# e as saídas entram, porque são o cache da demo (o vídeo roda sem chamar LLM) e a base do relatório.
+data/raw/*
+!data/raw/.gitkeep
+data/glossary/candidatos.yaml
+
+# Textos de referência de terceiros (direitos autorais): ficam só na máquina local.
+data/reference/*/*
+!data/reference/*/.gitkeep
+
+# Logs de execução local
+*.log
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/*.tsbuildinfo
+
+# SO / editores
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
