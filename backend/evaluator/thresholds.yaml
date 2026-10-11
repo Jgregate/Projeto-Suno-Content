@@ -1,0 +1,39 @@
+# Limiares do Avaliador Híbrido.
+# Cada métrica aceita {min}, {max}, {min, max} (faixa) ou {} (só reporta).
+# `formats` sobrescreve valores de `levels` para um formato específico.
+# Versão inicial = valores do briefing; a calibração (notebooks/calibracao_limiares.ipynb)
+# propõe ajustes, que entram aqui só depois de revisados.
+
+levels:
+  iniciante:
+    flesch_pt: {min: 60}
+    term_density: {max: 2}
+    term_context_pct: {min: 100}
+  intermediario:
+    flesch_pt: {min: 40, max: 60}
+    term_density: {min: 2, max: 6}
+    term_context_pct: {min: 50}
+  avancado:
+    flesch_pt: {}          # sem mínimo: só reporta
+    term_density: {min: 5} # abaixo disso = trivialização
+    term_context_pct: {}   # avançado não precisa contextualizar
+
+common:
+  numeric_grounding: {max: 0}       # nº de números sem correspondência na fonte
+  claim_support: {min: 0.95}        # sustentadas / total
+  claim_contradictions: {max: 0}    # qualquer contradição reprova
+  judge: {min: 4}                   # cada critério, escala 1-5
+
+formats:
+  carrossel: {}
+  roteiro: {}
+  texto: {}
+
+factuality:
+  rel_tolerance: 0.005   # 0,5% de diferença relativa
+  allow_rounding: true   # "12,4 bi" casa com "12.407 milhões"
+
+# Métricas usadas pelo classificador de nível (independem do nível-alvo).
+classifier:
+  metrics: [flesch_pt, term_density]
+  scale: {flesch_pt: 100, term_density: 10}   # normalização da distância

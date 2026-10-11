@@ -1,0 +1,494 @@
+# Glossário financeiro do avaliador (Domain Term Density Score).
+#
+# Campos:
+#   termo:            forma canônica
+#   variacoes:        outras grafias/siglas que devem casar (a lematização do spaCy cobre plural/flexão)
+#   nivel_minimo:     menor nível em que o termo pode aparecer SEM explicação
+#                     (iniciante | intermediario | avancado)
+#                     -> abaixo desse nível, o termo só passa se vier acompanhado de explicação/analogia
+#   analogia_iniciante: referência de analogia cotidiana para o nível iniciante
+#
+# Obs.: termos que contêm outros (ex.: "EBITDA ajustado" x "EBITDA") devem ser casados
+# pelo match mais longo primeiro — regra do matcher (Dia 3), não deste arquivo.
+
+termos:
+  # --- Macro / política monetária: vocabulário padrão de mercado ---
+  - termo: Selic
+    variacoes: [taxa Selic, taxa básica de juros, taxa básica]
+    nivel_minimo: intermediario
+    analogia_iniciante: "É o 'preço do dinheiro' no país: quando sobe, empréstimos e financiamentos ficam mais caros e a poupança/renda fixa rende mais."
+
+  - termo: IPCA
+    variacoes: [índice de preços ao consumidor amplo, inflação oficial]
+    nivel_minimo: intermediario
+    analogia_iniciante: "É o termômetro oficial da inflação: mede quanto ficou mais cara uma cesta de compras típica das famílias, do mercado ao aluguel."
+
+  - termo: CDI
+    variacoes: [certificado de depósito interbancário, taxa DI]
+    nivel_minimo: intermediario
+    analogia_iniciante: "É a taxa que os bancos cobram para emprestar dinheiro entre si por um dia; quase toda aplicação de renda fixa usa ela como régua, tipo '100% do CDI'."
+
+  - termo: Copom
+    variacoes: [Comitê de Política Monetária]
+    nivel_minimo: intermediario
+    analogia_iniciante: "É o grupo do Banco Central que se reúne a cada ~45 dias para decidir se os juros do país sobem, caem ou ficam iguais."
+
+  - termo: meta de inflação
+    variacoes: [meta para a inflação, centro da meta]
+    nivel_minimo: intermediario
+    analogia_iniciante: "É o limite de 'aumento de preços' que o governo considera saudável por ano, como um orçamento que o Banco Central tenta não estourar."
+
+  - termo: juros reais
+    variacoes: [juro real, taxa real de juros]
+    nivel_minimo: intermediario
+    analogia_iniciante: "É quanto seu dinheiro rende de verdade depois de descontar a inflação: render 10% com preços subindo 5% é ganhar só uns 5% de poder de compra."
+
+  # --- Empresas / resultados: vocabulário padrão de mercado ---
+  - termo: dividendos
+    variacoes: [dividendo, proventos]
+    nivel_minimo: intermediario
+    analogia_iniciante: "É a parte do lucro que a empresa divide com quem tem ações dela, como um aluguel que você recebe por ser 'sócio'."
+
+  - termo: dividend yield
+    variacoes: [DY, rendimento de dividendos]
+    nivel_minimo: intermediario
+    analogia_iniciante: "É quanto a ação pagou em dividendos em relação ao preço dela: se custa R$ 100 e pagou R$ 6 no ano, rendeu 6%, como o 'aluguel' de um imóvel sobre o valor dele."
+
+  - termo: EBITDA
+    variacoes: [LAJIDA, Ebitda]
+    nivel_minimo: intermediario
+    analogia_iniciante: "É quanto o negócio gera com a operação do dia a dia, antes de pagar juros, impostos e o desgaste de máquinas e equipamentos."
+
+  - termo: margem líquida
+    variacoes: [margem de lucro líquido]
+    nivel_minimo: intermediario
+    analogia_iniciante: "De cada R$ 100 que a empresa vende, é quanto sobra de lucro no fim depois de pagar todas as contas."
+
+  # --- Jargão institucional / analítico ---
+  - termo: curva de juros
+    variacoes: [estrutura a termo da taxa de juros, curva de juro, ETTJ]
+    nivel_minimo: avancado
+    analogia_iniciante: "É como uma tabela de preços do dinheiro por prazo: mostra quanto o mercado cobra para emprestar por 1 ano, 2 anos, 5 anos..."
+
+  - termo: forward guidance
+    variacoes: [orientação futura, comunicação prospectiva]
+    nivel_minimo: avancado
+    analogia_iniciante: "É o Banco Central 'avisando antes' o que pretende fazer com os juros, para ninguém ser pego de surpresa."
+
+  - termo: hiato do produto
+    variacoes: [hiato, output gap]
+    nivel_minimo: avancado
+    analogia_iniciante: "É a diferença entre quanto a economia está produzindo e quanto ela aguentaria produzir sem esquentar os preços, como um motor acima ou abaixo da rotação ideal."
+
+  - termo: taxa terminal
+    variacoes: [Selic terminal, juro terminal]
+    nivel_minimo: avancado
+    analogia_iniciante: "É o ponto onde o mercado acha que os juros vão parar de subir ou cair, como o andar final de um elevador."
+
+  - termo: taxa neutra
+    variacoes: [juro neutro, taxa de juros neutra, taxa natural de juros]
+    nivel_minimo: avancado
+    analogia_iniciante: "É o nível de juros que nem acelera nem freia a economia, como manter o pé leve no acelerador numa estrada plana."
+
+  - termo: desancoragem das expectativas
+    variacoes: [expectativas desancoradas, desancoragem]
+    nivel_minimo: avancado
+    analogia_iniciante: "É quando as pessoas param de acreditar que a inflação vai voltar para a meta, e passam a reajustar preços e salários contando com mais inflação."
+
+  - termo: pontos-base
+    variacoes: [pontos base, p.b., bps, basis points]
+    nivel_minimo: avancado
+    analogia_iniciante: "É um jeito de medir mudanças pequenas nos juros: 100 pontos-base é o mesmo que 1 ponto percentual."
+
+  - termo: EBITDA ajustado
+    variacoes: [Ebitda ajustado, LAJIDA ajustado]
+    nivel_minimo: avancado
+    analogia_iniciante: "É o resultado da operação depois de tirar efeitos que a empresa considera pontuais, como uma venda de imóvel que não se repete todo ano."
+
+  - termo: covenants
+    variacoes: [covenant, cláusulas restritivas, cláusulas financeiras]
+    nivel_minimo: avancado
+    analogia_iniciante: "São regras que a empresa promete cumprir quando pega dinheiro emprestado, tipo não se endividar demais; se quebrar a regra, o credor pode cobrar a dívida antes."
+
+  - termo: alavancagem
+    variacoes: [dívida líquida/EBITDA, alavancagem financeira, dívida líquida sobre EBITDA]
+    nivel_minimo: avancado
+    analogia_iniciante: "Mostra quantos anos de geração de caixa a empresa precisaria para pagar o que deve, como comparar a dívida do cartão com o seu salário."
+
+  # =====================================================================
+  # Termos novos (Dia 2) — status: pendente_revisao
+  # nivel_minimo e analogia_iniciante são PROPOSTAS: revisar antes de usar como gabarito.
+  # =====================================================================
+
+  # --- Macro / Copom ---
+  - termo: política monetária
+    variacoes: [política de juros]
+    nivel_minimo: intermediario
+    analogia_iniciante: "É o conjunto de decisões do Banco Central sobre juros para controlar a inflação, como um termostato que esquenta ou esfria a economia."
+    status: pendente_revisao
+  - termo: política monetária contracionista
+    variacoes: [política monetária restritiva, juros restritivos, patamar restritivo]
+    nivel_minimo: avancado
+    analogia_iniciante: "É quando o Banco Central mantém os juros altos de propósito para frear o consumo e segurar os preços, como pisar no freio."
+    status: pendente_revisao
+  - termo: política fiscal
+    variacoes: [contas públicas]
+    nivel_minimo: intermediario
+    analogia_iniciante: "É como o governo gasta e arrecada dinheiro, o 'orçamento doméstico' do país."
+    status: pendente_revisao
+  - termo: risco fiscal
+    variacoes: [incerteza fiscal]
+    nivel_minimo: intermediario
+    analogia_iniciante: "É o medo de o governo gastar mais do que consegue pagar, como uma família que vive no cheque especial."
+    status: pendente_revisao
+  - termo: dominância fiscal
+    variacoes: []
+    nivel_minimo: avancado
+    analogia_iniciante: "É quando a dívida do governo fica tão pesada que subir os juros passa a piorar a inflação em vez de ajudar, como um remédio que deixa de fazer efeito."
+    status: pendente_revisao
+  - termo: expectativas de inflação
+    variacoes: [expectativa de inflação, inflação esperada]
+    nivel_minimo: intermediario
+    analogia_iniciante: "É quanto as pessoas e empresas acham que os preços vão subir no futuro; se todo mundo espera alta, já reajusta preços antes."
+    status: pendente_revisao
+  - termo: Boletim Focus
+    variacoes: [Focus, pesquisa Focus, Relatório Focus]
+    nivel_minimo: intermediario
+    analogia_iniciante: "É uma pesquisa semanal do Banco Central com economistas, como um 'bolão' de previsões para inflação, juros e PIB."
+    status: pendente_revisao
+  - termo: balanço de riscos
+    variacoes: [assimetria do balanço de riscos, fatores de risco]
+    nivel_minimo: avancado
+    analogia_iniciante: "É a lista do que pode fazer a inflação subir mais ou menos do que o previsto, como pesar prós e contras numa balança."
+    status: pendente_revisao
+  - termo: núcleos de inflação
+    variacoes: [núcleo de inflação, medidas subjacentes, núcleos]
+    nivel_minimo: avancado
+    analogia_iniciante: "É a inflação sem os itens que sobem e descem muito, como alimentos e energia; mostra a tendência de fundo dos preços."
+    status: pendente_revisao
+  - termo: inflação de serviços
+    variacoes: [serviços subjacentes, inflação de serviços subjacente]
+    nivel_minimo: avancado
+    analogia_iniciante: "É quanto ficaram mais caros serviços como cabeleireiro, escola e conserto, que costumam subir junto com os salários."
+    status: pendente_revisao
+  - termo: horizonte relevante
+    variacoes: [horizonte relevante de política monetária]
+    nivel_minimo: avancado
+    analogia_iniciante: "É o prazo, de mais ou menos um ano e meio à frente, em que o Banco Central mira para trazer a inflação para a meta, porque os juros demoram a fazer efeito."
+    status: pendente_revisao
+  - termo: desinflação
+    variacoes: [processo desinflacionário]
+    nivel_minimo: intermediario
+    analogia_iniciante: "É quando os preços continuam subindo, mas cada vez mais devagar."
+    status: pendente_revisao
+  - termo: ciclo de flexibilização monetária
+    variacoes: [ciclo de afrouxamento, flexibilização monetária, ciclo de cortes, afrouxamento monetário]
+    nivel_minimo: avancado
+    analogia_iniciante: "É uma sequência de reuniões em que o Banco Central vai baixando os juros aos poucos, como soltar o freio devagar."
+    status: pendente_revisao
+  - termo: aperto monetário
+    variacoes: [ciclo de alta, ciclo de aperto, aperto da política monetária]
+    nivel_minimo: avancado
+    analogia_iniciante: "É uma sequência de altas de juros para segurar a inflação, como apertar o cinto."
+    status: pendente_revisao
+  - termo: condições financeiras
+    variacoes: []
+    nivel_minimo: avancado
+    analogia_iniciante: "É o quão fácil ou difícil está conseguir crédito e dinheiro na economia, olhando juros, bolsa, dólar e empréstimos juntos."
+    status: pendente_revisao
+  - termo: prêmio de risco
+    variacoes: [prêmios de risco, prêmio de risco país]
+    nivel_minimo: avancado
+    analogia_iniciante: "É o juro extra que o investidor cobra para aceitar mais risco, como um seguro mais caro para um motorista com multas."
+    status: pendente_revisao
+  - termo: pass-through cambial
+    variacoes: [repasse cambial]
+    nivel_minimo: avancado
+    analogia_iniciante: "É quanto a alta do dólar chega aos preços aqui dentro, como pão e eletrônicos que dependem de insumo importado."
+    status: pendente_revisao
+  - termo: câmbio
+    variacoes: [taxa de câmbio]
+    nivel_minimo: intermediario
+    analogia_iniciante: "É o preço do dólar (ou de outra moeda) em reais."
+    status: pendente_revisao
+  - termo: PIB
+    variacoes: [produto interno bruto]
+    nivel_minimo: intermediario
+    analogia_iniciante: "É a soma de tudo o que o país produz e vende em um período, como o 'faturamento' do Brasil."
+    status: pendente_revisao
+  - termo: IGP-M
+    variacoes: [índice geral de preços do mercado]
+    nivel_minimo: intermediario
+    analogia_iniciante: "É um índice de inflação muito usado para reajustar aluguel."
+    status: pendente_revisao
+  - termo: Federal Reserve
+    variacoes: [Fed, Federal Reserve System]
+    nivel_minimo: intermediario
+    analogia_iniciante: "É o Banco Central dos Estados Unidos; quando ele mexe nos juros de lá, o dinheiro do mundo todo muda de lugar."
+    status: pendente_revisao
+  - termo: Treasuries
+    variacoes: [Treasury, títulos do Tesouro americano]
+    nivel_minimo: avancado
+    analogia_iniciante: "São os títulos da dívida do governo americano, considerados o investimento mais seguro do mundo."
+    status: pendente_revisao
+  - termo: hawkish
+    variacoes: [tom hawkish, postura hawkish]
+    nivel_minimo: avancado
+    analogia_iniciante: "É quando o Banco Central fala mais duro, indicando juros altos por mais tempo para combater a inflação."
+    status: pendente_revisao
+  - termo: dovish
+    variacoes: [tom dovish, postura dovish]
+    nivel_minimo: avancado
+    analogia_iniciante: "É quando o Banco Central fala mais brando, abrindo espaço para baixar os juros."
+    status: pendente_revisao
+
+  # --- Empresas / eventos societários (fatos relevantes) ---
+  - termo: fato relevante
+    variacoes: [fatos relevantes]
+    nivel_minimo: intermediario
+    analogia_iniciante: "É um comunicado oficial que a empresa é obrigada a publicar quando algo importante pode mexer com o preço das ações."
+    status: pendente_revisao
+  - termo: juros sobre capital próprio
+    variacoes: [JCP, juros sobre o capital próprio]
+    nivel_minimo: intermediario
+    analogia_iniciante: "É outra forma de a empresa dividir o lucro com os acionistas, parecida com o dividendo, mas com desconto de imposto de renda na fonte."
+    status: pendente_revisao
+  - termo: data-com
+    variacoes: [data com, data de corte]
+    nivel_minimo: intermediario
+    analogia_iniciante: "É o último dia em que você precisa ter a ação para receber o provento, como a data-limite para entrar na lista de convidados."
+    status: pendente_revisao
+  - termo: ex-direitos
+    variacoes: [data ex, ex-dividendos, ex-JCP, ações ex]
+    nivel_minimo: intermediario
+    analogia_iniciante: "É a partir de quando quem compra a ação já não leva o provento anunciado."
+    status: pendente_revisao
+  - termo: aumento de capital
+    variacoes: [aumento do capital social]
+    nivel_minimo: intermediario
+    analogia_iniciante: "É quando a empresa coloca mais dinheiro próprio no negócio, vendendo novas ações ou transformando lucro guardado em capital."
+    status: pendente_revisao
+  - termo: capital social
+    variacoes: []
+    nivel_minimo: intermediario
+    analogia_iniciante: "É o dinheiro que os sócios colocaram na empresa, registrado oficialmente."
+    status: pendente_revisao
+  - termo: homologação
+    variacoes: [homologado, homologada]
+    nivel_minimo: intermediario
+    analogia_iniciante: "É a aprovação oficial de um órgão regulador, como o 'carimbo' que valida a operação."
+    status: pendente_revisao
+  - termo: subscrição
+    variacoes: [direito de subscrição, direito de preferência]
+    nivel_minimo: intermediario
+    analogia_iniciante: "É o direito de comprar as novas ações que a empresa emitir antes de outros investidores."
+    status: pendente_revisao
+  - termo: bonificação em ações
+    variacoes: [bonificação]
+    nivel_minimo: intermediario
+    analogia_iniciante: "É quando a empresa dá ações novas de graça para quem já é acionista, proporcional ao que cada um tem."
+    status: pendente_revisao
+  - termo: desdobramento
+    variacoes: [split, desdobramento de ações]
+    nivel_minimo: intermediario
+    analogia_iniciante: "É dividir cada ação em mais pedaços, como trocar uma nota de R$ 100 por duas de R$ 50: você não fica mais rico."
+    status: pendente_revisao
+  - termo: recompra de ações
+    variacoes: [programa de recompra, buyback]
+    nivel_minimo: intermediario
+    analogia_iniciante: "É a empresa comprando as próprias ações na bolsa, o que costuma aumentar a fatia de cada acionista que fica."
+    status: pendente_revisao
+  - termo: Assembleia Geral Extraordinária
+    variacoes: [AGE, assembleia extraordinária]
+    nivel_minimo: intermediario
+    analogia_iniciante: "É a reunião oficial dos acionistas para votar decisões fora da rotina, como uma assembleia de condomínio extra."
+    status: pendente_revisao
+  - termo: CVM
+    variacoes: [Comissão de Valores Mobiliários]
+    nivel_minimo: intermediario
+    analogia_iniciante: "É o órgão que fiscaliza o mercado de ações no Brasil, como um 'árbitro' da bolsa."
+    status: pendente_revisao
+  - termo: Bacen
+    variacoes: [BCB]
+    nivel_minimo: intermediario
+    analogia_iniciante: "É a sigla do Banco Central do Brasil, que cuida dos juros e fiscaliza os bancos."
+    status: pendente_revisao
+  - termo: payout
+    variacoes: [índice de payout, taxa de distribuição]
+    nivel_minimo: intermediario
+    analogia_iniciante: "É a fatia do lucro que a empresa distribui aos acionistas: payout de 50% é metade do lucro."
+    status: pendente_revisao
+  - termo: lucro por ação
+    variacoes: [LPA]
+    nivel_minimo: intermediario
+    analogia_iniciante: "É o lucro da empresa dividido pelo número de ações: quanto do lucro 'cabe' em cada ação."
+    status: pendente_revisao
+  - termo: preço/lucro
+    variacoes: [P/L, múltiplo P/L]
+    nivel_minimo: intermediario
+    analogia_iniciante: "Indica quantos anos de lucro seriam necessários para 'pagar' o preço da ação, como comparar o preço de um imóvel com o aluguel anual."
+    status: pendente_revisao
+  - termo: patrimônio líquido
+    variacoes: []
+    nivel_minimo: intermediario
+    analogia_iniciante: "É o que sobra para os donos depois de pagar todas as dívidas, como o valor da casa menos o que falta do financiamento."
+    status: pendente_revisao
+  - termo: lucro líquido recorrente
+    variacoes: [resultado recorrente gerencial, lucro recorrente, lucro gerencial]
+    nivel_minimo: intermediario
+    analogia_iniciante: "É o lucro sem efeitos que não se repetem, para mostrar quanto o negócio ganha normalmente."
+    status: pendente_revisao
+  - termo: lucro líquido
+    variacoes: []
+    nivel_minimo: intermediario
+    analogia_iniciante: "É o que a empresa ganhou no fim, depois de pagar custos, juros e impostos."
+    status: pendente_revisao
+  - termo: dívida líquida
+    variacoes: []
+    nivel_minimo: intermediario
+    analogia_iniciante: "É o que a empresa deve menos o dinheiro que já tem em caixa."
+    status: pendente_revisao
+  - termo: fluxo de caixa livre
+    variacoes: [FCF, geração de caixa livre]
+    nivel_minimo: intermediario
+    analogia_iniciante: "É o dinheiro que sobra no fim depois de manter e investir no negócio, como o que sobra do salário depois das contas fixas."
+    status: pendente_revisao
+  - termo: CAPEX
+    variacoes: [Capex, investimentos em ativos fixos]
+    nivel_minimo: intermediario
+    analogia_iniciante: "É o dinheiro gasto em máquinas, lojas e obras que vão durar anos, como reformar a casa em vez de pagar a conta de luz."
+    status: pendente_revisao
+  - termo: capital de giro
+    variacoes: [necessidade de capital de giro]
+    nivel_minimo: intermediario
+    analogia_iniciante: "É o dinheiro que a empresa precisa ter para funcionar no dia a dia enquanto espera receber dos clientes."
+    status: pendente_revisao
+  - termo: vendas mesmas lojas
+    variacoes: [SSS, same store sales, vendas em mesmas lojas]
+    nivel_minimo: avancado
+    analogia_iniciante: "Compara as vendas só das lojas que já existiam um ano antes, para não confundir crescimento real com lojas novas."
+    status: pendente_revisao
+  - termo: GMV
+    variacoes: [volume bruto de mercadorias]
+    nivel_minimo: avancado
+    analogia_iniciante: "É o total vendido na plataforma, incluindo produtos de outros vendedores, como o movimento total de um shopping."
+    status: pendente_revisao
+
+  # --- Bancos (releases) ---
+  - termo: carteira de crédito
+    variacoes: [carteira de crédito ampliada, carteira total de crédito]
+    nivel_minimo: intermediario
+    analogia_iniciante: "É todo o dinheiro que o banco tem emprestado aos clientes."
+    status: pendente_revisao
+  - termo: ROE
+    variacoes: [retorno sobre o patrimônio líquido, retorno sobre patrimônio]
+    nivel_minimo: avancado
+    analogia_iniciante: "Mostra quanto a empresa lucra para cada real dos donos, como o rendimento de um investimento próprio."
+    status: pendente_revisao
+  - termo: CET I
+    variacoes: [CET1, capital principal, Common Equity Tier 1, índice de capital principal]
+    nivel_minimo: avancado
+    analogia_iniciante: "É o 'colchão' de dinheiro próprio do banco para aguentar prejuízos sem quebrar."
+    status: pendente_revisao
+  - termo: Índice de Basileia
+    variacoes: [Basileia, índice de capital total]
+    nivel_minimo: avancado
+    analogia_iniciante: "Mede se o banco tem capital próprio suficiente para o tamanho dos riscos que corre, como uma reserva de emergência proporcional às dívidas."
+    status: pendente_revisao
+  - termo: NPL
+    variacoes: [NPL 90, índice de inadimplência acima de 90 dias, inadimplência acima de 90 dias, NPL 15-90]
+    nivel_minimo: avancado
+    analogia_iniciante: "É a fatia dos empréstimos com parcelas atrasadas há muito tempo, um termômetro do calote."
+    status: pendente_revisao
+  - termo: custo do crédito
+    variacoes: [custo de crédito]
+    nivel_minimo: avancado
+    analogia_iniciante: "É quanto o banco reserva ou perde com clientes que não pagam, o 'preço' de emprestar dinheiro."
+    status: pendente_revisao
+  - termo: PDD
+    variacoes: [provisão para devedores duvidosos, despesa de provisão, provisão para perdas esperadas]
+    nivel_minimo: avancado
+    analogia_iniciante: "É o dinheiro que o banco separa antes por achar que parte dos clientes não vai pagar, como guardar uma reserva para conserto do carro."
+    status: pendente_revisao
+  - termo: margem financeira
+    variacoes: [margem financeira com clientes, margem financeira com o mercado, NII]
+    nivel_minimo: avancado
+    analogia_iniciante: "É a diferença entre os juros que o banco cobra de quem pega empréstimo e os que paga a quem deixa dinheiro aplicado."
+    status: pendente_revisao
+  - termo: spread bancário
+    variacoes: [spread]
+    nivel_minimo: intermediario
+    analogia_iniciante: "É a diferença entre o juro que o banco cobra e o que ele paga; é de onde vem boa parte do lucro do banco."
+    status: pendente_revisao
+  - termo: índice de eficiência
+    variacoes: []
+    nivel_minimo: avancado
+    analogia_iniciante: "Mostra quanto o banco gasta para gerar cada real de receita; quanto menor, mais enxuto."
+    status: pendente_revisao
+  - termo: índice de cobertura
+    variacoes: [cobertura de provisões]
+    nivel_minimo: avancado
+    analogia_iniciante: "Compara o dinheiro reservado para calotes com os empréstimos já atrasados: mostra se a reserva é suficiente."
+    status: pendente_revisao
+  - termo: receita de serviços
+    variacoes: [receitas de serviços, receitas de prestação de serviços, tarifas bancárias]
+    nivel_minimo: intermediario
+    analogia_iniciante: "É o que o banco ganha cobrando tarifas e serviços, como cartão e conta, sem depender de emprestar dinheiro."
+    status: pendente_revisao
+  - termo: guidance
+    variacoes: [projeções gerenciais]
+    nivel_minimo: avancado
+    analogia_iniciante: "São as metas que a própria empresa divulga para o ano, como uma previsão oficial de desempenho."
+    status: pendente_revisao
+  - termo: índice de liquidez de curto prazo
+    variacoes: [LCR, liquidity coverage ratio]
+    nivel_minimo: avancado
+    analogia_iniciante: "Mostra se o banco tem dinheiro fácil de usar para aguentar um mês de saques fora do normal."
+    status: pendente_revisao
+  - termo: estágio 3
+    variacoes: [ativos problemáticos, créditos problemáticos]
+    nivel_minimo: avancado
+    analogia_iniciante: "São os empréstimos que o banco já considera com grande chance de não serem pagos."
+    status: pendente_revisao
+
+  # --- Renda fixa ---
+  - termo: prefixado
+    variacoes: [título prefixado, Tesouro Prefixado]
+    nivel_minimo: intermediario
+    analogia_iniciante: "É uma aplicação em que você já sabe no dia da compra quanto vai render, como combinar o preço antes."
+    status: pendente_revisao
+  - termo: pós-fixado
+    variacoes: [título pós-fixado, Tesouro Selic]
+    nivel_minimo: intermediario
+    analogia_iniciante: "É uma aplicação que acompanha uma taxa que muda, como a Selic: se os juros sobem, rende mais."
+    status: pendente_revisao
+  - termo: Tesouro IPCA+
+    variacoes: [NTN-B, NTN-Bs]
+    nivel_minimo: intermediario
+    analogia_iniciante: "É um título do governo que paga a inflação mais um juro combinado, protegendo o poder de compra."
+    status: pendente_revisao
+  - termo: duration
+    variacoes: [prazo médio ponderado]
+    nivel_minimo: avancado
+    analogia_iniciante: "Mede o quanto um título sofre quando os juros mudam: quanto mais longo, mais ele balança, como uma gangorra mais comprida."
+    status: pendente_revisao
+  - termo: marcação a mercado
+    variacoes: [marcado a mercado]
+    nivel_minimo: avancado
+    analogia_iniciante: "É atualizar todo dia o preço de um título pelo valor que ele valeria se fosse vendido hoje, como a tabela FIPE para o carro."
+    status: pendente_revisao
+  - termo: spread de crédito
+    variacoes: [spreads de crédito]
+    nivel_minimo: avancado
+    analogia_iniciante: "É o juro a mais que uma empresa paga em relação ao governo por ser mais arriscada."
+    status: pendente_revisao
+  - termo: debêntures
+    variacoes: [debênture]
+    nivel_minimo: intermediario
+    analogia_iniciante: "É como emprestar dinheiro diretamente para uma empresa em troca de juros."
+    status: pendente_revisao
+  - termo: rating
+    variacoes: [classificação de risco, nota de crédito]
+    nivel_minimo: intermediario
+    analogia_iniciante: "É uma nota dada por agências sobre a chance de a empresa ou o país pagar o que deve, como um score de crédito."
+    status: pendente_revisao
