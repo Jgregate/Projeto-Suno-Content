@@ -1,0 +1,238 @@
+@import "tailwindcss";
+
+/*
+ * Tema Suno: vermelho #D42126 como cor de marca, preto/cinzas neutros e Arial em
+ * negrito (mesmo guia visual de suno.com.br). Segue o sistema por padrão
+ * (color-scheme: light dark); o botão de tema troca o <meta name="color-scheme">.
+ * Todas as cores usam light-dark(), então não há classe .dark.
+ */
+:root {
+  color-scheme: light dark;
+
+  &:has(> head > meta[name="color-scheme"][content="dark"]) {
+    color-scheme: dark;
+  }
+  &:has(> head > meta[name="color-scheme"][content="light"]) {
+    color-scheme: light;
+  }
+
+  /* marca */
+  --brand: light-dark(#d42126, #ec3f44);
+  --brand-hover: light-dark(#b01a1e, #f25f63);
+  --brand-soft: light-dark(#fbeaea, #3a1617);
+
+  /* superfícies e texto (fundo branco/cinza claro; seções escuras #131313 no modo escuro) */
+  --paper: light-dark(#f5f5f5, #131313);
+  --surface: light-dark(#ffffff, #1c1c1c);
+  --surface-2: light-dark(#f0f0f0, #262626);
+  --ink: light-dark(#212121, #f2f2f2);
+  --ink-2: light-dark(#4b4b4b, #bdbdbd);
+  --ink-3: light-dark(#6e6e6e, #8b8b8b);
+  --line: light-dark(#e2e2e2, #2e2e2e);
+  --line-strong: light-dark(#c6c6c6, #474747);
+  --focus: var(--brand);
+
+  /* uma cor por nível (texto/ícone, fundo suave, borda): azul-ardósia, verde-petróleo, grafite */
+  --lvl-ini: light-dark(#3d5f8a, #8fb0d9);
+  --lvl-ini-soft: light-dark(#e9eef5, #1c2533);
+  --lvl-int: light-dark(#2a7a70, #6fc7b9);
+  --lvl-int-soft: light-dark(#e5f2f0, #16302c);
+  --lvl-adv: light-dark(#212121, #e6e6e6);
+  --lvl-adv-soft: light-dark(#ebebeb, #2e2e2e);
+
+  /* status (sempre acompanhado de ícone + texto) */
+  --ok: light-dark(#007a1f, #5fd38a);
+  --ok-soft: light-dark(#e6f4ea, #15301e);
+  --bad: light-dark(#b42318, #ff8a7a);
+  --bad-soft: light-dark(#fdecea, #3a1d1a);
+  --warn: light-dark(#8a5a00, #f1c162);
+  --warn-soft: light-dark(#fbf3dc, #33290f);
+}
+
+@theme inline {
+  --font-sans: Arial, Helvetica, ui-sans-serif, system-ui, sans-serif;
+  --font-serif: Arial, Helvetica, ui-sans-serif, system-ui, sans-serif;
+  --font-mono: Arial, Helvetica, ui-sans-serif, system-ui, sans-serif;
+
+  --color-brand: var(--brand);
+  --color-brand-hover: var(--brand-hover);
+  --color-brand-soft: var(--brand-soft);
+  --color-paper: var(--paper);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-ink-3: var(--ink-3);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-focus: var(--focus);
+  --color-lvl-ini: var(--lvl-ini);
+  --color-lvl-ini-soft: var(--lvl-ini-soft);
+  --color-lvl-int: var(--lvl-int);
+  --color-lvl-int-soft: var(--lvl-int-soft);
+  --color-lvl-adv: var(--lvl-adv);
+  --color-lvl-adv-soft: var(--lvl-adv-soft);
+  --color-ok: var(--ok);
+  --color-ok-soft: var(--ok-soft);
+  --color-bad: var(--bad);
+  --color-bad-soft: var(--bad-soft);
+  --color-warn: var(--warn);
+  --color-warn-soft: var(--warn-soft);
+}
+
+@layer base {
+  html {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  body {
+    background: var(--paper);
+    min-height: 100dvh;
+  }
+  h1, h2, h3 {
+    font-weight: 700;
+  }
+  .font-mono {
+    font-variant-numeric: tabular-nums;
+  }
+  :focus-visible {
+    outline: 2px solid var(--focus);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+  ::selection {
+    background: color-mix(in oklab, var(--brand) 22%, transparent);
+  }
+}
+
+@layer components {
+  /* rótulo de categoria no estilo Suno: caixa-alta, extra-negrito, espaçado, vermelho */
+  .eyebrow {
+    font-family: var(--font-sans);
+    font-size: 0.6875rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--brand);
+  }
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* --- animações da página inicial --- */
+@keyframes rise {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes pulse-ring {
+  0% { box-shadow: 0 0 0 0 color-mix(in oklab, var(--brand) 45%, transparent); }
+  70% { box-shadow: 0 0 0 14px transparent; }
+  100% { box-shadow: 0 0 0 0 transparent; }
+}
+@keyframes shine {
+  from { transform: translateX(-130%) skewX(-20deg); }
+  to { transform: translateX(260%) skewX(-20deg); }
+}
+@keyframes dash-flow {
+  to { stroke-dashoffset: -24; }
+}
+@keyframes grid-drift {
+  to { background-position: 63px 63px; }
+}
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+@layer components {
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.7s cubic-bezier(0.2, 0.7, 0.2, 1), transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+    transition-delay: var(--d, 0ms);
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+  .rise {
+    animation: rise 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+    animation-delay: var(--d, 0ms);
+  }
+  .btn-pulse {
+    animation: pulse-ring 2.6s ease-out infinite;
+  }
+  .btn-shine {
+    position: relative;
+    overflow: hidden;
+  }
+  .btn-shine::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 40%;
+    background: linear-gradient(90deg, transparent, rgb(255 255 255 / 0.4), transparent);
+    transform: translateX(-130%) skewX(-20deg);
+    pointer-events: none;
+  }
+  .btn-shine:hover::after {
+    animation: shine 0.8s ease;
+  }
+  .nudge svg {
+    transition: transform 0.2s ease;
+  }
+  .nudge:hover svg {
+    transform: translateX(4px);
+  }
+  .lift {
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+  }
+  .lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 32px -18px rgb(0 0 0 / 0.35);
+    z-index: 1;
+  }
+  .grid-drift {
+    animation: grid-drift 7s linear infinite;
+  }
+  /* barra vermelha que percorre o topo de cada etapa quando a seção entra na tela */
+  .stage-bar::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 3px;
+    width: 0;
+    background: var(--brand);
+    transition: width 0.6s ease;
+    transition-delay: var(--d, 0ms);
+  }
+  .is-visible .stage-bar::before {
+    width: 100%;
+  }
+  .flow-dash {
+    animation: dash-flow 1.2s linear infinite;
+  }
+  .caret::after {
+    content: "_";
+    margin-left: 2px;
+    color: var(--brand);
+    animation: blink 1s steps(1) infinite;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

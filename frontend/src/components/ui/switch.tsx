@@ -1,0 +1,15 @@
+import * as SwitchPrimitive from "@radix-ui/react-switch";
+import type { ComponentProps } from "react";
+import { cn } from "@/lib/utils";
+
+export const Switch = ({ className, ...props }: ComponentProps<typeof SwitchPrimitive.Root>) => (
+  <SwitchPrimitive.Root
+    className={cn(
+      "peer inline-flex h-5 w-9 shrink-0 cursor-pointer items-center rounded-full border border-line-strong bg-surface-2 transition-colors data-[state=checked]:border-ink data-[state=checked]:bg-ink",
+      className,
+    )}
+    {...props}
+  >
+    <SwitchPrimitive.Thumb className="block size-4 translate-x-0.5 rounded-full bg-surface shadow transition-transform data-[state=checked]:translate-x-4" />
+  </SwitchPrimitive.Root>
+);

@@ -1,0 +1,2285 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Suno Content API",
+    "description": "Pipeline de adaptação calibrada de documentos financeiros.",
+    "version": "0.4.0"
+  },
+  "paths": {
+    "/documents": {
+      "get": {
+        "tags": [
+          "documents"
+        ],
+        "summary": "List Documents",
+        "description": "Documentos processados e fontes compostas que já têm execução salva.\n\nDocumentos que integram uma fonte composta não são listados isoladamente.",
+        "operationId": "list_documents_documents_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/DocumentInfo"
+                  },
+                  "type": "array",
+                  "title": "Response List Documents Documents Get"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "documents"
+        ],
+        "summary": "Upload Document",
+        "operationId": "upload_document_documents_post",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "$ref": "#/components/schemas/Body_upload_document_documents_post"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DocumentInfo"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/documents/{doc_id}/anchors": {
+      "get": {
+        "tags": [
+          "documents"
+        ],
+        "summary": "Document Anchors",
+        "operationId": "document_anchors_documents__doc_id__anchors_get",
+        "parameters": [
+          {
+            "name": "doc_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Doc Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AnchorsResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/runs": {
+      "post": {
+        "tags": [
+          "runs"
+        ],
+        "summary": "Create Run",
+        "operationId": "create_run_runs_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RunCreate"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "202": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RunStatus"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/runs/{run_id}": {
+      "get": {
+        "tags": [
+          "runs"
+        ],
+        "summary": "Run Status",
+        "operationId": "run_status_runs__run_id__get",
+        "parameters": [
+          {
+            "name": "run_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Run Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RunStatus"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/runs/{run_id}/results": {
+      "get": {
+        "tags": [
+          "runs"
+        ],
+        "summary": "Run Results",
+        "operationId": "run_results_runs__run_id__results_get",
+        "parameters": [
+          {
+            "name": "run_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Run Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RunResults"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/reports/summary": {
+      "get": {
+        "tags": [
+          "reports"
+        ],
+        "summary": "Reports Summary",
+        "operationId": "reports_summary_reports_summary_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SummaryResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/reports/experiment": {
+      "get": {
+        "tags": [
+          "reports"
+        ],
+        "summary": "Reports Experiment",
+        "description": "Variância do avaliador, trade-offs e concordância humana do experimento mais recente (CSVs em csv/).",
+        "operationId": "reports_experiment_reports_experiment_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExperimentResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/glossary": {
+      "get": {
+        "tags": [
+          "reference"
+        ],
+        "summary": "Glossary",
+        "operationId": "glossary_glossary_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/GlossaryTermOut"
+                  },
+                  "type": "array",
+                  "title": "Response Glossary Glossary Get"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/thresholds": {
+      "get": {
+        "tags": [
+          "reference"
+        ],
+        "summary": "Thresholds",
+        "operationId": "thresholds_thresholds_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ThresholdsResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/runs/{run_id}/cells/{audience}/{fmt}/terms": {
+      "get": {
+        "tags": [
+          "runs"
+        ],
+        "summary": "Cell Terms",
+        "description": "Ocorrências de termos do glossário na célula, com o trecho exato e a contextualização.\n\nUsa `context_marker`, a mesma regra da métrica `term_context_pct`.",
+        "operationId": "cell_terms_runs__run_id__cells__audience___fmt__terms_get",
+        "parameters": [
+          {
+            "name": "run_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Run Id"
+            }
+          },
+          {
+            "name": "audience",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/Audience"
+            }
+          },
+          {
+            "name": "fmt",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/Format"
+            }
+          },
+          {
+            "name": "attempt",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Attempt"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CellTermsResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AdaptedClaim": {
+        "properties": {
+          "text": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Text"
+          },
+          "anchor_ids": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "minItems": 1,
+            "title": "Anchor Ids",
+            "description": "Ids das âncoras usadas. Obrigatório."
+          }
+        },
+        "type": "object",
+        "required": [
+          "text",
+          "anchor_ids"
+        ],
+        "title": "AdaptedClaim",
+        "description": "Uma afirmação reescrita para o nível, ligada às âncoras que a sustentam."
+      },
+      "AdaptedContent": {
+        "properties": {
+          "audience": {
+            "$ref": "#/components/schemas/Audience"
+          },
+          "angle": {
+            "type": "string",
+            "title": "Angle",
+            "description": "Ângulo editorial: por que isso importa para este público."
+          },
+          "claims": {
+            "items": {
+              "$ref": "#/components/schemas/AdaptedClaim"
+            },
+            "type": "array",
+            "minItems": 1,
+            "title": "Claims"
+          },
+          "takeaway": {
+            "type": "string",
+            "title": "Takeaway",
+            "description": "Mensagem final para o leitor deste nível."
+          }
+        },
+        "type": "object",
+        "required": [
+          "audience",
+          "angle",
+          "claims",
+          "takeaway"
+        ],
+        "title": "AdaptedContent",
+        "description": "Conteúdo do documento reescrito para um nível, independente do formato."
+      },
+      "AgreementRow": {
+        "properties": {
+          "dimensao": {
+            "type": "string",
+            "title": "Dimensao"
+          },
+          "n": {
+            "type": "integer",
+            "title": "N"
+          },
+          "concordancia": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Concordancia"
+          },
+          "ic95_inf": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Ic95 Inf"
+          },
+          "ic95_sup": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Ic95 Sup"
+          },
+          "kappa": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Kappa"
+          }
+        },
+        "type": "object",
+        "required": [
+          "dimensao",
+          "n"
+        ],
+        "title": "AgreementRow"
+      },
+      "AnchorOut": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "claim": {
+            "type": "string",
+            "title": "Claim"
+          },
+          "numbers": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Numbers"
+          },
+          "source_excerpt": {
+            "type": "string",
+            "title": "Source Excerpt"
+          },
+          "page": {
+            "type": "integer",
+            "title": "Page"
+          },
+          "source_doc_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Source Doc Id",
+            "description": "PDF de origem quando a fonte junta vários documentos."
+          },
+          "valid": {
+            "type": "boolean",
+            "title": "Valid"
+          },
+          "invalid_numbers": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Invalid Numbers"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "claim",
+          "numbers",
+          "source_excerpt",
+          "page",
+          "source_doc_id",
+          "valid",
+          "invalid_numbers"
+        ],
+        "title": "AnchorOut"
+      },
+      "AnchorsResponse": {
+        "properties": {
+          "doc_id": {
+            "type": "string",
+            "title": "Doc Id"
+          },
+          "run_id": {
+            "type": "string",
+            "title": "Run Id"
+          },
+          "anchors": {
+            "items": {
+              "$ref": "#/components/schemas/AnchorOut"
+            },
+            "type": "array",
+            "title": "Anchors"
+          }
+        },
+        "type": "object",
+        "required": [
+          "doc_id",
+          "run_id",
+          "anchors"
+        ],
+        "title": "AnchorsResponse"
+      },
+      "ArticleBody": {
+        "properties": {
+          "kind": {
+            "type": "string",
+            "const": "texto",
+            "title": "Kind",
+            "default": "texto"
+          },
+          "title": {
+            "type": "string",
+            "title": "Title"
+          },
+          "subtitle": {
+            "type": "string",
+            "title": "Subtitle",
+            "description": "Linha fina: uma frase que resume a notícia."
+          },
+          "sections": {
+            "items": {
+              "$ref": "#/components/schemas/Section"
+            },
+            "type": "array",
+            "minItems": 1,
+            "title": "Sections"
+          }
+        },
+        "type": "object",
+        "required": [
+          "title",
+          "subtitle",
+          "sections"
+        ],
+        "title": "ArticleBody",
+        "description": "Texto analítico para web/newsletter: título, linha fina e seções."
+      },
+      "AttemptRecord": {
+        "properties": {
+          "attempt": {
+            "type": "integer",
+            "minimum": 1.0,
+            "title": "Attempt"
+          },
+          "content": {
+            "$ref": "#/components/schemas/GeneratedContent"
+          },
+          "report": {
+            "$ref": "#/components/schemas/EvaluationReport"
+          },
+          "aggregate_score": {
+            "type": "number",
+            "title": "Aggregate Score",
+            "description": "Nota agregada 0..1 usada para parada e escolha da melhor tentativa."
+          },
+          "injected_feedback": {
+            "type": "string",
+            "title": "Injected Feedback",
+            "description": "Feedback que gerou esta tentativa (vazio na 1ª).",
+            "default": ""
+          },
+          "regressions": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Regressions",
+            "description": "Métricas que passavam e passaram a reprovar."
+          },
+          "input_tokens": {
+            "type": "integer",
+            "title": "Input Tokens",
+            "default": 0
+          },
+          "output_tokens": {
+            "type": "integer",
+            "title": "Output Tokens",
+            "default": 0
+          },
+          "cost_usd": {
+            "type": "number",
+            "title": "Cost Usd",
+            "default": 0.0
+          },
+          "latency_ms": {
+            "type": "number",
+            "title": "Latency Ms",
+            "description": "Geração/refino + avaliação desta tentativa.",
+            "default": 0.0
+          }
+        },
+        "type": "object",
+        "required": [
+          "attempt",
+          "content",
+          "report",
+          "aggregate_score"
+        ],
+        "title": "AttemptRecord",
+        "description": "Uma tentativa de uma célula: texto, relatório, nota agregada e custo."
+      },
+      "Audience": {
+        "type": "string",
+        "enum": [
+          "iniciante",
+          "intermediario",
+          "avancado"
+        ],
+        "title": "Audience",
+        "description": "Nível de sofisticação do público."
+      },
+      "Body_upload_document_documents_post": {
+        "properties": {
+          "file": {
+            "type": "string",
+            "contentMediaType": "application/octet-stream",
+            "title": "File"
+          }
+        },
+        "type": "object",
+        "required": [
+          "file"
+        ],
+        "title": "Body_upload_document_documents_post"
+      },
+      "BoundOut": {
+        "properties": {
+          "min": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Min"
+          },
+          "max": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Max"
+          }
+        },
+        "type": "object",
+        "title": "BoundOut"
+      },
+      "CarouselBody": {
+        "properties": {
+          "kind": {
+            "type": "string",
+            "const": "carrossel",
+            "title": "Kind",
+            "default": "carrossel"
+          },
+          "slides": {
+            "items": {
+              "$ref": "#/components/schemas/Slide"
+            },
+            "type": "array",
+            "maxItems": 8,
+            "minItems": 5,
+            "title": "Slides"
+          }
+        },
+        "type": "object",
+        "required": [
+          "slides"
+        ],
+        "title": "CarouselBody",
+        "description": "Carrossel de 5 a 8 slides: gancho, corpo(s), conclusão/CTA."
+      },
+      "CellMetrics": {
+        "properties": {
+          "system": {
+            "type": "string",
+            "title": "System"
+          },
+          "doc_id": {
+            "type": "string",
+            "title": "Doc Id"
+          },
+          "audience": {
+            "$ref": "#/components/schemas/Audience"
+          },
+          "format": {
+            "$ref": "#/components/schemas/Format"
+          },
+          "passed": {
+            "type": "boolean",
+            "title": "Passed"
+          },
+          "predicted_level": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Audience"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "metrics": {
+            "additionalProperties": {
+              "type": "number"
+            },
+            "type": "object",
+            "title": "Metrics"
+          }
+        },
+        "type": "object",
+        "required": [
+          "system",
+          "doc_id",
+          "audience",
+          "format",
+          "passed",
+          "predicted_level",
+          "metrics"
+        ],
+        "title": "CellMetrics"
+      },
+      "CellResult": {
+        "properties": {
+          "audience": {
+            "$ref": "#/components/schemas/Audience"
+          },
+          "format": {
+            "$ref": "#/components/schemas/Format"
+          },
+          "status": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/CellStatus"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "content": {
+            "$ref": "#/components/schemas/GeneratedContent",
+            "description": "Versão entregue (aprovada ou a de melhor nota)."
+          },
+          "report": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/EvaluationReport"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Relatório da versão entregue."
+          },
+          "history": {
+            "items": {
+              "$ref": "#/components/schemas/AttemptRecord"
+            },
+            "type": "array",
+            "title": "History",
+            "description": "Todas as tentativas, em ordem."
+          }
+        },
+        "type": "object",
+        "required": [
+          "audience",
+          "format",
+          "status",
+          "content",
+          "report",
+          "history"
+        ],
+        "title": "CellResult"
+      },
+      "CellStatus": {
+        "properties": {
+          "status": {
+            "type": "string",
+            "title": "Status",
+            "description": "'aprovado', 'aprovado_apos_N' (N refinamentos) ou 'reprovado_final'."
+          },
+          "attempts": {
+            "type": "integer",
+            "title": "Attempts"
+          },
+          "delivered_attempt": {
+            "type": "integer",
+            "title": "Delivered Attempt",
+            "description": "Tentativa entregue (a aprovada ou a de melhor nota)."
+          },
+          "best_score": {
+            "type": "number",
+            "title": "Best Score"
+          },
+          "stop_reason": {
+            "type": "string",
+            "enum": [
+              "aprovado",
+              "max_tentativas",
+              "estagnou",
+              "erro_refino"
+            ],
+            "title": "Stop Reason"
+          },
+          "regressions": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Regressions"
+          }
+        },
+        "type": "object",
+        "required": [
+          "status",
+          "attempts",
+          "delivered_attempt",
+          "best_score",
+          "stop_reason"
+        ],
+        "title": "CellStatus",
+        "description": "Situação final de uma célula depois do loop."
+      },
+      "CellTermsResponse": {
+        "properties": {
+          "run_id": {
+            "type": "string",
+            "title": "Run Id"
+          },
+          "audience": {
+            "$ref": "#/components/schemas/Audience"
+          },
+          "format": {
+            "$ref": "#/components/schemas/Format"
+          },
+          "attempt": {
+            "type": "integer",
+            "title": "Attempt"
+          },
+          "occurrences": {
+            "items": {
+              "$ref": "#/components/schemas/TermOccurrenceOut"
+            },
+            "type": "array",
+            "title": "Occurrences"
+          }
+        },
+        "type": "object",
+        "required": [
+          "run_id",
+          "audience",
+          "format",
+          "attempt",
+          "occurrences"
+        ],
+        "title": "CellTermsResponse"
+      },
+      "ClaimVerdict": {
+        "properties": {
+          "claim": {
+            "type": "string",
+            "title": "Claim"
+          },
+          "verdict": {
+            "type": "string",
+            "enum": [
+              "sustentada",
+              "nao_sustentada",
+              "contradita"
+            ],
+            "title": "Verdict"
+          },
+          "anchor_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Anchor Id"
+          },
+          "justification": {
+            "type": "string",
+            "title": "Justification",
+            "default": ""
+          }
+        },
+        "type": "object",
+        "required": [
+          "claim",
+          "verdict"
+        ],
+        "title": "ClaimVerdict",
+        "description": "Afirmação atômica do texto classificada contra as âncoras (saída do checker com LLM)."
+      },
+      "ConfusionMatrix": {
+        "properties": {
+          "labels": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Labels"
+          },
+          "matrix": {
+            "items": {
+              "items": {
+                "type": "integer"
+              },
+              "type": "array"
+            },
+            "type": "array",
+            "title": "Matrix",
+            "description": "Linhas = nível alvo, colunas = nível previsto."
+          }
+        },
+        "type": "object",
+        "required": [
+          "labels",
+          "matrix"
+        ],
+        "title": "ConfusionMatrix"
+      },
+      "DocumentInfo": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "title": {
+            "type": "string",
+            "title": "Title"
+          },
+          "doc_type": {
+            "$ref": "#/components/schemas/DocumentType"
+          },
+          "date": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Date"
+          },
+          "pages": {
+            "type": "integer",
+            "title": "Pages"
+          },
+          "runs": {
+            "type": "integer",
+            "title": "Runs",
+            "description": "Execuções salvas para o documento."
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "title",
+          "doc_type",
+          "date",
+          "pages",
+          "runs"
+        ],
+        "title": "DocumentInfo"
+      },
+      "DocumentType": {
+        "type": "string",
+        "enum": [
+          "ata_copom",
+          "fato_relevante",
+          "release_resultados",
+          "outro"
+        ],
+        "title": "DocumentType",
+        "description": "Tipos de documento suportados pelo pipeline."
+      },
+      "EvaluationReport": {
+        "properties": {
+          "audience": {
+            "$ref": "#/components/schemas/Audience"
+          },
+          "format": {
+            "$ref": "#/components/schemas/Format"
+          },
+          "attempt": {
+            "type": "integer",
+            "minimum": 1.0,
+            "title": "Attempt"
+          },
+          "metrics": {
+            "items": {
+              "$ref": "#/components/schemas/MetricResult"
+            },
+            "type": "array",
+            "minItems": 1,
+            "title": "Metrics"
+          },
+          "flags": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Flags",
+            "description": "Ex.: 'baixa_confiabilidade' (texto < 100 palavras)."
+          },
+          "feedback": {
+            "type": "string",
+            "title": "Feedback",
+            "description": "Instruções de correção injetadas no retry.",
+            "default": ""
+          },
+          "claims": {
+            "items": {
+              "$ref": "#/components/schemas/ClaimVerdict"
+            },
+            "type": "array",
+            "title": "Claims",
+            "description": "Veredito por afirmação (vazio sem LLM)."
+          },
+          "judge": {
+            "items": {
+              "$ref": "#/components/schemas/JudgeScore"
+            },
+            "type": "array",
+            "title": "Judge",
+            "description": "Notas do judge com evidência (vazio sem LLM)."
+          },
+          "passed": {
+            "type": "boolean",
+            "title": "Passed",
+            "readOnly": true
+          }
+        },
+        "type": "object",
+        "required": [
+          "audience",
+          "format",
+          "attempt",
+          "metrics",
+          "passed"
+        ],
+        "title": "EvaluationReport",
+        "description": "Relatório de uma célula numa tentativa; alimenta o reflection loop."
+      },
+      "ExperimentResponse": {
+        "properties": {
+          "date": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Date"
+          },
+          "repeats": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Repeats",
+            "description": "Avaliações por saída na variância."
+          },
+          "variance": {
+            "items": {
+              "$ref": "#/components/schemas/VarianceRow"
+            },
+            "type": "array",
+            "title": "Variance"
+          },
+          "tradeoffs": {
+            "items": {
+              "$ref": "#/components/schemas/TradeoffRow"
+            },
+            "type": "array",
+            "title": "Tradeoffs"
+          },
+          "agreement": {
+            "items": {
+              "$ref": "#/components/schemas/AgreementRow"
+            },
+            "type": "array",
+            "title": "Agreement"
+          }
+        },
+        "type": "object",
+        "title": "ExperimentResponse"
+      },
+      "Format": {
+        "type": "string",
+        "enum": [
+          "texto",
+          "carrossel",
+          "roteiro"
+        ],
+        "title": "Format",
+        "description": "Formato de mídia da saída."
+      },
+      "GeneratedContent": {
+        "properties": {
+          "audience": {
+            "$ref": "#/components/schemas/Audience"
+          },
+          "format": {
+            "$ref": "#/components/schemas/Format"
+          },
+          "attempt": {
+            "type": "integer",
+            "minimum": 1.0,
+            "title": "Attempt",
+            "description": "Número da tentativa (1 = primeira geração)."
+          },
+          "content": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/ArticleBody"
+              },
+              {
+                "$ref": "#/components/schemas/CarouselBody"
+              },
+              {
+                "$ref": "#/components/schemas/VideoScriptBody"
+              }
+            ],
+            "title": "Content",
+            "discriminator": {
+              "propertyName": "kind",
+              "mapping": {
+                "carrossel": "#/components/schemas/CarouselBody",
+                "roteiro": "#/components/schemas/VideoScriptBody",
+                "texto": "#/components/schemas/ArticleBody"
+              }
+            }
+          },
+          "anchor_ids": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Anchor Ids",
+            "description": "Âncoras factuais usadas, para rastreabilidade."
+          }
+        },
+        "type": "object",
+        "required": [
+          "audience",
+          "format",
+          "attempt",
+          "content"
+        ],
+        "title": "GeneratedContent",
+        "description": "Saída de uma célula nível x formato em uma tentativa."
+      },
+      "GlossaryTermOut": {
+        "properties": {
+          "termo": {
+            "type": "string",
+            "title": "Termo"
+          },
+          "variacoes": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Variacoes"
+          },
+          "nivel_minimo": {
+            "$ref": "#/components/schemas/Audience"
+          },
+          "analogia_iniciante": {
+            "type": "string",
+            "title": "Analogia Iniciante"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "revisado",
+              "pendente_revisao"
+            ],
+            "title": "Status"
+          }
+        },
+        "type": "object",
+        "required": [
+          "termo",
+          "variacoes",
+          "nivel_minimo",
+          "analogia_iniciante",
+          "status"
+        ],
+        "title": "GlossaryTermOut"
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "JudgeScore": {
+        "properties": {
+          "criterion": {
+            "type": "string",
+            "enum": [
+              "adequacao_publico",
+              "tom",
+              "nuances",
+              "formato"
+            ],
+            "title": "Criterion"
+          },
+          "score": {
+            "type": "integer",
+            "title": "Score"
+          },
+          "evidence": {
+            "type": "string",
+            "title": "Evidence"
+          },
+          "rationale": {
+            "type": "string",
+            "title": "Rationale"
+          }
+        },
+        "type": "object",
+        "required": [
+          "criterion",
+          "score",
+          "evidence",
+          "rationale"
+        ],
+        "title": "JudgeScore",
+        "description": "Nota do LLM Judge num critério, com o trecho literal que a justifica."
+      },
+      "LevelSummary": {
+        "properties": {
+          "system": {
+            "type": "string",
+            "title": "System"
+          },
+          "audience": {
+            "$ref": "#/components/schemas/Audience"
+          },
+          "cells": {
+            "type": "integer",
+            "title": "Cells"
+          },
+          "pass_rate": {
+            "type": "number",
+            "title": "Pass Rate"
+          },
+          "flesch_mean": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Flesch Mean"
+          },
+          "density_mean": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Density Mean"
+          }
+        },
+        "type": "object",
+        "required": [
+          "system",
+          "audience",
+          "cells",
+          "pass_rate",
+          "flesch_mean",
+          "density_mean"
+        ],
+        "title": "LevelSummary"
+      },
+      "MetricResult": {
+        "properties": {
+          "name": {
+            "type": "string",
+            "title": "Name",
+            "description": "Ex.: 'flesch_pt', 'term_density', 'numeric_grounding', 'judge_tom'."
+          },
+          "score": {
+            "type": "number",
+            "title": "Score"
+          },
+          "threshold": {
+            "type": "number",
+            "title": "Threshold",
+            "default": 0.0
+          },
+          "threshold_max": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Threshold Max"
+          },
+          "direction": {
+            "type": "string",
+            "enum": [
+              "min",
+              "max",
+              "range",
+              "info"
+            ],
+            "title": "Direction",
+            "default": "min"
+          },
+          "details": {
+            "type": "string",
+            "title": "Details",
+            "description": "Evidência curta (termos, frases, números, trechos).",
+            "default": ""
+          },
+          "passed": {
+            "type": "boolean",
+            "title": "Passed",
+            "readOnly": true
+          }
+        },
+        "type": "object",
+        "required": [
+          "name",
+          "score",
+          "passed"
+        ],
+        "title": "MetricResult",
+        "description": "Nota de uma métrica contra o limiar do nível/formato.\n\n`direction`:\n- \"min\":   passa se score >= threshold\n- \"max\":   passa se score <= threshold\n- \"range\": passa se threshold <= score <= threshold_max\n- \"info\":  só reporta (ex.: Flesch no Avançado, que não tem mínimo)"
+      },
+      "NodeCost": {
+        "properties": {
+          "node": {
+            "type": "string",
+            "title": "Node",
+            "description": "extractor, adapter, formatter, refiner, evaluator:deterministic, evaluator:claims, evaluator:judge"
+          },
+          "calls": {
+            "type": "integer",
+            "title": "Calls"
+          },
+          "llm_calls": {
+            "type": "integer",
+            "title": "Llm Calls"
+          },
+          "input_tokens": {
+            "type": "integer",
+            "title": "Input Tokens"
+          },
+          "output_tokens": {
+            "type": "integer",
+            "title": "Output Tokens"
+          },
+          "cost_usd": {
+            "type": "number",
+            "title": "Cost Usd"
+          },
+          "latency_ms": {
+            "type": "number",
+            "title": "Latency Ms",
+            "description": "Soma das latências das chamadas (chamadas paralelas se sobrepõem)."
+          }
+        },
+        "type": "object",
+        "required": [
+          "node",
+          "calls",
+          "llm_calls",
+          "input_tokens",
+          "output_tokens",
+          "cost_usd",
+          "latency_ms"
+        ],
+        "title": "NodeCost"
+      },
+      "ReflectionStats": {
+        "properties": {
+          "doc_id": {
+            "type": "string",
+            "title": "Doc Id"
+          },
+          "cells": {
+            "type": "integer",
+            "title": "Cells"
+          },
+          "pct_approved_first": {
+            "type": "number",
+            "title": "Pct Approved First"
+          },
+          "pct_approved_final": {
+            "type": "number",
+            "title": "Pct Approved Final"
+          },
+          "mean_attempts": {
+            "type": "number",
+            "title": "Mean Attempts"
+          },
+          "refined_cells": {
+            "type": "integer",
+            "title": "Refined Cells"
+          },
+          "stagnated": {
+            "type": "integer",
+            "title": "Stagnated"
+          },
+          "regressions": {
+            "type": "integer",
+            "title": "Regressions"
+          },
+          "extra_llm_calls": {
+            "type": "integer",
+            "title": "Extra Llm Calls"
+          },
+          "extra_tokens": {
+            "type": "integer",
+            "title": "Extra Tokens"
+          },
+          "extra_cost_usd": {
+            "type": "number",
+            "title": "Extra Cost Usd"
+          },
+          "extra_latency_s": {
+            "type": "number",
+            "title": "Extra Latency S"
+          }
+        },
+        "type": "object",
+        "required": [
+          "doc_id",
+          "cells",
+          "pct_approved_first",
+          "pct_approved_final",
+          "mean_attempts",
+          "refined_cells",
+          "stagnated",
+          "regressions",
+          "extra_llm_calls",
+          "extra_tokens",
+          "extra_cost_usd",
+          "extra_latency_s"
+        ],
+        "title": "ReflectionStats"
+      },
+      "RunCreate": {
+        "properties": {
+          "doc_id": {
+            "type": "string",
+            "title": "Doc Id"
+          },
+          "force": {
+            "type": "boolean",
+            "title": "Force",
+            "description": "Ignora o cache e chama o LLM.",
+            "default": false
+          },
+          "force_drift": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Audience"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Demo do reflection loop."
+          }
+        },
+        "type": "object",
+        "required": [
+          "doc_id"
+        ],
+        "title": "RunCreate"
+      },
+      "RunResults": {
+        "properties": {
+          "run_id": {
+            "type": "string",
+            "title": "Run Id"
+          },
+          "doc_id": {
+            "type": "string",
+            "title": "Doc Id"
+          },
+          "created_at": {
+            "type": "string",
+            "title": "Created At"
+          },
+          "prompts_hash": {
+            "type": "string",
+            "title": "Prompts Hash"
+          },
+          "models": {
+            "additionalProperties": {
+              "type": "string"
+            },
+            "type": "object",
+            "title": "Models"
+          },
+          "force_drift": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Force Drift"
+          },
+          "cells": {
+            "items": {
+              "$ref": "#/components/schemas/CellResult"
+            },
+            "type": "array",
+            "title": "Cells",
+            "description": "Matriz 3x3, ordenada por nível e formato."
+          },
+          "adapted": {
+            "additionalProperties": {
+              "$ref": "#/components/schemas/AdaptedContent"
+            },
+            "type": "object",
+            "title": "Adapted",
+            "description": "Afirmações por nível com os ids das âncoras que as sustentam."
+          },
+          "generation": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Totals"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "evaluation": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Totals"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "warnings": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Warnings"
+          },
+          "node_costs": {
+            "items": {
+              "$ref": "#/components/schemas/NodeCost"
+            },
+            "type": "array",
+            "title": "Node Costs"
+          }
+        },
+        "type": "object",
+        "required": [
+          "run_id",
+          "doc_id",
+          "created_at",
+          "prompts_hash",
+          "models",
+          "force_drift",
+          "cells",
+          "adapted",
+          "generation",
+          "evaluation",
+          "warnings"
+        ],
+        "title": "RunResults"
+      },
+      "RunStatus": {
+        "properties": {
+          "run_id": {
+            "type": "string",
+            "title": "Run Id"
+          },
+          "doc_id": {
+            "type": "string",
+            "title": "Doc Id"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "queued",
+              "running",
+              "completed",
+              "failed"
+            ],
+            "title": "Status"
+          },
+          "cached": {
+            "type": "boolean",
+            "title": "Cached",
+            "description": "Servido do cache, sem chamar LLM."
+          },
+          "progress": {
+            "additionalProperties": {
+              "$ref": "#/components/schemas/StageProgress"
+            },
+            "type": "object",
+            "title": "Progress"
+          },
+          "error": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Error"
+          }
+        },
+        "type": "object",
+        "required": [
+          "run_id",
+          "doc_id",
+          "status",
+          "cached",
+          "progress"
+        ],
+        "title": "RunStatus"
+      },
+      "ScriptBlock": {
+        "properties": {
+          "start_s": {
+            "type": "number",
+            "minimum": 0.0,
+            "title": "Start S"
+          },
+          "end_s": {
+            "type": "number",
+            "exclusiveMinimum": 0.0,
+            "title": "End S"
+          },
+          "visual_hook": {
+            "type": "string",
+            "title": "Visual Hook",
+            "description": "Indicação visual (texto na tela, gráfico, corte)."
+          },
+          "speech": {
+            "type": "string",
+            "title": "Speech",
+            "description": "Fala do apresentador neste bloco."
+          },
+          "anchor_ids": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Anchor Ids",
+            "description": "Ids das âncoras factuais que sustentam o trecho."
+          }
+        },
+        "type": "object",
+        "required": [
+          "start_s",
+          "end_s",
+          "visual_hook",
+          "speech"
+        ],
+        "title": "ScriptBlock",
+        "description": "Bloco do roteiro com marcação de tempo em segundos."
+      },
+      "Section": {
+        "properties": {
+          "heading": {
+            "type": "string",
+            "title": "Heading"
+          },
+          "body": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Body"
+          },
+          "anchor_ids": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Anchor Ids",
+            "description": "Ids das âncoras factuais que sustentam o trecho."
+          }
+        },
+        "type": "object",
+        "required": [
+          "heading",
+          "body"
+        ],
+        "title": "Section",
+        "description": "Seção do texto analítico."
+      },
+      "Slide": {
+        "properties": {
+          "role": {
+            "type": "string",
+            "enum": [
+              "gancho",
+              "corpo",
+              "conclusao"
+            ],
+            "title": "Role"
+          },
+          "title": {
+            "type": "string",
+            "title": "Title"
+          },
+          "text": {
+            "type": "string",
+            "title": "Text"
+          },
+          "anchor_ids": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Anchor Ids",
+            "description": "Ids das âncoras factuais que sustentam o trecho."
+          }
+        },
+        "type": "object",
+        "required": [
+          "role",
+          "title",
+          "text"
+        ],
+        "title": "Slide",
+        "description": "Um slide do carrossel: título curto e texto curto."
+      },
+      "StageProgress": {
+        "properties": {
+          "done": {
+            "type": "integer",
+            "title": "Done",
+            "default": 0
+          },
+          "total": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Total",
+            "description": "None quando o total depende do loop (avaliador/refiner)."
+          }
+        },
+        "type": "object",
+        "title": "StageProgress"
+      },
+      "SummaryResponse": {
+        "properties": {
+          "documents": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Documents"
+          },
+          "levels": {
+            "items": {
+              "$ref": "#/components/schemas/LevelSummary"
+            },
+            "type": "array",
+            "title": "Levels"
+          },
+          "confusion": {
+            "additionalProperties": {
+              "$ref": "#/components/schemas/ConfusionMatrix"
+            },
+            "type": "object",
+            "title": "Confusion",
+            "description": "Por sistema: 'pipeline' e, se avaliado, 'baseline'."
+          },
+          "pass_rate_by_system": {
+            "additionalProperties": {
+              "type": "number"
+            },
+            "type": "object",
+            "title": "Pass Rate By System"
+          },
+          "reflection": {
+            "items": {
+              "$ref": "#/components/schemas/ReflectionStats"
+            },
+            "type": "array",
+            "title": "Reflection"
+          },
+          "notes": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Notes"
+          },
+          "cells": {
+            "items": {
+              "$ref": "#/components/schemas/CellMetrics"
+            },
+            "type": "array",
+            "title": "Cells",
+            "description": "Métricas da versão entregue de cada saída."
+          },
+          "node_costs": {
+            "items": {
+              "$ref": "#/components/schemas/NodeCost"
+            },
+            "type": "array",
+            "title": "Node Costs",
+            "description": "Pipeline, somado entre documentos."
+          }
+        },
+        "type": "object",
+        "required": [
+          "documents",
+          "levels",
+          "confusion",
+          "pass_rate_by_system",
+          "reflection",
+          "notes"
+        ],
+        "title": "SummaryResponse"
+      },
+      "TermOccurrenceOut": {
+        "properties": {
+          "termo": {
+            "type": "string",
+            "title": "Termo"
+          },
+          "surface": {
+            "type": "string",
+            "title": "Surface",
+            "description": "Trecho exato do texto que casou (para destacar)."
+          },
+          "sentence_index": {
+            "type": "integer",
+            "title": "Sentence Index"
+          },
+          "sentence": {
+            "type": "string",
+            "title": "Sentence"
+          },
+          "needs_context": {
+            "type": "boolean",
+            "title": "Needs Context",
+            "description": "O nível mínimo do termo é superior ao nível do texto."
+          },
+          "marker": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Marker",
+            "description": "Marcador de explicação encontrado (mesma frase, anterior ou seguinte por anáfora)."
+          },
+          "contextualized": {
+            "type": "boolean",
+            "title": "Contextualized"
+          }
+        },
+        "type": "object",
+        "required": [
+          "termo",
+          "surface",
+          "sentence_index",
+          "sentence",
+          "needs_context",
+          "marker",
+          "contextualized"
+        ],
+        "title": "TermOccurrenceOut"
+      },
+      "ThresholdsResponse": {
+        "properties": {
+          "levels": {
+            "additionalProperties": {
+              "additionalProperties": {
+                "$ref": "#/components/schemas/BoundOut"
+              },
+              "type": "object"
+            },
+            "type": "object",
+            "title": "Levels",
+            "description": "Por nível: flesch_pt, term_density, term_context_pct."
+          },
+          "common": {
+            "additionalProperties": {
+              "$ref": "#/components/schemas/BoundOut"
+            },
+            "type": "object",
+            "title": "Common",
+            "description": "Comuns a todos os níveis (fidelidade e judge)."
+          }
+        },
+        "type": "object",
+        "required": [
+          "levels",
+          "common"
+        ],
+        "title": "ThresholdsResponse"
+      },
+      "Totals": {
+        "properties": {
+          "llm_calls": {
+            "type": "integer",
+            "title": "Llm Calls"
+          },
+          "input_tokens": {
+            "type": "integer",
+            "title": "Input Tokens"
+          },
+          "output_tokens": {
+            "type": "integer",
+            "title": "Output Tokens"
+          },
+          "cost_usd": {
+            "type": "number",
+            "title": "Cost Usd"
+          },
+          "wall_ms": {
+            "type": "number",
+            "title": "Wall Ms"
+          }
+        },
+        "type": "object",
+        "required": [
+          "llm_calls",
+          "input_tokens",
+          "output_tokens",
+          "cost_usd",
+          "wall_ms"
+        ],
+        "title": "Totals"
+      },
+      "TradeoffRow": {
+        "properties": {
+          "config": {
+            "type": "string",
+            "title": "Config"
+          },
+          "modelo_geracao": {
+            "type": "string",
+            "title": "Modelo Geracao"
+          },
+          "max_tentativas": {
+            "type": "integer",
+            "title": "Max Tentativas"
+          },
+          "aprovacao": {
+            "type": "number",
+            "title": "Aprovacao"
+          },
+          "flesch_medio": {
+            "type": "number",
+            "title": "Flesch Medio"
+          },
+          "densidade_media": {
+            "type": "number",
+            "title": "Densidade Media"
+          },
+          "fidelidade_media": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Fidelidade Media"
+          },
+          "tentativas_medias": {
+            "type": "number",
+            "title": "Tentativas Medias"
+          },
+          "chamadas_llm": {
+            "type": "integer",
+            "title": "Chamadas Llm"
+          },
+          "tokens": {
+            "type": "integer",
+            "title": "Tokens"
+          },
+          "custo_usd": {
+            "type": "number",
+            "title": "Custo Usd"
+          },
+          "latencia_s": {
+            "type": "number",
+            "title": "Latencia S"
+          },
+          "latencia_estimada": {
+            "type": "boolean",
+            "title": "Latencia Estimada",
+            "description": "True quando a latência vem do caminho crítico da 1ª passada."
+          }
+        },
+        "type": "object",
+        "required": [
+          "config",
+          "modelo_geracao",
+          "max_tentativas",
+          "aprovacao",
+          "flesch_medio",
+          "densidade_media",
+          "tentativas_medias",
+          "chamadas_llm",
+          "tokens",
+          "custo_usd",
+          "latencia_s",
+          "latencia_estimada"
+        ],
+        "title": "TradeoffRow"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          },
+          "input": {
+            "title": "Input"
+          },
+          "ctx": {
+            "type": "object",
+            "title": "Context"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      },
+      "VarianceRow": {
+        "properties": {
+          "metric": {
+            "type": "string",
+            "title": "Metric"
+          },
+          "tipo": {
+            "type": "string",
+            "enum": [
+              "deterministica",
+              "llm"
+            ],
+            "title": "Tipo"
+          },
+          "media": {
+            "type": "number",
+            "title": "Media"
+          },
+          "desvio_medio": {
+            "type": "number",
+            "title": "Desvio Medio",
+            "description": "Desvio padrão médio entre repetições, por saída."
+          },
+          "desvio_max": {
+            "type": "number",
+            "title": "Desvio Max"
+          }
+        },
+        "type": "object",
+        "required": [
+          "metric",
+          "tipo",
+          "media",
+          "desvio_medio",
+          "desvio_max"
+        ],
+        "title": "VarianceRow"
+      },
+      "VideoScriptBody": {
+        "properties": {
+          "kind": {
+            "type": "string",
+            "const": "roteiro",
+            "title": "Kind",
+            "default": "roteiro"
+          },
+          "blocks": {
+            "items": {
+              "$ref": "#/components/schemas/ScriptBlock"
+            },
+            "type": "array",
+            "minItems": 1,
+            "title": "Blocks"
+          }
+        },
+        "type": "object",
+        "required": [
+          "blocks"
+        ],
+        "title": "VideoScriptBody",
+        "description": "Roteiro de vídeo curto (até 60 s), blocos em ordem cronológica.\n\nO limite de 60 s é estrutural (rejeita). O limite de ~150 palavras de fala\né checado à parte e só registrado, para não descartar a saída."
+      }
+    }
+  }
+}

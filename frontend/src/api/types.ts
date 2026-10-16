@@ -1,0 +1,28 @@
+import type { components } from "./schema";
+
+type S = components["schemas"];
+export type DocumentInfo = S["DocumentInfo"];
+export type RunStatus = S["RunStatus"];
+export type RunResults = S["RunResults"];
+export type CellResult = S["CellResult"];
+export type CellStatus = S["CellStatus"];
+export type AttemptRecord = S["AttemptRecord"];
+export type EvaluationReport = S["EvaluationReport"];
+export type MetricResult = S["MetricResult"];
+export type GeneratedContent = S["GeneratedContent"];
+export type ArticleBody = S["ArticleBody"];
+export type CarouselBody = S["CarouselBody"];
+export type VideoScriptBody = S["VideoScriptBody"];
+export type AnchorOut = S["AnchorOut"];
+export type ClaimVerdict = S["ClaimVerdict"];
+export type JudgeScore = S["JudgeScore"];
+export type GlossaryTerm = S["GlossaryTermOut"];
+export type TermOccurrence = S["TermOccurrenceOut"];
+export type ThresholdsResponse = S["ThresholdsResponse"];
+export type Bound = S["BoundOut"];
+export type SummaryResponse = S["SummaryResponse"];
+export type ExperimentResponse = S["ExperimentResponse"];
+export type CellMetrics = S["CellMetrics"];
+export type NodeCost = S["NodeCost"];
+export type Audience = S["CellResult"]["audience"];
+export type Format = S["CellResult"]["format"];
