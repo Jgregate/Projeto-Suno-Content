@@ -1,0 +1,8 @@
+doc_id,node,llm_calls,input_tokens,output_tokens,cost_usd,latency_s
+fato-relevante-banco-bradesco-s-a-2026-10-08__fato-relevante-banco-bradesco-s-a-2026-09-30,adapter,3,4701,1621,0.000838875,2.9083
+fato-relevante-banco-bradesco-s-a-2026-10-08__fato-relevante-banco-bradesco-s-a-2026-09-30,evaluator:claims,23,35581,30916,0.023886749999999998,1099.4624
+fato-relevante-banco-bradesco-s-a-2026-10-08__fato-relevante-banco-bradesco-s-a-2026-09-30,evaluator:deterministic,0,0,0,0.0,6.2939
+fato-relevante-banco-bradesco-s-a-2026-10-08__fato-relevante-banco-bradesco-s-a-2026-09-30,evaluator:judge,23,27729,7684,0.0529192,93.8919
+fato-relevante-banco-bradesco-s-a-2026-10-08__fato-relevante-banco-bradesco-s-a-2026-09-30,extractor,1,1913,2016,0.00149655,4.7454
+fato-relevante-banco-bradesco-s-a-2026-10-08__fato-relevante-banco-bradesco-s-a-2026-09-30,formatter,9,9894,4597,0.0021211499999999996,399.3648
+fato-relevante-banco-bradesco-s-a-2026-10-08__fato-relevante-banco-bradesco-s-a-2026-09-30,refiner,14,35811,7861,0.005044125,629.8832

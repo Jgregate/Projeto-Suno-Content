@@ -1,0 +1,27 @@
+doc_id,node,llm_calls,input_tokens,output_tokens,cost_usd,latency_s,config
+release-itau-2t26,adapter,3,4693,1571,0.000823275,3.4892,barato + reflection
+release-itau-2t26,evaluator:claims,23,33469,27855,0.02173335,906.38,barato + reflection
+release-itau-2t26,evaluator:deterministic,0,0,0,0.0,11.1342,barato + reflection
+release-itau-2t26,evaluator:judge,23,27191,7018,0.0498248,92.488,barato + reflection
+release-itau-2t26,extractor,1,2494,1894,0.0015104999999999997,4.439100000000001,barato + reflection
+release-itau-2t26,formatter,9,13352,5895,0.0027699,620.0403,barato + reflection
+release-itau-2t26,refiner,14,35201,7966,0.005029875,603.908,barato + reflection
+release-itau-2t26,adapter,3,4693,1571,0.000823275,3.4892,barato sem reflection
+release-itau-2t26,evaluator:claims,9,13109,11870,0.00908835,417.7818,barato sem reflection
+release-itau-2t26,evaluator:deterministic,0,0,0,0.0,2.637,barato sem reflection
+release-itau-2t26,evaluator:judge,9,10603,2807,0.0197104,48.242599999999996,barato sem reflection
+release-itau-2t26,extractor,1,2494,1894,0.0015104999999999997,4.439100000000001,barato sem reflection
+release-itau-2t26,formatter,9,13352,5895,0.0027699,620.0403,barato sem reflection
+release-itau-2t26,adapter,3,4426,2224,0.0019982999999999997,22.0192,forte + reflection
+release-itau-2t26,evaluator:claims,26,35944,28953,0.0227634,1970.8896,forte + reflection
+release-itau-2t26,evaluator:deterministic,0,0,0,0.0,15.5308,forte + reflection
+release-itau-2t26,evaluator:judge,26,30374,8242,0.0572672,58.8944,forte + reflection
+release-itau-2t26,extractor,1,2494,1947,0.0015423,4.6855,forte + reflection
+release-itau-2t26,formatter,9,11672,6950,0.0059207999999999995,679.7389,forte + reflection
+release-itau-2t26,refiner,17,40404,15318,0.0152514,1865.3463000000002,forte + reflection
+release-itau-2t26,adapter,3,4426,2224,0.0019982999999999997,22.0192,forte sem reflection
+release-itau-2t26,evaluator:claims,9,12396,9896,0.007797,760.5128,forte sem reflection
+release-itau-2t26,evaluator:deterministic,0,0,0,0.0,2.4341,forte sem reflection
+release-itau-2t26,evaluator:judge,9,10523,2855,0.0198384,40.9486,forte sem reflection
+release-itau-2t26,extractor,1,2494,1947,0.0015423,4.6855,forte sem reflection
+release-itau-2t26,formatter,9,11672,6950,0.0059207999999999995,679.7389,forte sem reflection

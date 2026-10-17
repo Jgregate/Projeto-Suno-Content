@@ -1,0 +1,7 @@
+system,audience,saidas,aprovacao,flesch_pt,term_density,term_context_pct,claim_support,judge_adequacao_publico,judge_nuances
+baseline,avancado,9,0.0,30.047,4.451,100.0,0.6,3.444,3.222
+baseline,iniciante,9,0.0,39.869,4.759,16.019,0.632,2.0,2.333
+baseline,intermediario,9,0.0,31.481,4.044,48.889,0.625,3.778,3.111
+pipeline,avancado,9,0.222,36.454,5.446,100.0,0.943,4.889,4.0
+pipeline,iniciante,9,0.0,63.829,2.894,78.333,0.887,4.111,3.111
+pipeline,intermediario,9,0.111,44.122,5.263,76.667,0.922,3.778,3.667

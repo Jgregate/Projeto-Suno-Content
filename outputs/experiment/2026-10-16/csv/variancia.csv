@@ -1,0 +1,11 @@
+metric,media,desvio_medio_entre_repeticoes,desvio_max,tipo,repeticoes
+claim_contradictions,0.0,0.0,0.0,llm,2
+claim_support,0.8991,0.0439,0.1768,llm,2
+flesch_pt,44.8722,0.0,0.0,deterministica,2
+judge_adequacao_publico,4.3333,0.0,0.0,llm,2
+judge_formato,3.6667,0.0,0.0,llm,2
+judge_nuances,4.4444,0.0,0.0,llm,2
+judge_tom,5.0,0.0,0.0,llm,2
+numeric_grounding,0.4444,0.0,0.0,deterministica,2
+term_context_pct,85.2778,0.0,0.0,deterministica,2
+term_density,4.2989,0.0,0.0,deterministica,2

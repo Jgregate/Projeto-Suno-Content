@@ -1,0 +1,5 @@
+config,modelo_geracao,max_tentativas,aprovacao,flesch_medio,densidade_media,fidelidade_media,tentativas_medias,chamadas_llm,tokens,custo_usd,latencia_s,latencia
+barato + reflection,groq:openai/gpt-oss-20b,3,0.111,44.87,4.3,0.912,2.56,73,168599,0.081692,617.37,medida
+barato sem reflection,groq:openai/gpt-oss-20b,1,0.0,42.26,4.17,0.841,1.0,31,68288,0.033902,258.19,estimada (caminho crítico)
+forte + reflection,groq:openai/gpt-oss-120b,3,0.0,47.7,4.66,0.855,2.89,82,188948,0.104743,1034.55,medida
+forte sem reflection,groq:openai/gpt-oss-120b,1,0.0,39.8,4.11,0.873,1.0,31,65383,0.037097,334.38,estimada (caminho crítico)

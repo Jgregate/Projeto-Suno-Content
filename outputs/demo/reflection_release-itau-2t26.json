@@ -1,0 +1,880 @@
+{
+  "doc_id": "release-itau-2t26",
+  "drift_level": "iniciante",
+  "forced": true,
+  "focus_cell": null,
+  "prompts_hash": "45574b5dc45e",
+  "cells": {
+    "iniciante:carrossel": {
+      "status": {
+        "status": "reprovado_final",
+        "attempts": 3,
+        "delivered_attempt": 3,
+        "best_score": 0.9,
+        "stop_reason": "max_tentativas",
+        "regressions": []
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "aggregate_score": 0.6321,
+          "passed": false,
+          "metrics": [
+            {
+              "name": "flesch_pt",
+              "score": 36.69,
+              "bound": ">= 60",
+              "passed": false
+            },
+            {
+              "name": "term_density",
+              "score": 7.77,
+              "bound": "<= 2",
+              "passed": false
+            },
+            {
+              "name": "term_context_pct",
+              "score": 25.0,
+              "bound": ">= 100",
+              "passed": false
+            },
+            {
+              "name": "numeric_grounding",
+              "score": 0.0,
+              "bound": "<= 0",
+              "passed": true
+            },
+            {
+              "name": "claim_support",
+              "score": 0.909,
+              "bound": ">= 0.95",
+              "passed": false
+            },
+            {
+              "name": "claim_contradictions",
+              "score": 0.0,
+              "bound": "<= 0",
+              "passed": true
+            },
+            {
+              "name": "judge_adequacao_publico",
+              "score": 1.0,
+              "bound": ">= 4",
+              "passed": false
+            },
+            {
+              "name": "judge_tom",
+              "score": 1.0,
+              "bound": ">= 4",
+              "passed": false
+            },
+            {
+              "name": "judge_nuances",
+              "score": 5.0,
+              "bound": ">= 4",
+              "passed": true
+            },
+            {
+              "name": "judge_formato",
+              "score": 4.0,
+              "bound": ">= 4",
+              "passed": true
+            }
+          ],
+          "flags": [],
+          "regressions": [],
+          "injected_feedback": "",
+          "feedback": "- Flesch 36.7 < 60 exigido; 18% das palavras têm 4+ sílabas, troque por palavras curtas. Frase mais longa: \"Como o desempenho recente afeta a estratégia de gestão de risco e capital?\"\n- Densidade de termos técnicos 7.8/100 palavras > 2: corte ou troque por palavras do dia a dia: CET I, ROE, carteira de crédito, lucro líquido recorrente, margem financeira.\n- 25% dos termos contextualizados < 100% exigido: 'lucro líquido recorrente' sem explicação na frase 3 (\"Lucro Recorrente\"); 'lucro líquido recorrente' sem explicação na frase 4 (\"Lucro recorrente gerencial R$12,4 bilhões, superando consenso.\"); 'ROE' sem explicação na frase 5 (\"ROE e Capitalização\"); 'carteira de crédito' sem explicação na frase 8 (\"Carteira de Crédito\"); 'margem financeira' sem explicação na frase 14 (\"Margem financeira +3,3 %.\"). Explique cada um na mesma frase ou na anterior (ex.: 'ou seja', 'funciona como', parênteses), ou logo na frase seguinte começando por 'Esse/Essa/Isso'.\n- Fidelidade 0.91 < 0.95: afirmações sem âncora: \"ROE foi de 24,3 % no 2T26, representando queda de 1,5 ponto percentual em relaç…\". Remova ou reescreva preservando a condicionante da fonte.\n- Judge/adequacao_publico 1 < 4: \"ROE 24,3 % (‑1,5 p.p. vs 2T25). CET I 12,3 %.\" — O texto utiliza termos técnicos como ROE, CET I e margem financeira sem as analogias cotidianas obrigatórias para o público iniciante.\n- Judge/tom 1 < 4: \"Como o desempenho recente afeta a estratégia de gestão de risco e capital?\" — O tom é excessivamente técnico e corporativo, não respeitoso nem acessível para leigos, falhando em simplificar a linguagem.",
+          "text": "Impacto do 2T26 no Itaú\nComo o desempenho recente afeta a estratégia de gestão de risco e capital?\n\nLucro Recorrente\nLucro recorrente gerencial R$12,4 bilhões, superando consenso.\n\nROE e Capitalização\nROE 24,3 % (‑1,5 p.p. vs 2T25). CET I 12,3 %.\n\nCarteira de Crédito\nCarteira total R$1,5 trilhão (+2,7 %). Crédito consignado privado +14,3 %.\n\nRisco de Crédito\nInadimplência >90 dias 1,9 % (sexto trimestre).\n\nEficiência Operacional\nMargem financeira +3,3 %. Despesas não‑juros +3,3 % (R$16,7 bilhões).\n\nReceitas Diversificadas\nServiços e seguros +0,4 %. Projeção 2026: 2,0‑5,0 %.\n\nVisão Estratégica\nPosição sólida, expansão controlada, risco estável, ROE robusto, mas em leve declínio.",
+          "diff_from_previous": [],
+          "tokens": {
+            "input": 3850,
+            "output": 2232
+          },
+          "cost_usd": 0.003464,
+          "latency_ms": 130206.7
+        },
+        {
+          "attempt": 2,
+          "aggregate_score": 0.8925,
+          "passed": false,
+          "metrics": [
+            {
+              "name": "flesch_pt",
+              "score": 74.39,
+              "bound": ">= 60",
+              "passed": true
+            },
+            {
+              "name": "term_density",
+              "score": 0.61,
+              "bound": "<= 2",
+              "passed": true
+            },
+            {
+              "name": "term_context_pct",
+              "score": 0.0,
+              "bound": ">= 100",
+              "passed": false
+            },
+            {
+              "name": "numeric_grounding",
+              "score": 0.0,
+              "bound": "<= 0",
+              "passed": true
+            },
+            {
+              "name": "claim_support",
+              "score": 0.875,
+              "bound": ">= 0.95",
+              "passed": false
+            },
+            {
+              "name": "claim_contradictions",
+              "score": 0.0,
+              "bound": "<= 0",
+              "passed": true
+            },
+            {
+              "name": "judge_adequacao_publico",
+              "score": 5.0,
+              "bound": ">= 4",
+              "passed": true
+            },
+            {
+              "name": "judge_tom",
+              "score": 5.0,
+              "bound": ">= 4",
+              "passed": true
+            },
+            {
+              "name": "judge_nuances",
+              "score": 5.0,
+              "bound": ">= 4",
+              "passed": true
+            },
+            {
+              "name": "judge_formato",
+              "score": 4.0,
+              "bound": ">= 4",
+              "passed": true
+            }
+          ],
+          "flags": [],
+          "regressions": [],
+          "injected_feedback": "- Flesch 36.7 < 60 exigido; 18% das palavras têm 4+ sílabas, troque por palavras curtas. Frase mais longa: \"Como o desempenho recente afeta a estratégia de gestão de risco e capital?\"\n- Densidade de termos técnicos 7.8/100 palavras > 2: corte ou troque por palavras do dia a dia: CET I, ROE, carteira de crédito, lucro líquido recorrente, margem financeira.\n- 25% dos termos contextualizados < 100% exigido: 'lucro líquido recorrente' sem explicação na frase 3 (\"Lucro Recorrente\"); 'lucro líquido recorrente' sem explicação na frase 4 (\"Lucro recorrente gerencial R$12,4 bilhões, superando consenso.\"); 'ROE' sem explicação na frase 5 (\"ROE e Capitalização\"); 'carteira de crédito' sem explicação na frase 8 (\"Carteira de Crédito\"); 'margem financeira' sem explicação na frase 14 (\"Margem financeira +3,3 %.\"). Explique cada um na mesma frase ou na anterior (ex.: 'ou seja', 'funciona como', parênteses), ou logo na frase seguinte começando por 'Esse/Essa/Isso'.\n- Fidelidade 0.91 < 0.95: afirmações sem âncora: \"ROE foi de 24,3 % no 2T26, representando queda de 1,5 ponto percentual em relaç…\". Remova ou reescreva preservando a condicionante da fonte.\n- Judge/adequacao_publico 1 < 4: \"ROE 24,3 % (‑1,5 p.p. vs 2T25). CET I 12,3 %.\" — O texto utiliza termos técnicos como ROE, CET I e margem financeira sem as analogias cotidianas obrigatórias para o público iniciante.\n- Judge/tom 1 < 4: \"Como o desempenho recente afeta a estratégia de gestão de risco e capital?\" — O tom é excessivamente técnico e corporativo, não respeitoso nem acessível para leigos, falhando em simplificar a linguagem.",
+          "feedback": "- 0% dos termos contextualizados < 100% exigido: 'lucro líquido recorrente' sem explicação na frase 3 (\"Lucro Recorrente\"). Explique cada um na mesma frase ou na anterior (ex.: 'ou seja', 'funciona como', parênteses), ou logo na frase seguinte começando por 'Esse/Essa/Isso'.\n- Fidelidade 0.88 < 0.95: afirmações sem âncora: \"O retorno para os donos está um pouco menor que no ano passado.\". Remova ou reescreva preservando a condicionante da fonte.",
+          "text": "O que mudou no Itaú no 2T26\nO Itaú teve resultados que afetam o seu bolso e a forma como o banco cuida do seu dinheiro.\n\nLucro Recorrente\nO banco ganhou R$12,4 bilhões de lucro que costuma repetir a cada trimestre, superando o que os analistas esperavam.\n\nRendimento dos Donos\nO retorno sobre o dinheiro que os donos investiram ficou em 24,3 %, ou seja, a cada real investido, o banco trouxe quase 24 centavos de lucro.\n\nEmpréstimos e Crédito\nO Itaú emprestou R$1,5 trilhão, um pouco mais de 2,7 % a mais que no trimestre anterior. O crédito consignado privado cresceu 14,3 %.\n\nRisco de Crédito\nA taxa de clientes que não pagaram empréstimos há mais de 90 dias ficou em 1,9 %, o mesmo que nos últimos períodos.\n\nVisão para o Futuro\nO Itaú mantém uma posição forte, continua crescendo de forma controlada e protege bem o seu capital, mas o retorno para os donos está um pouco menor que no ano passado.",
+          "diff_from_previous": [
+            "--- antes",
+            "+++ depois",
+            "@@ -1,2 +1,2 @@",
+            "-Impacto do 2T26 no Itaú",
+            "-Como o desempenho recente afeta a estratégia de gestão de risco e capital?",
+            "+O que mudou no Itaú no 2T26",
+            "+O Itaú teve resultados que afetam o seu bolso e a forma como o banco cuida do seu dinheiro.",
+            "@@ -4,8 +4,6 @@",
+            "-Lucro recorrente gerencial R$12,4 bilhões, superando consenso.",
+            "-ROE e Capitalização",
+            "-ROE 24,3 % (‑1,5 p.p.",
+            "-vs 2T25).",
+            "-CET I 12,3 %.",
+            "-Carteira de Crédito",
+            "-Carteira total R$1,5 trilhão (+2,7 %).",
+            "-Crédito consignado privado +14,3 %.",
+            "+O banco ganhou R$12,4 bilhões de lucro que costuma repetir a cada trimestre, superando o que os analistas esperavam.",
+            "+Rendimento dos Donos",
+            "+O retorno sobre o dinheiro que os donos investiram ficou em 24,3 %, ou seja, a cada real investido, o banco trouxe quase 24 centavos de lucro.",
+            "+Empréstimos e Crédito",
+            "+O Itaú emprestou R$1,5 trilhão, um pouco mais de 2,7 % a mais que no trimestre anterior.",
+            "+O crédito consignado privado cresceu 14,3 %.",
+            "@@ -13,9 +11,3 @@",
+            "-Inadimplência >90 dias 1,9 % (sexto trimestre).",
+            "-Eficiência Operacional",
+            "-Margem financeira +3,3 %.",
+            "-Despesas não‑juros +3,3 % (R$16,7 bilhões).",
+            "-Receitas Diversificadas",
+            "-Serviços e seguros +0,4 %.",
+            "-Projeção 2026: 2,0‑5,0 %.",
+            "-Visão Estratégica",
+            "-Posição sólida, expansão controlada, risco estável, ROE robusto, mas em leve declínio.",
+            "+A taxa de clientes que não pagaram empréstimos há mais de 90 dias ficou em 1,9 %, o mesmo que nos últimos períodos.",
+            "+Visão para o Futuro",
+            "+O Itaú mantém uma posição forte, continua crescendo de forma controlada e protege bem o seu capital, mas o retorno para os donos está um pouco menor que no ano passado."
+          ],
+          "tokens": {
+            "input": 5303,
+            "output": 1672
+          },
+          "cost_usd": 0.003124,
+          "latency_ms": 161232.8
+        },
+        {
+          "attempt": 3,
+          "aggregate_score": 0.9,
+          "passed": false,
+          "metrics": [
+            {
+              "name": "flesch_pt",
+              "score": 72.81,
+              "bound": ">= 60",
+              "passed": true
+            },
+            {
+              "name": "term_density",
+              "score": 1.19,
+              "bound": "<= 2",
+              "passed": true
+            },
+            {
+              "name": "term_context_pct",
+              "score": 0.0,
+              "bound": ">= 100",
+              "passed": false
+            },
+            {
+              "name": "numeric_grounding",
+              "score": 0.0,
+              "bound": "<= 0",
+              "passed": true
+            },
+            {
+              "name": "claim_support",
+              "score": 1.0,
+              "bound": ">= 0.95",
+              "passed": true
+            },
+            {
+              "name": "claim_contradictions",
+              "score": 0.0,
+              "bound": "<= 0",
+              "passed": true
+            },
+            {
+              "name": "judge_adequacao_publico",
+              "score": 5.0,
+              "bound": ">= 4",
+              "passed": true
+            },
+            {
+              "name": "judge_tom",
+              "score": 5.0,
+              "bound": ">= 4",
+              "passed": true
+            },
+            {
+              "name": "judge_nuances",
+              "score": 5.0,
+              "bound": ">= 4",
+              "passed": true
+            },
+            {
+              "name": "judge_formato",
+              "score": 4.0,
+              "bound": ">= 4",
+              "passed": true
+            }
+          ],
+          "flags": [],
+          "regressions": [],
+          "injected_feedback": "- 0% dos termos contextualizados < 100% exigido: 'lucro líquido recorrente' sem explicação na frase 3 (\"Lucro Recorrente\"). Explique cada um na mesma frase ou na anterior (ex.: 'ou seja', 'funciona como', parênteses), ou logo na frase seguinte começando por 'Esse/Essa/Isso'.\n- Fidelidade 0.88 < 0.95: afirmações sem âncora: \"O retorno para os donos está um pouco menor que no ano passado.\". Remova ou reescreva preservando a condicionante da fonte.",
+          "feedback": "- 0% dos termos contextualizados < 100% exigido: 'lucro líquido recorrente' sem explicação na frase 3 (\"Lucro Recorrente\"); 'lucro líquido recorrente' sem explicação na frase 5 (\"Esse lucro líquido recorrente é o que o negócio ganha normalmente, se…\"). Explique cada um na mesma frase ou na anterior (ex.: 'ou seja', 'funciona como', parênteses), ou logo na frase seguinte começando por 'Esse/Essa/Isso'.",
+          "text": "O que mudou no Itaú no 2T26\nO Itaú teve resultados que afetam o seu bolso e a forma como o banco cuida do seu dinheiro.\n\nLucro Recorrente\nO banco ganhou R$12,4 bilhões de lucro que costuma repetir a cada trimestre, superando o que os analistas esperavam. Esse lucro líquido recorrente é o que o negócio ganha normalmente, sem efeitos que não se repetem.\n\nRendimento dos Donos\nO retorno sobre o dinheiro que os donos investiram ficou em 24,3 %, ou seja, a cada real investido, o banco trouxe quase 24 centavos de lucro.\n\nEmpréstimos e Crédito\nO Itaú emprestou R$1,5 trilhão, um pouco mais de 2,7 % a mais que no trimestre anterior. O crédito consignado privado cresceu 14,3 %.\n\nRisco de Crédito\nA taxa de clientes que não pagaram empréstimos há mais de 90 dias ficou em 1,9 %, o mesmo que nos últimos períodos.\n\nVisão para o Futuro\nO Itaú mantém uma posição forte, continua crescendo de forma controlada e protege bem o seu capital.",
+          "diff_from_previous": [
+            "--- antes",
+            "+++ depois",
+            "@@ -4,0 +5 @@",
+            "+Esse lucro líquido recorrente é o que o negócio ganha normalmente, sem efeitos que não se repetem.",
+            "@@ -13 +14 @@",
+            "-O Itaú mantém uma posição forte, continua crescendo de forma controlada e protege bem o seu capital, mas o retorno para os donos está um pouco menor que no ano passado.",
+            "+O Itaú mantém uma posição forte, continua crescendo de forma controlada e protege bem o seu capital."
+          ],
+          "tokens": {
+            "input": 4904,
+            "output": 1712
+          },
+          "cost_usd": 0.003164,
+          "latency_ms": 61621.0
+        }
+      ]
+    },
+    "iniciante:roteiro": {
+      "status": {
+        "status": "reprovado_final",
+        "attempts": 3,
+        "delivered_attempt": 3,
+        "best_score": 0.725,
+        "stop_reason": "max_tentativas",
+        "regressions": []
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "aggregate_score": 0.3678,
+          "passed": false,
+          "metrics": [
+            {
+              "name": "flesch_pt",
+              "score": 18.42,
+              "bound": ">= 60",
+              "passed": false
+            },
+            {
+              "name": "term_density",
+              "score": 6.9,
+              "bound": "<= 2",
+              "passed": false
+            },
+            {
+              "name": "term_context_pct",
+              "score": 25.0,
+              "bound": ">= 100",
+              "passed": false
+            },
+            {
+              "name": "numeric_grounding",
+              "score": 0.0,
+              "bound": "<= 0",
+              "passed": true
+            },
+            {
+              "name": "claim_support",
+              "score": 0.571,
+              "bound": ">= 0.95",
+              "passed": false
+            },
+            {
+              "name": "claim_contradictions",
+              "score": 1.0,
+              "bound": "<= 0",
+              "passed": false
+            },
+            {
+              "name": "judge_adequacao_publico",
+              "score": 1.0,
+              "bound": ">= 4",
+              "passed": false
+            },
+            {
+              "name": "judge_tom",
+              "score": 2.0,
+              "bound": ">= 4",
+              "passed": false
+            },
+            {
+              "name": "judge_nuances",
+              "score": 2.0,
+              "bound": ">= 4",
+              "passed": false
+            },
+            {
+              "name": "judge_formato",
+              "score": 1.0,
+              "bound": ">= 4",
+              "passed": false
+            }
+          ],
+          "flags": [],
+          "regressions": [],
+          "injected_feedback": "",
+          "feedback": "- Flesch 18.4 < 60 exigido; 24% das palavras têm 4+ sílabas, troque por palavras curtas. Frase mais longa: \"Indicadores de lucro, capitalização, eficiência e risco apontam para posição sólida, expa…\"\n- Densidade de termos técnicos 6.9/100 palavras > 2: corte ou troque por palavras do dia a dia: CET I, NPL, ROE, carteira de crédito, lucro líquido recorrente.\n- 25% dos termos contextualizados < 100% exigido: 'lucro líquido recorrente' sem explicação na frase 1 (\"Itaú Unibanco 2T26: lucro recorrente de R$ 12,4 bilhões, superando co…\"); 'NPL' sem explicação na frase 4 (\"Inadimplência acima de 90 dias estável em 1,9 % pelo sexto trimestre …\"); 'CET I' sem explicação na frase 5 (\"CET I atingiu 12,3 % no 2T26, níveis confortáveis de capitalização re…\"); 'margem financeira' sem explicação na frase 6 (\"Margem financeira com clientes cresceu 3,3 % no trimestre, evidencian…\"); 'margem financeira' sem explicação na frase 7 (\"Indicadores de lucro, capitalização, eficiência e risco apontam para …\"). Explique cada um na mesma frase ou na anterior (ex.: 'ou seja', 'funciona como', parênteses), ou logo na frase seguinte começando por 'Esse/Essa/Isso'.\n- Fidelidade 0.57 < 0.95: afirmações sem âncora: \"Itaú Unibanco 2T26: lucro recorrente de R$ 12,4 bilhões, superando consenso.\"; \"Indicadores de lucro, capitalização, eficiência e risco apontam para posição só…\". Remova ou reescreva preservando a condicionante da fonte.\n- Afirmação \"ROE recorrente 24,3 % – queda de 1,5 p.p. em relação a 2T25, refletindo leve de…\" contradiz a âncora A15: A15 indica ROE de 22,8 % no 2T25, portanto o ROE de 24,3 % no 2T26 representa aumento, não queda.\n- Judge/adequacao_publico 1 < 4: \"ROE recorrente 24,3 % – queda de 1,5 p.p.\" — O texto usa jargões técnicos (ROE, CET I, p.p.) sem analogias ou explicações, tornando-o incompreensível para o público leigo.\n- Judge/tom 2 < 4: \"Itaú Unibanco 2T26: lucro recorrente de R$ 12,4 bilhões\" — O tom é excessivamente técnico e seco, falhando em ser respeitoso e acessível para um adulto sem vocabulário de mercado.\n- Judge/nuances 2 < 4: \"Margem financeira com clientes cresceu 3,3 % no trimestre\" — O texto distorce a fonte ao atribuir a alta de 3,3% (que se refere a despesas não decorrentes de juros) à margem financeira.\n- Judge/formato 1 < 4: \"Itaú Unibanco 2T26: lucro recorrente de R$ 12,4 bilhões\" — O texto é uma lista de tópicos estáticos, sem gancho falado, indicações visuais ou estrutura de roteiro de vídeo.",
+          "text": "Itaú Unibanco 2T26: lucro recorrente de R$ 12,4 bilhões, superando consenso.\nROE recorrente 24,3 % – queda de 1,5 p.p. em relação a 2T25, refletindo leve declínio.\nCarteira de crédito total R$ 1,5 trilhão, crescimento 2,7 % no trimestre, expansão moderada.\nInadimplência acima de 90 dias estável em 1,9 % pelo sexto trimestre consecutivo, controle de risco de crédito.\nCET I atingiu 12,3 % no 2T26, níveis confortáveis de capitalização regulatória.\nMargem financeira com clientes cresceu 3,3 % no trimestre, evidenciando eficiência de captação e aplicação.\nIndicadores de lucro, capitalização, eficiência e risco apontam para posição sólida, expansão controlada da carteira e inadimplência estável, enquanto margem financeira e ROE permanecem robustos, mas ligeiramente em declínio.",
+          "diff_from_previous": [],
+          "tokens": {
+            "input": 3648,
+            "output": 2352
+          },
+          "cost_usd": 0.00347,
+          "latency_ms": 108011.9
+        },
+        {
+          "attempt": 2,
+          "aggregate_score": 0.7092,
+          "passed": false,
+          "metrics": [
+            {
+              "name": "flesch_pt",
+              "score": 65.09,
+              "bound": ">= 60",
+              "passed": true
+            },
+            {
+              "name": "term_density",
+              "score": 4.11,
+              "bound": "<= 2",
+              "passed": false
+            },
+            {
+              "name": "term_context_pct",
+              "score": 66.67,
+              "bound": ">= 100",
+              "passed": false
+            },
+            {
+              "name": "numeric_grounding",
+              "score": 0.0,
+              "bound": "<= 0",
+              "passed": true
+            },
+            {
+              "name": "claim_support",
+              "score": 0.875,
+              "bound": ">= 0.95",
+              "passed": false
+            },
+            {
+              "name": "claim_contradictions",
+              "score": 0.0,
+              "bound": "<= 0",
+              "passed": true
+            },
+            {
+              "name": "judge_adequacao_publico",
+              "score": 4.0,
+              "bound": ">= 4",
+              "passed": true
+            },
+            {
+              "name": "judge_tom",
+              "score": 5.0,
+              "bound": ">= 4",
+              "passed": true
+            },
+            {
+              "name": "judge_nuances",
+              "score": 1.0,
+              "bound": ">= 4",
+              "passed": false
+            },
+            {
+              "name": "judge_formato",
+              "score": 1.0,
+              "bound": ">= 4",
+              "passed": false
+            }
+          ],
+          "flags": [],
+          "regressions": [],
+          "injected_feedback": "- Flesch 18.4 < 60 exigido; 24% das palavras têm 4+ sílabas, troque por palavras curtas. Frase mais longa: \"Indicadores de lucro, capitalização, eficiência e risco apontam para posição sólida, expa…\"\n- Densidade de termos técnicos 6.9/100 palavras > 2: corte ou troque por palavras do dia a dia: CET I, NPL, ROE, carteira de crédito, lucro líquido recorrente.\n- 25% dos termos contextualizados < 100% exigido: 'lucro líquido recorrente' sem explicação na frase 1 (\"Itaú Unibanco 2T26: lucro recorrente de R$ 12,4 bilhões, superando co…\"); 'NPL' sem explicação na frase 4 (\"Inadimplência acima de 90 dias estável em 1,9 % pelo sexto trimestre …\"); 'CET I' sem explicação na frase 5 (\"CET I atingiu 12,3 % no 2T26, níveis confortáveis de capitalização re…\"); 'margem financeira' sem explicação na frase 6 (\"Margem financeira com clientes cresceu 3,3 % no trimestre, evidencian…\"); 'margem financeira' sem explicação na frase 7 (\"Indicadores de lucro, capitalização, eficiência e risco apontam para …\"). Explique cada um na mesma frase ou na anterior (ex.: 'ou seja', 'funciona como', parênteses), ou logo na frase seguinte começando por 'Esse/Essa/Isso'.\n- Fidelidade 0.57 < 0.95: afirmações sem âncora: \"Itaú Unibanco 2T26: lucro recorrente de R$ 12,4 bilhões, superando consenso.\"; \"Indicadores de lucro, capitalização, eficiência e risco apontam para posição só…\". Remova ou reescreva preservando a condicionante da fonte.\n- Afirmação \"ROE recorrente 24,3 % – queda de 1,5 p.p. em relação a 2T25, refletindo leve de…\" contradiz a âncora A15: A15 indica ROE de 22,8 % no 2T25, portanto o ROE de 24,3 % no 2T26 representa aumento, não queda.\n- Judge/adequacao_publico 1 < 4: \"ROE recorrente 24,3 % – queda de 1,5 p.p.\" — O texto usa jargões técnicos (ROE, CET I, p.p.) sem analogias ou explicações, tornando-o incompreensível para o público leigo.\n- Judge/tom 2 < 4: \"Itaú Unibanco 2T26: lucro recorrente de R$ 12,4 bilhões\" — O tom é excessivamente técnico e seco, falhando em ser respeitoso e acessível para um adulto sem vocabulário de mercado.\n- Judge/nuances 2 < 4: \"Margem financeira com clientes cresceu 3,3 % no trimestre\" — O texto distorce a fonte ao atribuir a alta de 3,3% (que se refere a despesas não decorrentes de juros) à margem financeira.\n- Judge/formato 1 < 4: \"Itaú Unibanco 2T26: lucro recorrente de R$ 12,4 bilhões\" — O texto é uma lista de tópicos estáticos, sem gancho falado, indicações visuais ou estrutura de roteiro de vídeo.",
+          "feedback": "- Densidade de termos técnicos 4.1/100 palavras > 2: corte ou troque por palavras do dia a dia: CET I, NPL, ROE, carteira de crédito, lucro líquido recorrente.\n- 67% dos termos contextualizados < 100% exigido: 'lucro líquido recorrente' sem explicação na frase 1 (\"Itaú Unibanco 2T26 registrou lucro recorrente de R$ 12,4 bilhões, sup…\"); 'NPL' sem explicação na frase 6 (\"A inadimplência acima de 90 dias, que indica clientes que não pagaram…\"). Explique cada um na mesma frase ou na anterior (ex.: 'ou seja', 'funciona como', parênteses), ou logo na frase seguinte começando por 'Esse/Essa/Isso'.\n- Fidelidade 0.88 < 0.95: afirmações sem âncora: \"Isso é 1,5 ponto percentual a mais que no 2T25, quando era 22,8 %.\". Remova ou reescreva preservando a condicionante da fonte.\n- Judge/nuances 1 < 4: \"Isso é 1,5 ponto percentual a mais que no 2T25, quando era 22,8 %.\" — Há distorção factual grave: o documento afirma que o ROE foi 'ligeiramente inferior' ao 2T25, mas o texto afirma que foi 'a mais', invertendo a tendência.\n- Judge/formato 1 < 4: \"Itaú Unibanco 2T26 registrou lucro recorrente de R$ 12,4 bilhões\" — O texto não segue o formato de roteiro de vídeo: falta gancho falado nos 3 primeiros segundos, falta indicação visual e a linguagem é escrita, não falada.",
+          "text": "Itaú Unibanco 2T26 registrou lucro recorrente de R$ 12,4 bilhões, superando o que os analistas esperavam.\nO ROE recorrente, que mostra quanto a empresa ganha por cada real dos donos, ficou em 24,3 %. Isso é 1,5 ponto percentual a mais que no 2T25, quando era 22,8 %.\nA carteira de crédito total, que é o dinheiro que o banco emprestou, atingiu R$ 1,5 trilhão. Cresceu 2,7 % no trimestre, um aumento moderado.\nA inadimplência acima de 90 dias, que indica clientes que não pagaram em tempo, ficou estável em 1,9 %.\nO CET I, que é o colchão de dinheiro próprio do banco para aguentar perdas, atingiu 12,3 %.\nA margem financeira, que é a diferença entre juros cobrados e pagos, cresceu 3,3 % no trimestre.\nOs números mostram que o Itaú está em boa posição: lucro forte, capital sólido, risco estável e crescimento controlado da carteira.",
+          "diff_from_previous": [
+            "--- antes",
+            "+++ depois",
+            "@@ -1,8 +1,9 @@",
+            "-Itaú Unibanco 2T26: lucro recorrente de R$ 12,4 bilhões, superando consenso.",
+            "-ROE recorrente 24,3 % – queda de 1,5 p.p.",
+            "-em relação a 2T25, refletindo leve declínio.",
+            "-Carteira de crédito total R$ 1,5 trilhão, crescimento 2,7 % no trimestre, expansão moderada.",
+            "-Inadimplência acima de 90 dias estável em 1,9 % pelo sexto trimestre consecutivo, controle de risco de crédito.",
+            "-CET I atingiu 12,3 % no 2T26, níveis confortáveis de capitalização regulatória.",
+            "-Margem financeira com clientes cresceu 3,3 % no trimestre, evidenciando eficiência de captação e aplicação.",
+            "-Indicadores de lucro, capitalização, eficiência e risco apontam para posição sólida, expansão controlada da carteira e inadimplência estável, enquanto margem financeira e ROE permanecem robustos, mas ligeiramente em declínio.",
+            "+Itaú Unibanco 2T26 registrou lucro recorrente de R$ 12,4 bilhões, superando o que os analistas esperavam.",
+            "+O ROE recorrente, que mostra quanto a empresa ganha por cada real dos donos, ficou em 24,3 %.",
+            "+Isso é 1,5 ponto percentual a mais que no 2T25, quando era 22,8 %.",
+            "+A carteira de crédito total, que é o dinheiro que o banco emprestou, atingiu R$ 1,5 trilhão.",
+            "+Cresceu 2,7 % no trimestre, um aumento moderado.",
+            "+A inadimplência acima de 90 dias, que indica clientes que não pagaram em tempo, ficou estável em 1,9 %.",
+            "+O CET I, que é o colchão de dinheiro próprio do banco para aguentar perdas, atingiu 12,3 %.",
+            "+A margem financeira, que é a diferença entre juros cobrados e pagos, cresceu 3,3 % no trimestre.",
+            "+Os números mostram que o Itaú está em boa posição: lucro forte, capital sólido, risco estável e crescimento controlado da carteira."
+          ],
+          "tokens": {
+            "input": 5764,
+            "output": 1970
+          },
+          "cost_usd": 0.003415,
+          "latency_ms": 152112.0
+        },
+        {
+          "attempt": 3,
+          "aggregate_score": 0.725,
+          "passed": false,
+          "metrics": [
+            {
+              "name": "flesch_pt",
+              "score": 68.98,
+              "bound": ">= 60",
+              "passed": true
+            },
+            {
+              "name": "term_density",
+              "score": 4.55,
+              "bound": "<= 2",
+              "passed": false
+            },
+            {
+              "name": "term_context_pct",
+              "score": 50.0,
+              "bound": ">= 100",
+              "passed": false
+            },
+            {
+              "name": "numeric_grounding",
+              "score": 0.0,
+              "bound": "<= 0",
+              "passed": true
+            },
+            {
+              "name": "claim_support",
+              "score": 1.0,
+              "bound": ">= 0.95",
+              "passed": true
+            },
+            {
+              "name": "claim_contradictions",
+              "score": 0.0,
+              "bound": "<= 0",
+              "passed": true
+            },
+            {
+              "name": "judge_adequacao_publico",
+              "score": 5.0,
+              "bound": ">= 4",
+              "passed": true
+            },
+            {
+              "name": "judge_tom",
+              "score": 5.0,
+              "bound": ">= 4",
+              "passed": true
+            },
+            {
+              "name": "judge_nuances",
+              "score": 2.0,
+              "bound": ">= 4",
+              "passed": false
+            },
+            {
+              "name": "judge_formato",
+              "score": 1.0,
+              "bound": ">= 4",
+              "passed": false
+            }
+          ],
+          "flags": [],
+          "regressions": [],
+          "injected_feedback": "- Densidade de termos técnicos 4.1/100 palavras > 2: corte ou troque por palavras do dia a dia: CET I, NPL, ROE, carteira de crédito, lucro líquido recorrente.\n- 67% dos termos contextualizados < 100% exigido: 'lucro líquido recorrente' sem explicação na frase 1 (\"Itaú Unibanco 2T26 registrou lucro recorrente de R$ 12,4 bilhões, sup…\"); 'NPL' sem explicação na frase 6 (\"A inadimplência acima de 90 dias, que indica clientes que não pagaram…\"). Explique cada um na mesma frase ou na anterior (ex.: 'ou seja', 'funciona como', parênteses), ou logo na frase seguinte começando por 'Esse/Essa/Isso'.\n- Fidelidade 0.88 < 0.95: afirmações sem âncora: \"Isso é 1,5 ponto percentual a mais que no 2T25, quando era 22,8 %.\". Remova ou reescreva preservando a condicionante da fonte.\n- Judge/nuances 1 < 4: \"Isso é 1,5 ponto percentual a mais que no 2T25, quando era 22,8 %.\" — Há distorção factual grave: o documento afirma que o ROE foi 'ligeiramente inferior' ao 2T25, mas o texto afirma que foi 'a mais', invertendo a tendência.\n- Judge/formato 1 < 4: \"Itaú Unibanco 2T26 registrou lucro recorrente de R$ 12,4 bilhões\" — O texto não segue o formato de roteiro de vídeo: falta gancho falado nos 3 primeiros segundos, falta indicação visual e a linguagem é escrita, não falada.",
+          "feedback": "- Densidade de termos técnicos 4.5/100 palavras > 2: corte ou troque por palavras do dia a dia: CET I, NPL, ROE, carteira de crédito, lucro líquido recorrente.\n- 50% dos termos contextualizados < 100% exigido: 'lucro líquido recorrente' sem explicação na frase 1 (\"Itaú Unibanco registrou lucro recorrente de R$ 12,4 bilhões no segund…\"); 'ROE' sem explicação na frase 2 (\"O ROE recorrente, que mostra quanto a empresa ganha por cada real dos…\"); 'NPL' sem explicação na frase 6 (\"A inadimplência acima de 90 dias, que indica clientes que não pagaram…\"). Explique cada um na mesma frase ou na anterior (ex.: 'ou seja', 'funciona como', parênteses), ou logo na frase seguinte começando por 'Esse/Essa/Isso'.\n- Judge/nuances 2 < 4: \"A margem financeira, que é a diferença entre juros cobrados e pagos, cresceu 3,…\" — Há distorção factual: o documento cita 'despesas não decorrentes de juros' com alta de 3,3%, mas o texto atribui esse número à 'margem financeira', alterando o significado do dado.\n- Judge/formato 1 < 4: \"Itaú Unibanco registrou lucro recorrente de R$ 12,4 bilhões no segundo trimestr…\" — O texto é um parágrafo corrido, sem gancho falado nos 3 primeiros segundos, sem indicações visuais e sem estrutura de roteiro de vídeo.",
+          "text": "Itaú Unibanco registrou lucro recorrente de R$ 12,4 bilhões no segundo trimestre de 2026.\nO ROE recorrente, que mostra quanto a empresa ganha por cada real dos donos, ficou em 24,3 %. No 2T25 o valor era 22,8 %.\nA carteira de crédito total, que é o dinheiro que o banco emprestou, atingiu R$ 1,5 trilhão. Cresceu 2,7 % no trimestre.\nA inadimplência acima de 90 dias, que indica clientes que não pagaram em tempo, ficou estável em 1,9 %.\nO CET I, que é o colchão de dinheiro próprio do banco para aguentar perdas, atingiu 12,3 %.\nA margem financeira, que é a diferença entre juros cobrados e pagos, cresceu 3,3 % no trimestre.\nOs números mostram que o Itaú está em boa posição: lucro forte, capital sólido, risco estável e crescimento controlado da carteira.",
+          "diff_from_previous": [
+            "--- antes",
+            "+++ depois",
+            "@@ -1 +1 @@",
+            "-Itaú Unibanco 2T26 registrou lucro recorrente de R$ 12,4 bilhões, superando o que os analistas esperavam.",
+            "+Itaú Unibanco registrou lucro recorrente de R$ 12,4 bilhões no segundo trimestre de 2026.",
+            "@@ -3 +3 @@",
+            "-Isso é 1,5 ponto percentual a mais que no 2T25, quando era 22,8 %.",
+            "+No 2T25 o valor era 22,8 %.",
+            "@@ -5 +5 @@",
+            "-Cresceu 2,7 % no trimestre, um aumento moderado.",
+            "+Cresceu 2,7 % no trimestre."
+          ],
+          "tokens": {
+            "input": 5381,
+            "output": 1954
+          },
+          "cost_usd": 0.003373,
+          "latency_ms": 80443.1
+        }
+      ]
+    },
+    "iniciante:texto": {
+      "status": {
+        "status": "reprovado_final",
+        "attempts": 3,
+        "delivered_attempt": 3,
+        "best_score": 0.6172,
+        "stop_reason": "max_tentativas",
+        "regressions": [
+          "claim_contradictions",
+          "claim_support",
+          "judge_nuances"
+        ]
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "aggregate_score": 0.5171,
+          "passed": false,
+          "metrics": [
+            {
+              "name": "flesch_pt",
+              "score": 33.7,
+              "bound": ">= 60",
+              "passed": false
+            },
+            {
+              "name": "term_density",
+              "score": 3.84,
+              "bound": "<= 2",
+              "passed": false
+            },
+            {
+              "name": "term_context_pct",
+              "score": 13.33,
+              "bound": ">= 100",
+              "passed": false
+            },
+            {
+              "name": "numeric_grounding",
+              "score": 4.0,
+              "bound": "<= 0",
+              "passed": false
+            },
+            {
+              "name": "claim_support",
+              "score": 0.846,
+              "bound": ">= 0.95",
+              "passed": false
+            },
+            {
+              "name": "claim_contradictions",
+              "score": 1.0,
+              "bound": "<= 0",
+              "passed": false
+            },
+            {
+              "name": "judge_adequacao_publico",
+              "score": 2.0,
+              "bound": ">= 4",
+              "passed": false
+            },
+            {
+              "name": "judge_tom",
+              "score": 5.0,
+              "bound": ">= 4",
+              "passed": true
+            },
+            {
+              "name": "judge_nuances",
+              "score": 5.0,
+              "bound": ">= 4",
+              "passed": true
+            },
+            {
+              "name": "judge_formato",
+              "score": 5.0,
+              "bound": ">= 4",
+              "passed": true
+            }
+          ],
+          "flags": [],
+          "regressions": [],
+          "injected_feedback": "",
+          "feedback": "- Flesch 33.7 < 60 exigido; 21% das palavras têm 4+ sílabas, troque por palavras curtas. Frase mais longa: \"O ROE recorrente foi de 24,3 % no 2T26, ligeiramente inferior ao 22,8 % registrado no 2T2…\"\n- Densidade de termos técnicos 3.8/100 palavras > 2: corte ou troque por palavras do dia a dia: CET I, NPL, ROE, carteira de crédito, lucro líquido recorrente.\n- 13% dos termos contextualizados < 100% exigido: 'carteira de crédito' sem explicação na frase 2 (\"Indicadores de desempenho e capitalização revelam expansão moderada d…\"); 'ROE' sem explicação na frase 2 (\"Indicadores de desempenho e capitalização revelam expansão moderada d…\"); 'margem financeira' sem explicação na frase 2 (\"Indicadores de desempenho e capitalização revelam expansão moderada d…\"); 'lucro líquido recorrente' sem explicação na frase 3 (\"Lucro recorrente e rentabilidade\"); 'lucro líquido recorrente' sem explicação na frase 4 (\"O lucro recorrente gerencial atingiu R$ 12,4 bilhões no 2T26, superan…\"). Explique cada um na mesma frase ou na anterior (ex.: 'ou seja', 'funciona como', parênteses), ou logo na frase seguinte começando por 'Esse/Essa/Isso'.\n- Alucinação numérica: 15, 11, 07, 13 não aparece(m) na fonte nem nas âncoras. Remova ou use o valor exato da âncora.\n- Fidelidade 0.85 < 0.95: afirmações sem âncora: \"O lucro recorrente superou o consenso de mercado\". Remova ou reescreva preservando a condicionante da fonte.\n- Afirmação \"O ROE recorrente de 24,3 % no 2T26 foi ligeiramente inferior ao 22,8 % registra…\" contradiz a âncora A15: A âncora A15 mostra que o ROE em 2T25 foi 22,8%, portanto 24,3% não é inferior.\n- Judge/adequacao_publico 2 < 4: \"O ROE recorrente foi de 24,3 % no 2T26, ligeiramente inferior ao 22,8 %\" — O texto utiliza termos técnicos como ROE, CET I e margem financeira sem as analogias cotidianas obrigatórias para o público iniciante.",
+          "text": "Itaú Unibanco 2T26: Lucro sólido, capitalização confortável e risco controlado\n\nIndicadores de desempenho e capitalização revelam expansão moderada da carteira de crédito e estabilidade de inadimplência, com ROE e margem financeira robustos, porém em leve declínio em relação ao ano anterior.\n\nLucro recorrente e rentabilidade\nO lucro recorrente gerencial atingiu R$ 12,4 bilhões no 2T26, superando o consenso de mercado. O ROE recorrente foi de 24,3 % no 2T26, ligeiramente inferior ao 22,8 % registrado no 2T25, refletindo um leve declínio de 1,5 p.p. Esses números indicam que, embora a rentabilidade permaneça elevada, há uma tendência de compressão que pode exigir atenção na alocação de recursos e na gestão de custos. \n\nAnchor IDs: [A01, A02, A15]\n\nCarteira de crédito e risco de crédito\nA carteira de crédito total alcançou R$ 1,5 trilhão, crescendo 2,7 % no trimestre, indicando expansão moderada do volume de empréstimos. O índice de inadimplência acima de 90 dias manteve-se estável em 1,9 % pelo sexto trimestre consecutivo, sinalizando controle de risco de crédito. O crédito consignado privado registrou alta de 14,3 % no trimestre, impulsionando a carteira de crédito de renda fixa. Esses dados sugerem que a expansão da carteira está acompanhada de um controle eficaz do risco de crédito. \n\nAnchor IDs: [A03, A10, A04, A14, A11]\n\nCapitalização e estrutura de custos\nO CET I atingiu 12,3 % no 2T26, demonstrando níveis confortáveis de capitalização conforme os requisitos regulatórios. Despesas não decorrentes de juros totalizaram R$ 16,7 bilhões, alta de 3,3 % no trimestre, impactando a margem operacional. A margem financeira com clientes cresceu 3,3 % no trimestre, evidenciando melhoria na eficiência de captação e aplicação de recursos. Esses indicadores apontam para uma estrutura de custos em crescimento, mas com ganhos de eficiência na margem financeira que compensam parcialmente o impacto das despesas. \n\nAnchor IDs: [A07, A05, A08]\n\nReceitas de serviços e projeções futuras\nAs receitas com serviços e seguros avançaram 0,4 % no trimestre, contribuindo para a diversificação de fontes de receita. A projeção de crescimento da receita de prestação de serviços e resultado de seguros para 2026 foi revisada para faixa entre 2,0 % e 5,0 %. A ata sugere que a diversificação está em andamento, mas a margem de crescimento ainda apresenta variação significativa, exigindo monitoramento contínuo. \n\nAnchor IDs: [A09, A13]",
+          "diff_from_previous": [],
+          "tokens": {
+            "input": 4567,
+            "output": 2766
+          },
+          "cost_usd": 0.004133,
+          "latency_ms": 138259.3
+        },
+        {
+          "attempt": 2,
+          "aggregate_score": 0.6045,
+          "passed": false,
+          "metrics": [
+            {
+              "name": "flesch_pt",
+              "score": 45.89,
+              "bound": ">= 60",
+              "passed": false
+            },
+            {
+              "name": "term_density",
+              "score": 3.74,
+              "bound": "<= 2",
+              "passed": false
+            },
+            {
+              "name": "term_context_pct",
+              "score": 40.0,
+              "bound": ">= 100",
+              "passed": false
+            },
+            {
+              "name": "numeric_grounding",
+              "score": 4.0,
+              "bound": "<= 0",
+              "passed": false
+            },
+            {
+              "name": "claim_support",
+              "score": 1.0,
+              "bound": ">= 0.95",
+              "passed": true
+            },
+            {
+              "name": "claim_contradictions",
+              "score": 0.0,
+              "bound": "<= 0",
+              "passed": true
+            },
+            {
+              "name": "judge_adequacao_publico",
+              "score": 2.0,
+              "bound": ">= 4",
+              "passed": false
+            },
+            {
+              "name": "judge_tom",
+              "score": 5.0,
+              "bound": ">= 4",
+              "passed": true
+            },
+            {
+              "name": "judge_nuances",
+              "score": 1.0,
+              "bound": ">= 4",
+              "passed": false
+            },
+            {
+              "name": "judge_formato",
+              "score": 5.0,
+              "bound": ">= 4",
+              "passed": true
+            }
+          ],
+          "flags": [
+            "regressao:judge_nuances"
+          ],
+          "regressions": [
+            "judge_nuances"
+          ],
+          "injected_feedback": "- Flesch 33.7 < 60 exigido; 21% das palavras têm 4+ sílabas, troque por palavras curtas. Frase mais longa: \"O ROE recorrente foi de 24,3 % no 2T26, ligeiramente inferior ao 22,8 % registrado no 2T2…\"\n- Densidade de termos técnicos 3.8/100 palavras > 2: corte ou troque por palavras do dia a dia: CET I, NPL, ROE, carteira de crédito, lucro líquido recorrente.\n- 13% dos termos contextualizados < 100% exigido: 'carteira de crédito' sem explicação na frase 2 (\"Indicadores de desempenho e capitalização revelam expansão moderada d…\"); 'ROE' sem explicação na frase 2 (\"Indicadores de desempenho e capitalização revelam expansão moderada d…\"); 'margem financeira' sem explicação na frase 2 (\"Indicadores de desempenho e capitalização revelam expansão moderada d…\"); 'lucro líquido recorrente' sem explicação na frase 3 (\"Lucro recorrente e rentabilidade\"); 'lucro líquido recorrente' sem explicação na frase 4 (\"O lucro recorrente gerencial atingiu R$ 12,4 bilhões no 2T26, superan…\"). Explique cada um na mesma frase ou na anterior (ex.: 'ou seja', 'funciona como', parênteses), ou logo na frase seguinte começando por 'Esse/Essa/Isso'.\n- Alucinação numérica: 15, 11, 07, 13 não aparece(m) na fonte nem nas âncoras. Remova ou use o valor exato da âncora.\n- Fidelidade 0.85 < 0.95: afirmações sem âncora: \"O lucro recorrente superou o consenso de mercado\". Remova ou reescreva preservando a condicionante da fonte.\n- Afirmação \"O ROE recorrente de 24,3 % no 2T26 foi ligeiramente inferior ao 22,8 % registra…\" contradiz a âncora A15: A âncora A15 mostra que o ROE em 2T25 foi 22,8%, portanto 24,3% não é inferior.\n- Judge/adequacao_publico 2 < 4: \"O ROE recorrente foi de 24,3 % no 2T26, ligeiramente inferior ao 22,8 %\" — O texto utiliza termos técnicos como ROE, CET I e margem financeira sem as analogias cotidianas obrigatórias para o público iniciante.",
+          "feedback": "- Flesch 45.9 < 60 exigido; 17% das palavras têm 4+ sílabas, troque por palavras curtas. Frase mais longa: \"Indicadores de desempenho e capitalização revelam expansão moderada da carteira de crédit…\"\n- Densidade de termos técnicos 3.7/100 palavras > 2: corte ou troque por palavras do dia a dia: CET I, NPL, ROE, carteira de crédito, lucro líquido recorrente.\n- 40% dos termos contextualizados < 100% exigido: 'carteira de crédito' sem explicação na frase 2 (\"Indicadores de desempenho e capitalização revelam expansão moderada d…\"); 'ROE' sem explicação na frase 2 (\"Indicadores de desempenho e capitalização revelam expansão moderada d…\"); 'margem financeira' sem explicação na frase 2 (\"Indicadores de desempenho e capitalização revelam expansão moderada d…\"); 'lucro líquido recorrente' sem explicação na frase 3 (\"Lucro recorrente e rentabilidade\"); 'carteira de crédito' sem explicação na frase 9 (\"Carteira de crédito e risco de crédito\"). Explique cada um na mesma frase ou na anterior (ex.: 'ou seja', 'funciona como', parênteses), ou logo na frase seguinte começando por 'Esse/Essa/Isso'.\n- Alucinação numérica: 15, 11, 07, 13 não aparece(m) na fonte nem nas âncoras. Remova ou use o valor exato da âncora.\n- Judge/adequacao_publico 2 < 4: \"O ROE recorrente foi de 24,3 % no 2T26, maior que os 22,8 % do 2T25, indicando …\" — O texto usa termos técnicos como ROE, CET I e margem financeira sem as analogias cotidianas obrigatórias para o público iniciante, violando a rubrica.\n- Judge/nuances 1 < 4: \"O ROE recorrente foi de 24,3 % no 2T26, maior que os 22,8 % do 2T25\" — O texto distorce a fonte ao afirmar que o ROE é maior que o do ano anterior, quando a fonte indica que é ligeiramente inferior.",
+          "text": "Itaú Unibanco 2T26: Lucro sólido, capitalização confortável e risco controlado\n\nIndicadores de desempenho e capitalização revelam expansão moderada da carteira de crédito e estabilidade de inadimplência, com ROE e margem financeira robustos, porém em leve declínio em relação ao ano anterior.\n\nLucro recorrente e rentabilidade\nO lucro recorrente gerencial atingiu R$ 12,4 bilhões no 2T26. Esse valor mostra quanto o banco ganha normalmente, sem efeitos que não se repetem. O ROE recorrente foi de 24,3 % no 2T26, maior que os 22,8 % do 2T25, indicando que a empresa lucra mais por cada real dos donos. Esses números mostram que a rentabilidade permanece alta, mas pode mudar se os custos aumentarem. \n\nAnchor IDs: [A01, A02, A15]\n\nCarteira de crédito e risco de crédito\nA carteira de crédito total atingiu R$ 1,5 trilhão no 2T26, crescendo 2,7 % no trimestre. Esse valor representa todo o dinheiro que o banco emprestou aos clientes. O índice de inadimplência acima de 90 dias manteve-se estável em 1,9 %, mostrando controle de risco de crédito. O crédito consignado privado registrou alta de 14,3 % no trimestre, impulsionando a carteira de crédito de renda fixa. Esses dados sugerem que a expansão da carteira está acompanhada de um controle eficaz do risco de crédito. \n\nAnchor IDs: [A03, A10, A04, A14, A11]\n\nCapitalização e estrutura de custos\nO CET I atingiu 12,3 % no 2T26, mostrando que o banco tem um colchão de dinheiro próprio para aguentar prejuízos sem quebrar. Despesas não decorrentes de juros totalizaram R$ 16,7 bilhões, alta de 3,3 % no trimestre, impactando a margem operacional. A margem financeira com clientes cresceu 3,3 % no trimestre, evidenciando melhoria na eficiência de captação e aplicação de recursos. Esses indicadores apontam para uma estrutura de custos em crescimento, mas com ganhos de eficiência na margem financeira que compensam parcialmente o impacto das despesas. \n\nAnchor IDs: [A07, A05, A08]\n\nReceitas de serviços e projeções futuras\nAs receitas com serviços e seguros avançaram 0,4 % no trimestre, contribuindo para a diversificação de fontes de receita. A projeção de crescimento da receita de prestação de serviços e resultado de seguros para 2026 foi revisada para faixa entre 2,0 % e 5,0 %. A ata sugere que a diversificação está em andamento, mas a margem de crescimento ainda apresenta variação significativa, exigindo monitoramento contínuo. \n\nAnchor IDs: [A09, A13]",
+          "diff_from_previous": [
+            "--- antes",
+            "+++ depois",
+            "@@ -4,3 +4,4 @@",
+            "-O lucro recorrente gerencial atingiu R$ 12,4 bilhões no 2T26, superando o consenso de mercado.",
+            "-O ROE recorrente foi de 24,3 % no 2T26, ligeiramente inferior ao 22,8 % registrado no 2T25, refletindo um leve declínio de 1,5 p.p.",
+            "-Esses números indicam que, embora a rentabilidade permaneça elevada, há uma tendência de compressão que pode exigir atenção na alocação de recursos e na gestão de custos.",
+            "+O lucro recorrente gerencial atingiu R$ 12,4 bilhões no 2T26.",
+            "+Esse valor mostra quanto o banco ganha normalmente, sem efeitos que não se repetem.",
+            "+O ROE recorrente foi de 24,3 % no 2T26, maior que os 22,8 % do 2T25, indicando que a empresa lucra mais por cada real dos donos.",
+            "+Esses números mostram que a rentabilidade permanece alta, mas pode mudar se os custos aumentarem.",
+            "@@ -9,2 +10,3 @@",
+            "-A carteira de crédito total alcançou R$ 1,5 trilhão, crescendo 2,7 % no trimestre, indicando expansão moderada do volume de empréstimos.",
+            "-O índice de inadimplência acima de 90 dias manteve-se estável em 1,9 % pelo sexto trimestre consecutivo, sinalizando controle de risco de crédito.",
+            "+A carteira de crédito total atingiu R$ 1,5 trilhão no 2T26, crescendo 2,7 % no trimestre.",
+            "+Esse valor representa todo o dinheiro que o banco emprestou aos clientes.",
+            "+O índice de inadimplência acima de 90 dias manteve-se estável em 1,9 %, mostrando controle de risco de crédito.",
+            "@@ -15 +17 @@",
+            "-O CET I atingiu 12,3 % no 2T26, demonstrando níveis confortáveis de capitalização conforme os requisitos regulatórios.",
+            "+O CET I atingiu 12,3 % no 2T26, mostrando que o banco tem um colchão de dinheiro próprio para aguentar prejuízos sem quebrar."
+          ],
+          "tokens": {
+            "input": 6596,
+            "output": 2687
+          },
+          "cost_usd": 0.004322,
+          "latency_ms": 267342.9
+        },
+        {
+          "attempt": 3,
+          "aggregate_score": 0.6172,
+          "passed": false,
+          "metrics": [
+            {
+              "name": "flesch_pt",
+              "score": 37.55,
+              "bound": ">= 60",
+              "passed": false
+            },
+            {
+              "name": "term_density",
+              "score": 4.07,
+              "bound": "<= 2",
+              "passed": false
+            },
+            {
+              "name": "term_context_pct",
+              "score": 40.0,
+              "bound": ">= 100",
+              "passed": false
+            },
+            {
+              "name": "numeric_grounding",
+              "score": 0.0,
+              "bound": "<= 0",
+              "passed": true
+            },
+            {
+              "name": "claim_support",
+              "score": 0.846,
+              "bound": ">= 0.95",
+              "passed": false
+            },
+            {
+              "name": "claim_contradictions",
+              "score": 1.0,
+              "bound": "<= 0",
+              "passed": false
+            },
+            {
+              "name": "judge_adequacao_publico",
+              "score": 2.0,
+              "bound": ">= 4",
+              "passed": false
+            },
+            {
+              "name": "judge_tom",
+              "score": 5.0,
+              "bound": ">= 4",
+              "passed": true
+            },
+            {
+              "name": "judge_nuances",
+              "score": 3.0,
+              "bound": ">= 4",
+              "passed": false
+            },
+            {
+              "name": "judge_formato",
+              "score": 5.0,
+              "bound": ">= 4",
+              "passed": true
+            }
+          ],
+          "flags": [
+            "regressao:claim_support,claim_contradictions"
+          ],
+          "regressions": [
+            "claim_support",
+            "claim_contradictions"
+          ],
+          "injected_feedback": "- Flesch 45.9 < 60 exigido; 17% das palavras têm 4+ sílabas, troque por palavras curtas. Frase mais longa: \"Indicadores de desempenho e capitalização revelam expansão moderada da carteira de crédit…\"\n- Densidade de termos técnicos 3.7/100 palavras > 2: corte ou troque por palavras do dia a dia: CET I, NPL, ROE, carteira de crédito, lucro líquido recorrente.\n- 40% dos termos contextualizados < 100% exigido: 'carteira de crédito' sem explicação na frase 2 (\"Indicadores de desempenho e capitalização revelam expansão moderada d…\"); 'ROE' sem explicação na frase 2 (\"Indicadores de desempenho e capitalização revelam expansão moderada d…\"); 'margem financeira' sem explicação na frase 2 (\"Indicadores de desempenho e capitalização revelam expansão moderada d…\"); 'lucro líquido recorrente' sem explicação na frase 3 (\"Lucro recorrente e rentabilidade\"); 'carteira de crédito' sem explicação na frase 9 (\"Carteira de crédito e risco de crédito\"). Explique cada um na mesma frase ou na anterior (ex.: 'ou seja', 'funciona como', parênteses), ou logo na frase seguinte começando por 'Esse/Essa/Isso'.\n- Alucinação numérica: 15, 11, 07, 13 não aparece(m) na fonte nem nas âncoras. Remova ou use o valor exato da âncora.\n- Judge/adequacao_publico 2 < 4: \"O ROE recorrente foi de 24,3 % no 2T26, maior que os 22,8 % do 2T25, indicando …\" — O texto usa termos técnicos como ROE, CET I e margem financeira sem as analogias cotidianas obrigatórias para o público iniciante, violando a rubrica.\n- Judge/nuances 1 < 4: \"O ROE recorrente foi de 24,3 % no 2T26, maior que os 22,8 % do 2T25\" — O texto distorce a fonte ao afirmar que o ROE é maior que o do ano anterior, quando a fonte indica que é ligeiramente inferior.",
+          "feedback": "- Flesch 37.5 < 60 exigido; 18% das palavras têm 4+ sílabas, troque por palavras curtas. Frase mais longa: \"Indicadores de desempenho e capitalização revelam expansão moderada da carteira de crédit…\"\n- Densidade de termos técnicos 4.1/100 palavras > 2: corte ou troque por palavras do dia a dia: CET I, NPL, ROE, carteira de crédito, lucro líquido recorrente.\n- 40% dos termos contextualizados < 100% exigido: 'carteira de crédito' sem explicação na frase 2 (\"Indicadores de desempenho e capitalização revelam expansão moderada d…\"); 'ROE' sem explicação na frase 2 (\"Indicadores de desempenho e capitalização revelam expansão moderada d…\"); 'margem financeira' sem explicação na frase 2 (\"Indicadores de desempenho e capitalização revelam expansão moderada d…\"); 'lucro líquido recorrente' sem explicação na frase 3 (\"Lucro recorrente e rentabilidade\"); 'carteira de crédito' sem explicação na frase 8 (\"Carteira de crédito e risco de crédito\"). Explique cada um na mesma frase ou na anterior (ex.: 'ou seja', 'funciona como', parênteses), ou logo na frase seguinte começando por 'Esse/Essa/Isso'.\n- Fidelidade 0.85 < 0.95: afirmações sem âncora: \"Indicadores de desempenho e capitalização revelam expansão moderada da carteira…\". Remova ou reescreva preservando a condicionante da fonte.\n- Afirmação \"O ROE recorrente de 24,3 % foi ligeiramente inferior aos 22,8 % do 2T25.\" contradiz a âncora A15: 24,3% é superior a 22,8%, portanto a afirmação de inferioridade contradiz a âncora A15.\n- Judge/adequacao_publico 2 < 4: \"O ROE recorrente foi de 24,3 % no 2T26, ligeiramente inferior aos 22,8 % do 2T25\" — O texto usa termos técnicos como ROE, CET I e margem financeira sem as analogias cotidianas obrigatórias para o público iniciante, violando a rubrica.\n- Judge/nuances 3 < 4: \"O ROE recorrente foi de 24,3 % no 2T26, ligeiramente inferior aos 22,8 % do 2T25\" — O texto introduz um dado específico (22,8% no 2T25) que não consta na referência fornecida, o que configura risco de distorção ou alucinação de dados.",
+          "text": "Itaú Unibanco 2T26: Lucro sólido, capitalização confortável e risco controlado\n\nIndicadores de desempenho e capitalização revelam expansão moderada da carteira de crédito e estabilidade de inadimplência, com ROE e margem financeira robustos, porém em leve declínio em relação ao ano anterior.\n\nLucro recorrente e rentabilidade\nO lucro recorrente gerencial atingiu R$ 12,4 bilhões no 2T26. Esse valor mostra quanto o banco ganha normalmente, sem efeitos que não se repetem. O ROE recorrente foi de 24,3 % no 2T26, ligeiramente inferior aos 22,8 % do 2T25, indicando que a empresa lucra um pouco menos por cada real dos donos. Esses números mostram que a rentabilidade permanece alta, mas pode mudar se os custos aumentarem.\n\nCarteira de crédito e risco de crédito\nA carteira de crédito total atingiu R$ 1,5 trilhão no 2T26, crescendo 2,7 % no trimestre. Esse valor representa todo o dinheiro que o banco emprestou aos clientes. O índice de inadimplência acima de 90 dias manteve-se estável em 1,9 %, mostrando controle de risco de crédito. O crédito consignado privado registrou alta de 14,3 % no trimestre, impulsionando a carteira de crédito de renda fixa. Esses dados sugerem que a expansão da carteira está acompanhada de um controle eficaz do risco de crédito.\n\nCapitalização e estrutura de custos\nO CET I atingiu 12,3 % no 2T26, mostrando que o banco tem um colchão de dinheiro próprio para aguentar prejuízos sem quebrar. Despesas não decorrentes de juros totalizaram R$ 16,7 bilhões, alta de 3,3 % no trimestre, impactando a margem operacional. A margem financeira com clientes cresceu 3,3 % no trimestre, evidenciando melhoria na eficiência de captação e aplicação de recursos. Esses indicadores apontam para uma estrutura de custos em crescimento, mas com ganhos de eficiência na margem financeira que compensam parcialmente o impacto das despesas.\n\nReceitas de serviços e projeções futuras\nAs receitas com serviços e seguros avançaram 0,4 % no trimestre, contribuindo para a diversificação de fontes de receita. A projeção de crescimento da receita de prestação de serviços e resultado de seguros para 2026 foi revisada para faixa entre 2,0 % e 5,0 %. A ata sugere que a diversificação está em andamento, mas a margem de crescimento ainda apresenta variação significativa, exigindo monitoramento contínuo.",
+          "diff_from_previous": [
+            "--- antes",
+            "+++ depois",
+            "@@ -6 +6 @@",
+            "-O ROE recorrente foi de 24,3 % no 2T26, maior que os 22,8 % do 2T25, indicando que a empresa lucra mais por cada real dos donos.",
+            "+O ROE recorrente foi de 24,3 % no 2T26, ligeiramente inferior aos 22,8 % do 2T25, indicando que a empresa lucra um pouco menos por cada real dos donos.",
+            "@@ -8 +7,0 @@",
+            "-Anchor IDs: [A01, A02, A15]",
+            "@@ -15 +13,0 @@",
+            "-Anchor IDs: [A03, A10, A04, A14, A11]",
+            "@@ -21 +18,0 @@",
+            "-Anchor IDs: [A07, A05, A08]",
+            "@@ -26 +22,0 @@",
+            "-Anchor IDs: [A09, A13]"
+          ],
+          "tokens": {
+            "input": 6409,
+            "output": 2429
+          },
+          "cost_usd": 0.004124,
+          "latency_ms": 127378.4
+        }
+      ]
+    }
+  }
+}

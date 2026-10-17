@@ -1,0 +1,6 @@
+dimensao,n,concordancia,ic95_inf,ic95_sup,kappa_cohen
+nivel (percebido x previsto),9,0.333,0.121,0.646,0.0
+nivel (percebido x alvo),9,0.556,0.267,0.811,0.333
+erro factual,0,,,,
+trivializou,0,,,,
+"tom (erro absoluto médio, 1-5)",9,0.111,,,

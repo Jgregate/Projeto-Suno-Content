@@ -1,0 +1,773 @@
+{
+  "doc_id": "release-itau-2t26",
+  "drift_level": "intermediario",
+  "forced": false,
+  "focus_cell": "intermediario:texto",
+  "prompts_hash": "45574b5dc45e",
+  "cells": {
+    "intermediario:carrossel": {
+      "status": {
+        "status": "reprovado_final",
+        "attempts": 3,
+        "delivered_attempt": 2,
+        "best_score": 0.9828,
+        "stop_reason": "max_tentativas",
+        "regressions": [
+          "term_context_pct",
+          "term_density"
+        ]
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "aggregate_score": 0.8828,
+          "passed": false,
+          "metrics": [
+            {
+              "name": "flesch_pt",
+              "score": 48.47,
+              "bound": "entre 40 e 60",
+              "passed": true
+            },
+            {
+              "name": "term_density",
+              "score": 5.26,
+              "bound": "entre 2 e 6",
+              "passed": true
+            },
+            {
+              "name": "term_context_pct",
+              "score": 0.0,
+              "bound": ">= 50",
+              "passed": false
+            },
+            {
+              "name": "numeric_grounding",
+              "score": 0.0,
+              "bound": "<= 0",
+              "passed": true
+            },
+            {
+              "name": "claim_support",
+              "score": 0.778,
+              "bound": ">= 0.95",
+              "passed": false
+            },
+            {
+              "name": "claim_contradictions",
+              "score": 0.0,
+              "bound": "<= 0",
+              "passed": true
+            },
+            {
+              "name": "judge_adequacao_publico",
+              "score": 4.0,
+              "bound": ">= 4",
+              "passed": true
+            },
+            {
+              "name": "judge_tom",
+              "score": 5.0,
+              "bound": ">= 4",
+              "passed": true
+            },
+            {
+              "name": "judge_nuances",
+              "score": 5.0,
+              "bound": ">= 4",
+              "passed": true
+            },
+            {
+              "name": "judge_formato",
+              "score": 5.0,
+              "bound": ">= 4",
+              "passed": true
+            }
+          ],
+          "flags": [],
+          "regressions": [],
+          "injected_feedback": "",
+          "feedback": "- 0% dos termos contextualizados < 50% exigido: 'ROE' sem explicação na frase 2 (\"Lucro recorrente, ROE e crescimento de crédito mostram a saúde do ban…\"); 'ROE' sem explicação na frase 6 (\"ROE recorrente\"). Explique cada um na mesma frase ou na anterior (ex.: 'ou seja', 'funciona como', parênteses).\n- Fidelidade 0.78 < 0.95: afirmações sem âncora: \"O ROE recorrente foi ligeiramente abaixo de 24,5 % no segundo trimestre de 2025.\"; \"A inadimplência de 90 dias esteve estável por seis trimestres consecutivos.\". Remova ou reescreva preservando a condicionante da fonte.",
+          "text": "Como esses indicadores afetam sua alocação?\nLucro recorrente, ROE e crescimento de crédito mostram a saúde do banco, impactando renda fixa e ações.\n\nLucro recorrente 2T26\nR$ 12,4 bilhões, superando consenso. [A01]\n\nROE recorrente\n24,3 % no 2T26, ligeiramente abaixo de 24,5 % em 2T25. [A02]\n\nCarteira de crédito\nR$ 1,5 trilhão, +2,7 % no trimestre. [A03,A04]\n\nInadimplência 90 dias\nEstável em 1,9 % pelo sexto trimestre. [A05]\n\nReceitas de serviços\n+0,4 % no trimestre, projeção 2,0‑5,0 % em 2026. [A09,A10]\n\nResumo e próximos passos\nResultados sólidos, crescimento moderado de crédito, estabilidade na inadimplência e foco em serviços. Salve para acompanhar a alocação futura.",
+          "diff_from_previous": [],
+          "tokens": {
+            "input": 5067,
+            "output": 2468
+          },
+          "cost_usd": 0.003566,
+          "latency_ms": 162386.7
+        },
+        {
+          "attempt": 2,
+          "aggregate_score": 0.9828,
+          "passed": false,
+          "metrics": [
+            {
+              "name": "flesch_pt",
+              "score": 43.33,
+              "bound": "entre 40 e 60",
+              "passed": true
+            },
+            {
+              "name": "term_density",
+              "score": 7.03,
+              "bound": "entre 2 e 6",
+              "passed": false
+            },
+            {
+              "name": "term_context_pct",
+              "score": 80.0,
+              "bound": ">= 50",
+              "passed": true
+            },
+            {
+              "name": "numeric_grounding",
+              "score": 0.0,
+              "bound": "<= 0",
+              "passed": true
+            },
+            {
+              "name": "claim_support",
+              "score": 1.0,
+              "bound": ">= 0.95",
+              "passed": true
+            },
+            {
+              "name": "claim_contradictions",
+              "score": 0.0,
+              "bound": "<= 0",
+              "passed": true
+            },
+            {
+              "name": "judge_adequacao_publico",
+              "score": 4.0,
+              "bound": ">= 4",
+              "passed": true
+            },
+            {
+              "name": "judge_tom",
+              "score": 5.0,
+              "bound": ">= 4",
+              "passed": true
+            },
+            {
+              "name": "judge_nuances",
+              "score": 5.0,
+              "bound": ">= 4",
+              "passed": true
+            },
+            {
+              "name": "judge_formato",
+              "score": 5.0,
+              "bound": ">= 4",
+              "passed": true
+            }
+          ],
+          "flags": [
+            "regressao:term_density"
+          ],
+          "regressions": [
+            "term_density"
+          ],
+          "injected_feedback": "- 0% dos termos contextualizados < 50% exigido: 'ROE' sem explicação na frase 2 (\"Lucro recorrente, ROE e crescimento de crédito mostram a saúde do ban…\"); 'ROE' sem explicação na frase 6 (\"ROE recorrente\"). Explique cada um na mesma frase ou na anterior (ex.: 'ou seja', 'funciona como', parênteses).\n- Fidelidade 0.78 < 0.95: afirmações sem âncora: \"O ROE recorrente foi ligeiramente abaixo de 24,5 % no segundo trimestre de 2025.\"; \"A inadimplência de 90 dias esteve estável por seis trimestres consecutivos.\". Remova ou reescreva preservando a condicionante da fonte.",
+          "feedback": "- Densidade de termos técnicos 7.0/100 palavras > 6: corte ou troque por palavras do dia a dia: ROE, carteira de crédito, lucro líquido recorrente, receita de serviços.",
+          "text": "Como esses indicadores afetam sua alocação?\nLucro recorrente, ROE (retorno sobre patrimônio líquido) e crescimento de crédito mostram a saúde do banco, impactando renda fixa e ações.\n\nLucro recorrente 2T26\nR$ 12,4 bilhões, superando consenso. [A01]\n\nROE recorrente\n24,3 % no 2T26, ROE (retorno sobre patrimônio líquido) indica eficiência na geração de lucro. [A02]\n\nCarteira de crédito\nR$ 1,5 trilhão, +2,7 % no trimestre. [A03,A04]\n\nInadimplência 90 dias\nEstável em 1,9 % no 2T26, mantendo o nível de períodos anteriores. [A05]\n\nReceitas de serviços\n+0,4 % no trimestre, projeção 2,0‑5,0 % em 2026. [A09,A10]\n\nResumo e próximos passos\nResultados sólidos, crescimento moderado de crédito, estabilidade na inadimplência e foco em serviços. Salve para acompanhar a alocação futura.",
+          "diff_from_previous": [
+            "--- antes",
+            "+++ depois",
+            "@@ -2 +2 @@",
+            "-Lucro recorrente, ROE e crescimento de crédito mostram a saúde do banco, impactando renda fixa e ações.",
+            "+Lucro recorrente, ROE (retorno sobre patrimônio líquido) e crescimento de crédito mostram a saúde do banco, impactando renda fixa e ações.",
+            "@@ -7 +7 @@",
+            "-24,3 % no 2T26, ligeiramente abaixo de 24,5 % em 2T25.",
+            "+24,3 % no 2T26, ROE (retorno sobre patrimônio líquido) indica eficiência na geração de lucro.",
+            "@@ -13 +13 @@",
+            "-Estável em 1,9 % pelo sexto trimestre.",
+            "+Estável em 1,9 % no 2T26, mantendo o nível de períodos anteriores."
+          ],
+          "tokens": {
+            "input": 4576,
+            "output": 1579
+          },
+          "cost_usd": 0.00306,
+          "latency_ms": 28229.2
+        },
+        {
+          "attempt": 3,
+          "aggregate_score": 0.9,
+          "passed": false,
+          "metrics": [
+            {
+              "name": "flesch_pt",
+              "score": 44.39,
+              "bound": "entre 40 e 60",
+              "passed": true
+            },
+            {
+              "name": "term_density",
+              "score": 4.1,
+              "bound": "entre 2 e 6",
+              "passed": true
+            },
+            {
+              "name": "term_context_pct",
+              "score": 0.0,
+              "bound": ">= 50",
+              "passed": false
+            },
+            {
+              "name": "numeric_grounding",
+              "score": 0.0,
+              "bound": "<= 0",
+              "passed": true
+            },
+            {
+              "name": "claim_support",
+              "score": 1.0,
+              "bound": ">= 0.95",
+              "passed": true
+            },
+            {
+              "name": "claim_contradictions",
+              "score": 0.0,
+              "bound": "<= 0",
+              "passed": true
+            },
+            {
+              "name": "judge_adequacao_publico",
+              "score": 5.0,
+              "bound": ">= 4",
+              "passed": true
+            },
+            {
+              "name": "judge_tom",
+              "score": 5.0,
+              "bound": ">= 4",
+              "passed": true
+            },
+            {
+              "name": "judge_nuances",
+              "score": 5.0,
+              "bound": ">= 4",
+              "passed": true
+            },
+            {
+              "name": "judge_formato",
+              "score": 5.0,
+              "bound": ">= 4",
+              "passed": true
+            }
+          ],
+          "flags": [
+            "regressao:term_context_pct"
+          ],
+          "regressions": [
+            "term_context_pct"
+          ],
+          "injected_feedback": "- Densidade de termos técnicos 7.0/100 palavras > 6: corte ou troque por palavras do dia a dia: ROE, carteira de crédito, lucro líquido recorrente, receita de serviços.",
+          "feedback": "- 0% dos termos contextualizados < 50% exigido: 'ROE' sem explicação na frase 2 (\"Lucro recorrente, retorno sobre patrimônio e crescimento de crédito m…\"); 'ROE' sem explicação na frase 6 (\"Retorno sobre patrimônio\"). Explique cada um na mesma frase ou na anterior (ex.: 'ou seja', 'funciona como', parênteses).",
+          "text": "Como esses indicadores afetam sua alocação?\nLucro recorrente, retorno sobre patrimônio e crescimento de crédito mostram a saúde do banco, impactando renda fixa e ações.\n\nLucro recorrente 2T26\nR$ 12,4 bilhões, superando consenso. [A01]\n\nRetorno sobre patrimônio\n24,3 % no 2T26, indica eficiência na geração de lucro. [A02]\n\nCrescimento de crédito\nR$ 1,5 trilhão, +2,7 % no trimestre. [A03,A04]\n\nInadimplência 90 dias\nEstável em 1,9 % no 2T26, mantendo o nível de períodos anteriores. [A05]\n\nReceitas de serviços\n+0,4 % no trimestre, projeção 2,0‑5,0 % em 2026. [A09,A10]\n\nResumo e próximos passos\nResultados sólidos, crescimento moderado de crédito, estabilidade na inadimplência e foco em serviços. Salve para acompanhar a alocação futura.",
+          "diff_from_previous": [
+            "--- antes",
+            "+++ depois",
+            "@@ -2 +2 @@",
+            "-Lucro recorrente, ROE (retorno sobre patrimônio líquido) e crescimento de crédito mostram a saúde do banco, impactando renda fixa e ações.",
+            "+Lucro recorrente, retorno sobre patrimônio e crescimento de crédito mostram a saúde do banco, impactando renda fixa e ações.",
+            "@@ -6,2 +6,2 @@",
+            "-ROE recorrente",
+            "-24,3 % no 2T26, ROE (retorno sobre patrimônio líquido) indica eficiência na geração de lucro.",
+            "+Retorno sobre patrimônio",
+            "+24,3 % no 2T26, indica eficiência na geração de lucro.",
+            "@@ -9 +9 @@",
+            "-Carteira de crédito",
+            "+Crescimento de crédito"
+          ],
+          "tokens": {
+            "input": 4447,
+            "output": 1673
+          },
+          "cost_usd": 0.003083,
+          "latency_ms": 16113.9
+        }
+      ]
+    },
+    "intermediario:roteiro": {
+      "status": {
+        "status": "reprovado_final",
+        "attempts": 2,
+        "delivered_attempt": 1,
+        "best_score": 0.7705,
+        "stop_reason": "estagnou",
+        "regressions": [
+          "numeric_grounding"
+        ]
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "aggregate_score": 0.7705,
+          "passed": false,
+          "metrics": [
+            {
+              "name": "flesch_pt",
+              "score": 36.18,
+              "bound": "entre 40 e 60",
+              "passed": false
+            },
+            {
+              "name": "term_density",
+              "score": 3.18,
+              "bound": "entre 2 e 6",
+              "passed": true
+            },
+            {
+              "name": "term_context_pct",
+              "score": 0.0,
+              "bound": ">= 50",
+              "passed": false
+            },
+            {
+              "name": "numeric_grounding",
+              "score": 0.0,
+              "bound": "<= 0",
+              "passed": true
+            },
+            {
+              "name": "claim_support",
+              "score": 0.75,
+              "bound": ">= 0.95",
+              "passed": false
+            },
+            {
+              "name": "claim_contradictions",
+              "score": 0.0,
+              "bound": "<= 0",
+              "passed": true
+            },
+            {
+              "name": "judge_adequacao_publico",
+              "score": 3.0,
+              "bound": ">= 4",
+              "passed": false
+            },
+            {
+              "name": "judge_tom",
+              "score": 5.0,
+              "bound": ">= 4",
+              "passed": true
+            },
+            {
+              "name": "judge_nuances",
+              "score": 5.0,
+              "bound": ">= 4",
+              "passed": true
+            },
+            {
+              "name": "judge_formato",
+              "score": 1.0,
+              "bound": ">= 4",
+              "passed": false
+            }
+          ],
+          "flags": [],
+          "regressions": [],
+          "injected_feedback": "",
+          "feedback": "- Flesch 36 < 40 exigido; frases com média de 20 palavras, encurte para ~15; 17% das palavras têm 4+ sílabas, troque por palavras curtas. Frase mais longa: \"O banco apresenta resultados sólidos, com crescimento moderado de crédito, estabilidade n…\"\n- 0% dos termos contextualizados < 50% exigido: 'ROE' sem explicação na frase 3 (\"O ROE recorrente ficou em 24,3 % no 2T26, um pouco abaixo do 24,5 % d…\"); 'NPL' sem explicação na frase 5 (\"O índice de inadimplência acima de 90 dias manteve-se estável em 1,9 …\"); 'CET I' sem explicação na frase 6 (\"O CET1 atingiu 12,3 % no 2T26, indicando robustez de capital, enquant…\"). Explique cada um na mesma frase ou na anterior (ex.: 'ou seja', 'funciona como', parênteses).\n- Fidelidade 0.75 < 0.95: afirmações sem âncora: \"superando o consenso de mercado\"; \"um pouco abaixo do 24,5 % do 2T25\"; \"O índice de inadimplência acima de 90 dias manteve-se estável em 1,9 % pelo sex…\". Remova ou reescreva preservando a condicionante da fonte.\n- Judge/adequacao_publico 3 < 4: \"O CET1 atingiu 12,3 % no 2T26, indicando robustez de capital\" — O texto usa jargão institucional (CET1) sem a explicação curta exigida pela rubrica, violando a regra de adequação ao público intermediário.\n- Judge/formato 1 < 4: \"Indicadores bancários revelam o caminho da alocação entre renda fixa e ações.\" — O texto não cumpre o formato de roteiro de vídeo: falta gancho falado nos 3 primeiros segundos, indicações visuais e estrutura de fala natural para voz alta.",
+          "text": "Indicadores bancários revelam o caminho da alocação entre renda fixa e ações.\nO lucro recorrente gerencial atingiu R$ 12,4 bilhões no 2T26, superando o consenso de mercado.\nO ROE recorrente ficou em 24,3 % no 2T26, um pouco abaixo do 24,5 % do 2T25.\nA carteira de crédito totalizou R$ 1,5 trilhão, crescendo 2,7 % no trimestre, com crédito consignado privado subindo 14,3 %.\nO índice de inadimplência acima de 90 dias manteve-se estável em 1,9 % pelo sexto trimestre consecutivo.\nO CET1 atingiu 12,3 % no 2T26, indicando robustez de capital, enquanto despesas não decorrentes de juros subiram 3,3 % para R$ 16,7 bilhões.\nReceitas com serviços e seguros avançaram 0,4 % no trimestre, com projeção de crescimento entre 2,0 % e 5,0 % para 2026.\nO banco apresenta resultados sólidos, com crescimento moderado de crédito, estabilidade na inadimplência e foco em serviços, fatores que devem ser monitorados ao ajustar a exposição entre renda fixa e ações.",
+          "diff_from_previous": [],
+          "tokens": {
+            "input": 3754,
+            "output": 2418
+          },
+          "cost_usd": 0.003584,
+          "latency_ms": 74373.6
+        },
+        {
+          "attempt": 2,
+          "aggregate_score": 0.725,
+          "passed": false,
+          "metrics": [
+            {
+              "name": "flesch_pt",
+              "score": 45.11,
+              "bound": "entre 40 e 60",
+              "passed": true
+            },
+            {
+              "name": "term_density",
+              "score": 3.38,
+              "bound": "entre 2 e 6",
+              "passed": true
+            },
+            {
+              "name": "term_context_pct",
+              "score": 0.0,
+              "bound": ">= 50",
+              "passed": false
+            },
+            {
+              "name": "numeric_grounding",
+              "score": 1.0,
+              "bound": "<= 0",
+              "passed": false
+            },
+            {
+              "name": "claim_support",
+              "score": 1.0,
+              "bound": ">= 0.95",
+              "passed": true
+            },
+            {
+              "name": "claim_contradictions",
+              "score": 0.0,
+              "bound": "<= 0",
+              "passed": true
+            },
+            {
+              "name": "judge_adequacao_publico",
+              "score": 4.0,
+              "bound": ">= 4",
+              "passed": true
+            },
+            {
+              "name": "judge_tom",
+              "score": 4.0,
+              "bound": ">= 4",
+              "passed": true
+            },
+            {
+              "name": "judge_nuances",
+              "score": 5.0,
+              "bound": ">= 4",
+              "passed": true
+            },
+            {
+              "name": "judge_formato",
+              "score": 1.0,
+              "bound": ">= 4",
+              "passed": false
+            }
+          ],
+          "flags": [
+            "regressao:numeric_grounding"
+          ],
+          "regressions": [
+            "numeric_grounding"
+          ],
+          "injected_feedback": "- Flesch 36 < 40 exigido; frases com média de 20 palavras, encurte para ~15; 17% das palavras têm 4+ sílabas, troque por palavras curtas. Frase mais longa: \"O banco apresenta resultados sólidos, com crescimento moderado de crédito, estabilidade n…\"\n- 0% dos termos contextualizados < 50% exigido: 'ROE' sem explicação na frase 3 (\"O ROE recorrente ficou em 24,3 % no 2T26, um pouco abaixo do 24,5 % d…\"); 'NPL' sem explicação na frase 5 (\"O índice de inadimplência acima de 90 dias manteve-se estável em 1,9 …\"); 'CET I' sem explicação na frase 6 (\"O CET1 atingiu 12,3 % no 2T26, indicando robustez de capital, enquant…\"). Explique cada um na mesma frase ou na anterior (ex.: 'ou seja', 'funciona como', parênteses).\n- Fidelidade 0.75 < 0.95: afirmações sem âncora: \"superando o consenso de mercado\"; \"um pouco abaixo do 24,5 % do 2T25\"; \"O índice de inadimplência acima de 90 dias manteve-se estável em 1,9 % pelo sex…\". Remova ou reescreva preservando a condicionante da fonte.\n- Judge/adequacao_publico 3 < 4: \"O CET1 atingiu 12,3 % no 2T26, indicando robustez de capital\" — O texto usa jargão institucional (CET1) sem a explicação curta exigida pela rubrica, violando a regra de adequação ao público intermediário.\n- Judge/formato 1 < 4: \"Indicadores bancários revelam o caminho da alocação entre renda fixa e ações.\" — O texto não cumpre o formato de roteiro de vídeo: falta gancho falado nos 3 primeiros segundos, indicações visuais e estrutura de fala natural para voz alta.",
+          "feedback": "- 0% dos termos contextualizados < 50% exigido: 'ROE' sem explicação na frase 3 (\"O ROE recorrente, que mede o retorno sobre o patrimônio líquido, fico…\"); 'ROE' sem explicação na frase 3 (\"O ROE recorrente, que mede o retorno sobre o patrimônio líquido, fico…\"); 'NPL' sem explicação na frase 5 (\"O índice de inadimplência acima de 90 dias, que indica a taxa de clie…\"); 'CET I' sem explicação na frase 6 (\"O CET1, que mede a qualidade do capital principal, atingiu 12,3 % no …\"); 'CET I' sem explicação na frase 6 (\"O CET1, que mede a qualidade do capital principal, atingiu 12,3 % no …\"). Explique cada um na mesma frase ou na anterior (ex.: 'ou seja', 'funciona como', parênteses).\n- Alucinação numérica: 07 não aparece(m) na fonte nem nas âncoras. Remova ou use o valor exato da âncora.\n- Judge/formato 1 < 4: \"conforme a âncora A01\" — O texto falha gravemente no formato: não tem gancho falado nos 3s, não tem indicações visuais, usa linguagem escrita (referências a âncoras) e excede o limite de palavras para um vídeo de 60s.",
+          "text": "Indicadores bancários mostram a rota entre renda fixa e ações.\nO lucro recorrente gerencial atingiu R$ 12,4 bilhões no 2T26, conforme a âncora A01.\nO ROE recorrente, que mede o retorno sobre o patrimônio líquido, ficou em 24,3 % no 2T26, conforme a âncora A02.\nA carteira de crédito totalizou R$ 1,5 trilhão, crescendo 2,7 % no trimestre, com crédito consignado privado subindo 14,3 %, conforme as âncoras A03, A04 e A12.\nO índice de inadimplência acima de 90 dias, que indica a taxa de clientes em atraso, ficou em 1,9 % no 2T26, estável em relação a períodos anteriores, conforme a âncora A05.\nO CET1, que mede a qualidade do capital principal, atingiu 12,3 % no 2T26, conforme a âncora A06. Despesas não decorrentes de juros subiram 3,3 % para R$ 16,7 bilhões, conforme a âncora A07.\nReceitas com serviços e seguros avançaram 0,4 % no trimestre, com projeção de crescimento entre 2,0 % e 5,0 % para 2026, conforme as âncoras A09 e A10.\nO banco apresenta resultados sólidos, com crescimento moderado de crédito, estabilidade na inadimplência e foco em serviços, fatores que devem ser monitorados ao ajustar a exposição entre renda fixa e ações.",
+          "diff_from_previous": [
+            "--- antes",
+            "+++ depois",
+            "@@ -1,7 +1,8 @@",
+            "-Indicadores bancários revelam o caminho da alocação entre renda fixa e ações.",
+            "-O lucro recorrente gerencial atingiu R$ 12,4 bilhões no 2T26, superando o consenso de mercado.",
+            "-O ROE recorrente ficou em 24,3 % no 2T26, um pouco abaixo do 24,5 % do 2T25.",
+            "-A carteira de crédito totalizou R$ 1,5 trilhão, crescendo 2,7 % no trimestre, com crédito consignado privado subindo 14,3 %.",
+            "-O índice de inadimplência acima de 90 dias manteve-se estável em 1,9 % pelo sexto trimestre consecutivo.",
+            "-O CET1 atingiu 12,3 % no 2T26, indicando robustez de capital, enquanto despesas não decorrentes de juros subiram 3,3 % para R$ 16,7 bilhões.",
+            "-Receitas com serviços e seguros avançaram 0,4 % no trimestre, com projeção de crescimento entre 2,0 % e 5,0 % para 2026.",
+            "+Indicadores bancários mostram a rota entre renda fixa e ações.",
+            "+O lucro recorrente gerencial atingiu R$ 12,4 bilhões no 2T26, conforme a âncora A01.",
+            "+O ROE recorrente, que mede o retorno sobre o patrimônio líquido, ficou em 24,3 % no 2T26, conforme a âncora A02.",
+            "+A carteira de crédito totalizou R$ 1,5 trilhão, crescendo 2,7 % no trimestre, com crédito consignado privado subindo 14,3 %, conforme as âncoras A03, A04 e A12.",
+            "+O índice de inadimplência acima de 90 dias, que indica a taxa de clientes em atraso, ficou em 1,9 % no 2T26, estável em relação a períodos anteriores, conforme a âncora A05.",
+            "+O CET1, que mede a qualidade do capital principal, atingiu 12,3 % no 2T26, conforme a âncora A06.",
+            "+Despesas não decorrentes de juros subiram 3,3 % para R$ 16,7 bilhões, conforme a âncora A07.",
+            "+Receitas com serviços e seguros avançaram 0,4 % no trimestre, com projeção de crescimento entre 2,0 % e 5,0 % para 2026, conforme as âncoras A09 e A10."
+          ],
+          "tokens": {
+            "input": 5631,
+            "output": 2265
+          },
+          "cost_usd": 0.003653,
+          "latency_ms": 75317.6
+        }
+      ]
+    },
+    "intermediario:texto": {
+      "status": {
+        "status": "aprovado_apos_2",
+        "attempts": 3,
+        "delivered_attempt": 3,
+        "best_score": 1.0,
+        "stop_reason": "aprovado",
+        "regressions": [
+          "term_context_pct"
+        ]
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "aggregate_score": 0.9366,
+          "passed": false,
+          "metrics": [
+            {
+              "name": "flesch_pt",
+              "score": 39.91,
+              "bound": "entre 40 e 60",
+              "passed": false
+            },
+            {
+              "name": "term_density",
+              "score": 3.85,
+              "bound": "entre 2 e 6",
+              "passed": true
+            },
+            {
+              "name": "term_context_pct",
+              "score": 66.67,
+              "bound": ">= 50",
+              "passed": true
+            },
+            {
+              "name": "numeric_grounding",
+              "score": 0.0,
+              "bound": "<= 0",
+              "passed": true
+            },
+            {
+              "name": "claim_support",
+              "score": 0.818,
+              "bound": ">= 0.95",
+              "passed": false
+            },
+            {
+              "name": "claim_contradictions",
+              "score": 0.0,
+              "bound": "<= 0",
+              "passed": true
+            },
+            {
+              "name": "judge_adequacao_publico",
+              "score": 2.0,
+              "bound": ">= 4",
+              "passed": false
+            },
+            {
+              "name": "judge_tom",
+              "score": 4.0,
+              "bound": ">= 4",
+              "passed": true
+            },
+            {
+              "name": "judge_nuances",
+              "score": 5.0,
+              "bound": ">= 4",
+              "passed": true
+            },
+            {
+              "name": "judge_formato",
+              "score": 5.0,
+              "bound": ">= 4",
+              "passed": true
+            }
+          ],
+          "flags": [],
+          "regressions": [],
+          "injected_feedback": "",
+          "feedback": "- Flesch 40 < 40 exigido; 18% das palavras têm 4+ sílabas, troque por palavras curtas. Frase mais longa: \"Esses números indicam que, apesar de uma leve queda no retorno sobre patrimônio, a rentab…\"\n- Fidelidade 0.82 < 0.95: afirmações sem âncora: \"O ROE recorrente ficou em 24,3 % no 2T26, um pouco abaixo do 24,5 % do 2T25\"; \"O índice de inadimplência acima de 90 dias manteve‑se estável em 1,9 % pelo sex…\". Remova ou reescreva preservando a condicionante da fonte.\n- Judge/adequacao_publico 2 < 4: \"O ROE recorrente ficou em 24,3 % no 2T26, um pouco abaixo do 24,5 % do 2T25\" — O texto utiliza métricas avançadas como ROE e CET1 sem a explicação curta exigida pela rubrica, tornando-o inadequado para o público intermediário.",
+          "text": "Indicadores de Saúde Operacional do Banco e Impacto na Alocação\n\nResultados sólidos e crescimento moderado de crédito apontam para ajustes entre renda fixa e ações.\n\nLucro e Rentabilidade\nO lucro recorrente gerencial atingiu R$ 12,4 bilhões no 2T26, superando o consenso de mercado (A01). O ROE recorrente ficou em 24,3 % no 2T26, um pouco abaixo do 24,5 % do 2T25 (A02). Esses números indicam que, apesar de uma leve queda no retorno sobre patrimônio, a rentabilidade continua robusta, o que pode influenciar a atratividade das ações em relação à renda fixa.\n\nCarteira de Crédito e Inadimplência\nA carteira de crédito totalizou R$ 1,5 trilhão, crescendo 2,7 % no trimestre (A03, A04). O índice de inadimplência acima de 90 dias manteve-se estável em 1,9 % pelo sexto trimestre consecutivo (A05). A estabilidade na inadimplência reforça a qualidade da carteira, enquanto o crescimento moderado de crédito sugere oportunidades de renda fixa de médio prazo.\n\nCapital e Eficiência Operacional\nO CET1 (capital principal) atingiu 12,3 % no 2T26, indicando robustez de capital (A06). O índice de eficiência do banco no Brasil foi de 35,5 % no 2T26 (A08). Esses indicadores de capital e eficiência apontam para uma estrutura sólida que pode sustentar a expansão de serviços sem comprometer a saúde financeira.\n\nReceitas de Serviços e Crédito Consignado\nReceitas com serviços e seguros avançaram 0,4 % no trimestre, com projeção de crescimento entre 2,0 % e 5,0 % para 2026 (A09, A10). O crédito consignado privado registrou alta de 14,3 % no trimestre, impulsionando a carteira de crédito (A12). O foco em serviços pode aumentar a margem de lucro e oferecer alternativas de renda fixa de maior qualidade.",
+          "diff_from_previous": [],
+          "tokens": {
+            "input": 3919,
+            "output": 2217
+          },
+          "cost_usd": 0.003546,
+          "latency_ms": 96527.3
+        },
+        {
+          "attempt": 2,
+          "aggregate_score": 0.98,
+          "passed": false,
+          "metrics": [
+            {
+              "name": "flesch_pt",
+              "score": 43.45,
+              "bound": "entre 40 e 60",
+              "passed": true
+            },
+            {
+              "name": "term_density",
+              "score": 3.62,
+              "bound": "entre 2 e 6",
+              "passed": true
+            },
+            {
+              "name": "term_context_pct",
+              "score": 40.0,
+              "bound": ">= 50",
+              "passed": false
+            },
+            {
+              "name": "numeric_grounding",
+              "score": 0.0,
+              "bound": "<= 0",
+              "passed": true
+            },
+            {
+              "name": "claim_support",
+              "score": 1.0,
+              "bound": ">= 0.95",
+              "passed": true
+            },
+            {
+              "name": "claim_contradictions",
+              "score": 0.0,
+              "bound": "<= 0",
+              "passed": true
+            },
+            {
+              "name": "judge_adequacao_publico",
+              "score": 5.0,
+              "bound": ">= 4",
+              "passed": true
+            },
+            {
+              "name": "judge_tom",
+              "score": 5.0,
+              "bound": ">= 4",
+              "passed": true
+            },
+            {
+              "name": "judge_nuances",
+              "score": 5.0,
+              "bound": ">= 4",
+              "passed": true
+            },
+            {
+              "name": "judge_formato",
+              "score": 5.0,
+              "bound": ">= 4",
+              "passed": true
+            }
+          ],
+          "flags": [
+            "regressao:term_context_pct"
+          ],
+          "regressions": [
+            "term_context_pct"
+          ],
+          "injected_feedback": "- Flesch 40 < 40 exigido; 18% das palavras têm 4+ sílabas, troque por palavras curtas. Frase mais longa: \"Esses números indicam que, apesar de uma leve queda no retorno sobre patrimônio, a rentab…\"\n- Fidelidade 0.82 < 0.95: afirmações sem âncora: \"O ROE recorrente ficou em 24,3 % no 2T26, um pouco abaixo do 24,5 % do 2T25\"; \"O índice de inadimplência acima de 90 dias manteve‑se estável em 1,9 % pelo sex…\". Remova ou reescreva preservando a condicionante da fonte.\n- Judge/adequacao_publico 2 < 4: \"O ROE recorrente ficou em 24,3 % no 2T26, um pouco abaixo do 24,5 % do 2T25\" — O texto utiliza métricas avançadas como ROE e CET1 sem a explicação curta exigida pela rubrica, tornando-o inadequado para o público intermediário.",
+          "feedback": "- 40% dos termos contextualizados < 50% exigido: 'NPL' sem explicação na frase 9 (\"O índice de inadimplência acima de 90 dias manteve‑se estável em 1,9 …\"); 'CET I' sem explicação na frase 12 (\"O CET1, que indica a reserva de capital principal, atingiu 12,3 % no …\"); 'CET I' sem explicação na frase 12 (\"O CET1, que indica a reserva de capital principal, atingiu 12,3 % no …\"). Explique cada um na mesma frase ou na anterior (ex.: 'ou seja', 'funciona como', parênteses).",
+          "text": "Indicadores de Saúde Operacional do Banco e Impacto na Alocação\n\nResultados sólidos e crescimento moderado de crédito apontam para ajustes entre renda fixa e ações.\n\nLucro e Rentabilidade\nO lucro recorrente gerencial atingiu R$ 12,4 bilhões no 2T26, superando o consenso de mercado (A01). O ROE recorrente, que mede o lucro sobre patrimônio, ficou em 24,3 % no 2T26 (A02). Esses números indicam que a rentabilidade continua robusta, o que pode influenciar a atratividade das ações em relação à renda fixa.\n\nCarteira de Crédito e Inadimplência\nA carteira de crédito totalizou R$ 1,5 trilhão, crescendo 2,7 % no trimestre (A03, A04). O índice de inadimplência acima de 90 dias manteve‑se estável em 1,9 % no 2T26 (A05). A estabilidade na inadimplência reforça a qualidade da carteira, enquanto o crescimento moderado de crédito sugere oportunidades de renda fixa de médio prazo.\n\nCapital e Eficiência Operacional\nO CET1, que indica a reserva de capital principal, atingiu 12,3 % no 2T26 (A06). O índice de eficiência do banco no Brasil foi de 35,5 % no 2T26 (A08). Esses indicadores de capital e eficiência apontam para uma estrutura sólida que pode sustentar a expansão de serviços sem comprometer a saúde financeira.\n\nReceitas de Serviços e Crédito Consignado\nReceitas com serviços e seguros avançaram 0,4 % no trimestre, com projeção de crescimento entre 2,0 % e 5,0 % para 2026 (A09, A10). O crédito consignado privado registrou alta de 14,3 % no trimestre, impulsionando a carteira de crédito (A12). O foco em serviços pode aumentar a margem de lucro e oferecer alternativas de renda fixa de maior qualidade.",
+          "diff_from_previous": [
+            "--- antes",
+            "+++ depois",
+            "@@ -5,2 +5,2 @@",
+            "-O ROE recorrente ficou em 24,3 % no 2T26, um pouco abaixo do 24,5 % do 2T25 (A02).",
+            "-Esses números indicam que, apesar de uma leve queda no retorno sobre patrimônio, a rentabilidade continua robusta, o que pode influenciar a atratividade das ações em relação à renda fixa.",
+            "+O ROE recorrente, que mede o lucro sobre patrimônio, ficou em 24,3 % no 2T26 (A02).",
+            "+Esses números indicam que a rentabilidade continua robusta, o que pode influenciar a atratividade das ações em relação à renda fixa.",
+            "@@ -9 +9 @@",
+            "-O índice de inadimplência acima de 90 dias manteve-se estável em 1,9 % pelo sexto trimestre consecutivo (A05).",
+            "+O índice de inadimplência acima de 90 dias manteve‑se estável em 1,9 % no 2T26 (A05).",
+            "@@ -12 +12 @@",
+            "-O CET1 (capital principal) atingiu 12,3 % no 2T26, indicando robustez de capital (A06).",
+            "+O CET1, que indica a reserva de capital principal, atingiu 12,3 % no 2T26 (A06)."
+          ],
+          "tokens": {
+            "input": 5284,
+            "output": 2015
+          },
+          "cost_usd": 0.003514,
+          "latency_ms": 110880.1
+        },
+        {
+          "attempt": 3,
+          "aggregate_score": 1.0,
+          "passed": true,
+          "metrics": [
+            {
+              "name": "flesch_pt",
+              "score": 45.7,
+              "bound": "entre 40 e 60",
+              "passed": true
+            },
+            {
+              "name": "term_density",
+              "score": 4.21,
+              "bound": "entre 2 e 6",
+              "passed": true
+            },
+            {
+              "name": "term_context_pct",
+              "score": 100.0,
+              "bound": ">= 50",
+              "passed": true
+            },
+            {
+              "name": "numeric_grounding",
+              "score": 0.0,
+              "bound": "<= 0",
+              "passed": true
+            },
+            {
+              "name": "claim_support",
+              "score": 1.0,
+              "bound": ">= 0.95",
+              "passed": true
+            },
+            {
+              "name": "claim_contradictions",
+              "score": 0.0,
+              "bound": "<= 0",
+              "passed": true
+            },
+            {
+              "name": "judge_adequacao_publico",
+              "score": 4.0,
+              "bound": ">= 4",
+              "passed": true
+            },
+            {
+              "name": "judge_tom",
+              "score": 5.0,
+              "bound": ">= 4",
+              "passed": true
+            },
+            {
+              "name": "judge_nuances",
+              "score": 5.0,
+              "bound": ">= 4",
+              "passed": true
+            },
+            {
+              "name": "judge_formato",
+              "score": 5.0,
+              "bound": ">= 4",
+              "passed": true
+            }
+          ],
+          "flags": [],
+          "regressions": [],
+          "injected_feedback": "- 40% dos termos contextualizados < 50% exigido: 'NPL' sem explicação na frase 9 (\"O índice de inadimplência acima de 90 dias manteve‑se estável em 1,9 …\"); 'CET I' sem explicação na frase 12 (\"O CET1, que indica a reserva de capital principal, atingiu 12,3 % no …\"); 'CET I' sem explicação na frase 12 (\"O CET1, que indica a reserva de capital principal, atingiu 12,3 % no …\"). Explique cada um na mesma frase ou na anterior (ex.: 'ou seja', 'funciona como', parênteses).",
+          "feedback": "",
+          "text": "Indicadores de Saúde Operacional do Banco e Impacto na Alocação\n\nResultados sólidos e crescimento moderado de crédito apontam para ajustes entre renda fixa e ações.\n\nLucro e Rentabilidade\nO lucro recorrente gerencial atingiu R$ 12,4 bilhões no 2T26, superando o consenso de mercado (A01). O ROE recorrente, que mede o lucro sobre patrimônio, ficou em 24,3 % no 2T26 (A02). Esses números indicam que a rentabilidade continua robusta, o que pode influenciar a atratividade das ações em relação à renda fixa.\n\nCarteira de Crédito e Inadimplência\nA carteira de crédito totalizou R$ 1,5 trilhão, crescendo 2,7 % no trimestre (A03, A04). O índice de inadimplência acima de 90 dias, ou seja, o NPL, manteve‑se estável em 1,9 % no 2T26 (A05). A estabilidade na inadimplência reforça a qualidade da carteira, enquanto o crescimento moderado de crédito sugere oportunidades de renda fixa de médio prazo.\n\nCapital e Eficiência Operacional\nO CET1, que indica a reserva de capital principal – ou seja, o CET I – atingiu 12,3 % no 2T26 (A06). O índice de eficiência do banco no Brasil foi de 35,5 % no 2T26 (A08). Esses indicadores de capital e eficiência apontam para uma estrutura sólida que pode sustentar a expansão de serviços sem comprometer a saúde financeira.\n\nReceitas de Serviços e Crédito Consignado\nReceitas com serviços e seguros avançaram 0,4 % no trimestre, com projeção de crescimento entre 2,0 % e 5,0 % para 2026 (A09, A10). O crédito consignado privado registrou alta de 14,3 % no trimestre, impulsionando a carteira de crédito (A12). O foco em serviços pode aumentar a margem de lucro e oferecer alternativas de renda fixa de maior qualidade.",
+          "diff_from_previous": [
+            "--- antes",
+            "+++ depois",
+            "@@ -4 +4 @@",
+            "-O lucro recorrente gerencial atingiu R$ 12,4 bilhões no 2T26, superando o consenso de mercado (A01).",
+            "+O lucro recorrente gerencial atingiu R$ 12,4 bilhões no 2T26, superando o consenso de mercado (A01).",
+            "@@ -8,2 +8,2 @@",
+            "-A carteira de crédito totalizou R$ 1,5 trilhão, crescendo 2,7 % no trimestre (A03, A04).",
+            "-O índice de inadimplência acima de 90 dias manteve‑se estável em 1,9 % no 2T26 (A05).",
+            "+A carteira de crédito totalizou R$ 1,5 trilhão, crescendo 2,7 % no trimestre (A03, A04).",
+            "+O índice de inadimplência acima de 90 dias, ou seja, o NPL, manteve‑se estável em 1,9 % no 2T26 (A05).",
+            "@@ -12 +12 @@",
+            "-O CET1, que indica a reserva de capital principal, atingiu 12,3 % no 2T26 (A06).",
+            "+O CET1, que indica a reserva de capital principal – ou seja, o CET I – atingiu 12,3 % no 2T26 (A06)."
+          ],
+          "tokens": {
+            "input": 5216,
+            "output": 1984
+          },
+          "cost_usd": 0.003495,
+          "latency_ms": 43589.4
+        }
+      ]
+    }
+  }
+}

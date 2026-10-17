@@ -1,0 +1,559 @@
+{
+  "doc_id": "ata-copom-2026-09-16",
+  "prompt_hash": "5cabb0a0e1b2",
+  "model": "groq:openai/gpt-oss-20b",
+  "created_at": "2026-10-17T13:56:13",
+  "outputs": {
+    "iniciante:texto": {
+      "audience": "iniciante",
+      "format": "texto",
+      "attempt": 1,
+      "content": {
+        "kind": "texto",
+        "title": "Copom reduz taxa básica de juros para 13,75% – foco em inflação e riscos",
+        "subtitle": "O Comitê de Política Monetária decide baixar a taxa de juros à medida que a inflação ainda ultrapassa a meta, mas mantém postura restritiva diante de incertezas externas e expectativas desancoradas.",
+        "sections": [
+          {
+            "heading": "Contexto econômico",
+            "body": "O cenário externo permanece volátil, com conflitos no Oriente Médio e incertezas nas políticas monetárias de economias avançadas, o que aumenta a volatilidade de preços de ativos e commodities. Domesticamente, a atividade econômica mostra moderação gradual, especialmente nos setores cíclicos, mas o mercado de trabalho permanece aquecido. A inflação cheia e a média de medidas subjacentes desaceleraram, ficando abaixo do limite superior do intervalo de tolerância, mas ainda acima da meta de 3,5 %.",
+            "anchor_ids": []
+          },
+          {
+            "heading": "Expectativas e projeções",
+            "body": "As pesquisas Focus apontam expectativas de inflação de 4,9 % em 2026 e 4,3 % em 2027, enquanto a projeção do Copom para o primeiro trimestre de 2028 é de 3,2 %. A inflação acumulada em quatro trimestres deve cair de 5,2 % em 2026 para 3,9 % em 2027 e 3,2 % em 2028, conforme a tabela de referência.",
+            "anchor_ids": []
+          },
+          {
+            "heading": "Riscos à inflação",
+            "body": "Os riscos de alta são considerados mais elevados que o habitual, com destaque para a desancoragem prolongada das expectativas, resiliência da inflação de serviços, choques de oferta (petróleo, clima) e estímulos à demanda. Os riscos de baixa incluem desaceleração mais acentuada da atividade, desaceleração global e queda nos preços das commodities. A postura do Copom é de manter a restrição monetária mais longa do que o normal para ancorar expectativas.",
+            "anchor_ids": []
+          },
+          {
+            "heading": "Política monetária e decisão",
+            "body": "O Copom avaliou que a política contracionista tem se acumulado, mas a inflação ainda é impulsionada pela demanda, exigindo continuidade da restrição. Choques de oferta não justificam ajustes imediatos, mas devem ser monitorados. Em meio a alta incerteza, o Comitê decidiu reduzir a taxa básica de juros para 13,75 % ao ano, buscando suavizar flutuações de atividade e fomentar o pleno emprego, enquanto mantém a meta de inflação como foco principal.",
+            "anchor_ids": []
+          },
+          {
+            "heading": "Conclusão para investidores",
+            "body": "Para investidores iniciantes, a decisão indica que o Banco Central está disposto a reduzir a taxa de juros para estimular a economia, mas ainda mantém uma postura cautelosa diante de riscos inflacionários. Isso pode favorecer setores de crédito e consumo, mas a inflação ainda está acima da meta, o que pode pressionar a rentabilidade real de ativos de renda fixa. Monitorar as expectativas de inflação e a evolução dos choques de oferta será crucial para ajustar estratégias de portfólio.",
+            "anchor_ids": []
+          }
+        ]
+      },
+      "anchor_ids": [],
+      "warnings": []
+    },
+    "iniciante:carrossel": {
+      "audience": "iniciante",
+      "format": "carrossel",
+      "attempt": 1,
+      "content": {
+        "kind": "carrossel",
+        "slides": [
+          {
+            "role": "gancho",
+            "title": "Copom 281: O que mudou?",
+            "text": "Em 15-16 set 2026, o Comitê de Política Monetária reduziu a taxa básica de juros para 13,75 % ao ano, sinalizando confiança na trajetória de desinflação.",
+            "anchor_ids": []
+          },
+          {
+            "role": "corpo",
+            "title": "Cenário externo e interno",
+            "text": "Conflitos no Oriente Médio e volatilidade de commodities mantêm incertezas globais. No Brasil, a atividade desacelera, mas o mercado de trabalho permanece aquecido e a inflação ainda acima da meta.",
+            "anchor_ids": []
+          },
+          {
+            "role": "corpo",
+            "title": "Expectativas de inflação",
+            "text": "Projeções Focus: 4,9 % em 2026, 4,3 % em 2027, 3,2 % no 1.º trimestre de 2028. A inflação acumulada em 4 trimestres: 5,2 % (2026), 3,9 % (2027).",
+            "anchor_ids": []
+          },
+          {
+            "role": "corpo",
+            "title": "Riscos e riscos de alta",
+            "text": "Desancoragem das expectativas, resiliência de serviços, choques de oferta e câmbio depreciado aumentam risco de alta. Riscos de baixa incluem desaceleração mais forte e queda de commodities.",
+            "anchor_ids": []
+          },
+          {
+            "role": "corpo",
+            "title": "Política monetária em foco",
+            "text": "Copom mantém postura restritiva, mas ajusta a taxa para 13,75 % ao ano, equilibrando a necessidade de desinflação com a suavização da atividade econômica.",
+            "anchor_ids": []
+          },
+          {
+            "role": "conclusao",
+            "title": "Próximos passos",
+            "text": "O Comitê continuará monitorando dados, ajustando a política conforme necessário para garantir a convergência da inflação à meta e o pleno emprego.",
+            "anchor_ids": []
+          }
+        ]
+      },
+      "anchor_ids": [],
+      "warnings": []
+    },
+    "iniciante:roteiro": {
+      "audience": "iniciante",
+      "format": "roteiro",
+      "attempt": 1,
+      "content": {
+        "kind": "roteiro",
+        "blocks": [
+          {
+            "start_s": 0.0,
+            "end_s": 5.0,
+            "visual_hook": "Título na tela: \"Copom 281 – Decisão de Juros 2026\"",
+            "speech": "Olá, investidores! Hoje trazemos a decisão do Copom, o Comitê de Política Monetária do Brasil.",
+            "anchor_ids": []
+          },
+          {
+            "start_s": 5.0,
+            "end_s": 12.0,
+            "visual_hook": "Gráfico de taxa de juros em queda",
+            "speech": "Em 15 e 16 de setembro, o Copom reduziu a taxa básica de juros para 13,75% ao ano.",
+            "anchor_ids": []
+          },
+          {
+            "start_s": 12.0,
+            "end_s": 20.0,
+            "visual_hook": "Mapa do Brasil com ícones de inflação",
+            "speech": "A meta de inflação é de 4,5%. A inflação atual está em 5,2% em 2026, acima da meta, mas a projeção para 2028 é de 3,2%.",
+            "anchor_ids": []
+          },
+          {
+            "start_s": 20.0,
+            "end_s": 28.0,
+            "visual_hook": "Ícone de risco com seta para cima",
+            "speech": "O Comitê alerta para riscos de alta: expectativas desancoradas, choques de oferta e política fiscal contracíclica.",
+            "anchor_ids": []
+          },
+          {
+            "start_s": 28.0,
+            "end_s": 35.0,
+            "visual_hook": "Ícone de estabilidade",
+            "speech": "Para conter a inflação, o Copom mantém a política restritiva, mas com cautela diante da incerteza global.",
+            "anchor_ids": []
+          },
+          {
+            "start_s": 35.0,
+            "end_s": 42.0,
+            "visual_hook": "Gráfico de crescimento econômico",
+            "speech": "A economia está moderando, mas o mercado de trabalho permanece aquecido, com desemprego baixo.",
+            "anchor_ids": []
+          },
+          {
+            "start_s": 42.0,
+            "end_s": 50.0,
+            "visual_hook": "Ícone de investimento",
+            "speech": "Para investidores, isso significa juros mais baixos, mas ainda cautela: a inflação pode subir se choques persistirem.",
+            "anchor_ids": []
+          },
+          {
+            "start_s": 50.0,
+            "end_s": 60.0,
+            "visual_hook": "Call to action",
+            "speech": "Fique atento às próximas reuniões do Copom e às projeções de inflação. Até a próxima!",
+            "anchor_ids": []
+          }
+        ]
+      },
+      "anchor_ids": [],
+      "warnings": []
+    },
+    "intermediario:texto": {
+      "audience": "intermediario",
+      "format": "texto",
+      "attempt": 1,
+      "content": {
+        "kind": "texto",
+        "title": "Copom 281ª: Redução da taxa básica de juros para 13,75% em meio a incertezas externas e expectativas inflacionárias acima da meta",
+        "subtitle": "O Comitê de Política Monetária mantém postura restritiva, ajustando a taxa para garantir a convergência da inflação ao longo do horizonte relevante.",
+        "sections": [
+          {
+            "heading": "Contexto macroeconômico",
+            "body": "O cenário externo permanece volátil, com conflitos no Oriente Médio e incertezas nas políticas monetárias de economias avançadas. No Brasil, a atividade econômica mostra moderação gradual, especialmente em setores cíclicos, mas o mercado de trabalho permanece aquecido. A inflação cheia e a média de medidas subjacentes desaceleraram, ficando abaixo do limite superior do intervalo de tolerância, porém ainda acima da meta de 3,5%.",
+            "anchor_ids": []
+          },
+          {
+            "heading": "Expectativas e projeções",
+            "body": "As pesquisas Focus indicam expectativas de inflação de 4,9% em 2026 e 4,3% em 2027, enquanto a projeção do Copom para o primeiro trimestre de 2028 é de 3,2%. A inflação acumulada em quatro trimestres para 2026, 2027 e 2028 é de 5,2%, 3,9% e 3,2%, respectivamente. Os riscos de alta permanecem elevados, com destaque para a desancoragem das expectativas, resiliência da inflação de serviços e choques de oferta.",
+            "anchor_ids": []
+          },
+          {
+            "heading": "Riscos e cenários",
+            "body": "O Comitê identificou riscos de alta, como desancoragem prolongada das expectativas, maior resiliência de serviços e políticas externas e internas que aumentem a inflação. Riscos de baixa incluem desaceleração mais acentuada da atividade doméstica, desaceleração global e queda nos preços das commodities. A política monetária deve permanecer restritiva para conter a inflação, mas sem reagir a choques de oferta primários.",
+            "anchor_ids": []
+          },
+          {
+            "heading": "Decisão de política monetária",
+            "body": "O Copom reduziu a taxa básica de juros para 13,75% ao ano, mantendo a postura restritiva necessária para a convergência da inflação à meta. A decisão visa suavizar flutuações na atividade econômica e fomentar o pleno emprego, enquanto o Comitê continua monitorando o cenário de incertezas e ajustando a calibração conforme necessário.",
+            "anchor_ids": []
+          },
+          {
+            "heading": "Votação e composição",
+            "body": "A decisão foi aprovada por Gabriel Muricca Galípolo (presidente), Ailton de Aquino Santos, Gilneu Francisco Astolfi Vivan, Izabela Moreira Correa, Nilton José Schneider David, Paulo Picchetti e Rodrigo Alves Teixeira.",
+            "anchor_ids": []
+          }
+        ]
+      },
+      "anchor_ids": [],
+      "warnings": []
+    },
+    "intermediario:carrossel": {
+      "audience": "intermediario",
+      "format": "carrossel",
+      "attempt": 1,
+      "content": {
+        "kind": "carrossel",
+        "slides": [
+          {
+            "role": "gancho",
+            "title": "Copom 281ª – 15/16 set 2026",
+            "text": "O Comitê de Política Monetária reduziu a taxa básica de juros para 13,75 % ao ano, sinalizando confiança na convergência da inflação à meta.",
+            "anchor_ids": []
+          },
+          {
+            "role": "corpo",
+            "title": "Cenário externo e interno",
+            "text": "Conflitos no Oriente Médio e incerteza em economias avançadas aumentam volatilidade de commodities. Doméstica: atividade moderada, mercado de trabalho aquecido, inflação ainda acima da meta.",
+            "anchor_ids": []
+          },
+          {
+            "role": "corpo",
+            "title": "Expectativas de inflação",
+            "text": "Focus aponta 4,9 % em 2026 e 4,3 % em 2027. Projeção do Copom para 1º tri 2028: 3,2 %. Riscos de alta mantêm-se elevados, exigindo política restritiva mais longa.",
+            "anchor_ids": []
+          },
+          {
+            "role": "corpo",
+            "title": "Riscos e cenários",
+            "text": "Alto risco de alta por desancoragem de expectativas, resiliência de serviços e choques de oferta. Risco de baixa por desaceleração mais forte ou queda de commodities.",
+            "anchor_ids": []
+          },
+          {
+            "role": "corpo",
+            "title": "Decisão de política",
+            "text": "Redução da taxa básica para 13,75 % ao ano visa suavizar atividade, fomentar pleno emprego e manter a inflação próxima da meta.",
+            "anchor_ids": []
+          },
+          {
+            "role": "conclusao",
+            "title": "Próximos passos",
+            "text": "Copom continuará monitorando cenários, ajustando a restrição conforme evolução do risco, mantendo a estabilidade de preços e o crescimento sustentável.",
+            "anchor_ids": []
+          }
+        ]
+      },
+      "anchor_ids": [],
+      "warnings": []
+    },
+    "intermediario:roteiro": {
+      "audience": "intermediario",
+      "format": "roteiro",
+      "attempt": 1,
+      "content": {
+        "kind": "roteiro",
+        "blocks": [
+          {
+            "start_s": 0.0,
+            "end_s": 5.0,
+            "visual_hook": "Título: Copom 281 – Decisão de juros",
+            "speech": "Bem-vindo ao resumo da 281ª reunião do Comitê de Política Monetária.",
+            "anchor_ids": []
+          },
+          {
+            "start_s": 5.0,
+            "end_s": 12.0,
+            "visual_hook": "Gráfico de inflação vs meta",
+            "speech": "O cenário externo permanece incerto, com tensões no Oriente Médio e volatilidade de commodities.",
+            "anchor_ids": []
+          },
+          {
+            "start_s": 12.0,
+            "end_s": 20.0,
+            "visual_hook": "Indicadores econômicos em tela",
+            "speech": "Domesticamente, a atividade desacelera, mas o mercado de trabalho permanece aquecido e a inflação ainda acima da meta.",
+            "anchor_ids": []
+          },
+          {
+            "start_s": 20.0,
+            "end_s": 28.0,
+            "visual_hook": "Tabela de expectativas Focus",
+            "speech": "Expectativas de inflação para 2026 e 2027 estão em 4,9% e 4,3%, acima da meta de 3,5%.",
+            "anchor_ids": []
+          },
+          {
+            "start_s": 28.0,
+            "end_s": 36.0,
+            "visual_hook": "Análise de riscos",
+            "speech": "Riscos de alta incluem desancoragem das expectativas e choques de oferta, enquanto riscos de baixa envolvem desaceleração mais forte e queda de commodities.",
+            "anchor_ids": []
+          },
+          {
+            "start_s": 36.0,
+            "end_s": 44.0,
+            "visual_hook": "Política monetária em foco",
+            "speech": "O Copom conclui que a política deve permanecer restritiva, monitorando choques de oferta e mantendo a convergência à meta.",
+            "anchor_ids": []
+          },
+          {
+            "start_s": 44.0,
+            "end_s": 52.0,
+            "visual_hook": "Decisão de taxa",
+            "speech": "Decisão: redução da taxa básica de juros para 13,75% ao ano, visando estabilizar preços e suavizar flutuações econômicas.",
+            "anchor_ids": []
+          },
+          {
+            "start_s": 52.0,
+            "end_s": 60.0,
+            "visual_hook": "Encerramento",
+            "speech": "O Copom continuará ajustando a política conforme o cenário evolui, mantendo a disciplina fiscal e monetária.",
+            "anchor_ids": []
+          }
+        ]
+      },
+      "anchor_ids": [],
+      "warnings": []
+    },
+    "avancado:texto": {
+      "audience": "avancado",
+      "format": "texto",
+      "attempt": 1,
+      "content": {
+        "kind": "texto",
+        "title": "Copom 281ª: Redução de juros em meio a expectativas inflacionárias desancoradas",
+        "subtitle": "O Banco Central reduziu a taxa básica para 13,75% ao ano, sinalizando maior restrição monetária para conter a inflação que ainda ultrapassa a meta.",
+        "sections": [
+          {
+            "heading": "Contexto externo e interno",
+            "body": "O Comitê avaliou a persistente incerteza no cenário externo, marcada por conflitos no Oriente Médio e volatilidade de commodities, e a moderação gradual da atividade doméstica. O PIB do 2º trimestre de 2026 desacelerou, especialmente nos setores cíclicos, enquanto o mercado de trabalho permanece aquecido, com desemprego em patamares historicamente baixos e crescimento de salários acima da produtividade.",
+            "anchor_ids": []
+          },
+          {
+            "heading": "Expectativas e projeções de inflação",
+            "body": "As expectativas de inflação para 2026 e 2027, segundo a pesquisa Focus, ficam em 4,9% e 4,3%, respectivamente, acima da meta de 3,5%. A projeção do Copom para o 1º trimestre de 2028 é de 3,2%. A inflação acumulada em quatro trimestres deve cair de 5,2% em 2026 para 3,9% em 2027 e 3,2% em 2028, conforme Tabela 1.",
+            "anchor_ids": []
+          },
+          {
+            "heading": "Riscos e cenários de risco",
+            "body": "O Comitê identificou riscos de alta, como desancoragem prolongada das expectativas, resiliência da inflação de serviços e choques de oferta de petróleo, e riscos de baixa, como desaceleração mais acentuada da atividade e queda nos preços das commodities. A assimetria altista reforça a necessidade de restrição monetária mais longa.",
+            "anchor_ids": []
+          },
+          {
+            "heading": "Decisão de política monetária",
+            "body": "Em decisão unânime, o Copom reduziu a taxa básica de juros para 13,75% ao ano, mantendo um caráter restritivo para garantir a convergência da inflação à meta. A medida visa suavizar flutuações de atividade e fomentar o pleno emprego, enquanto o Comitê permanece vigilante a choques de oferta e à evolução das expectativas.",
+            "anchor_ids": []
+          },
+          {
+            "heading": "Perspectiva futura",
+            "body": "O Copom enfatizou a importância de manter a política monetária previsível, crível e anticíclica, em harmonia com a política fiscal. A expectativa é de que a taxa neutra possa subir devido a incertezas fiscais e de reformas estruturais, exigindo ajustes contínuos na condução da política.",
+            "anchor_ids": []
+          }
+        ]
+      },
+      "anchor_ids": [],
+      "warnings": []
+    },
+    "avancado:carrossel": {
+      "audience": "avancado",
+      "format": "carrossel",
+      "attempt": 1,
+      "content": {
+        "kind": "carrossel",
+        "slides": [
+          {
+            "role": "gancho",
+            "title": "Copom 281ª – 15/16 Set",
+            "text": "Decisão de reduzir a taxa básica de juros para 13,75 % a.a., sinalizando confiança na convergência da inflação à meta.",
+            "anchor_ids": []
+          },
+          {
+            "role": "corpo",
+            "title": "Contexto Externo",
+            "text": "Incertezas geopolíticas e volatilidade de commodities exigem cautela; risco de alta inflacionária permanece elevado.",
+            "anchor_ids": []
+          },
+          {
+            "role": "corpo",
+            "title": "Situação Interna",
+            "text": "Inflação subjacente desacelerou, mas ainda acima da meta; expectativas de 4,9 % em 2026 e 4,3 % em 2027. PIB desacelera, mercado de trabalho aquecido.",
+            "anchor_ids": []
+          },
+          {
+            "role": "corpo",
+            "title": "Riscos de Inflação",
+            "text": "Alto risco de alta: desancoragem de expectativas, resiliência de serviços, choques de oferta. Risco de baixa: desaceleração mais forte, queda de commodities.",
+            "anchor_ids": []
+          },
+          {
+            "role": "corpo",
+            "title": "Política Fiscal e Monetária",
+            "text": "Política fiscal contracíclica e reformas estruturais são cruciais; coordenação entre fiscal e monetária reforça a convergência.",
+            "anchor_ids": []
+          },
+          {
+            "role": "conclusao",
+            "title": "Próximos Passos",
+            "text": "Copom manterá restrição adequada, monitorando choques de oferta e expectativas; objetivo: estabilizar preços e fomentar pleno emprego.",
+            "anchor_ids": []
+          }
+        ]
+      },
+      "anchor_ids": [],
+      "warnings": []
+    },
+    "avancado:roteiro": {
+      "audience": "avancado",
+      "format": "roteiro",
+      "attempt": 1,
+      "content": {
+        "kind": "roteiro",
+        "blocks": [
+          {
+            "start_s": 0.0,
+            "end_s": 5.0,
+            "visual_hook": "Título: Copom 281 – Decisão de juros",
+            "speech": "Bem-vindo ao resumo da 281ª reunião do Copom, realizada em 15 e 16 de setembro de 2026.",
+            "anchor_ids": []
+          },
+          {
+            "start_s": 5.0,
+            "end_s": 15.0,
+            "visual_hook": "Gráfico de inflação e expectativas",
+            "speech": "O cenário externo permanece incerto, com tensões no Oriente Médio e volatilidade de commodities. No Brasil, a inflação subjacente desacelerou, mas ainda está acima da meta, com expectativas de 4,9% em 2026 e 4,3% em 2027.",
+            "anchor_ids": []
+          },
+          {
+            "start_s": 15.0,
+            "end_s": 25.0,
+            "visual_hook": "Indicadores de atividade econômica",
+            "speech": "O PIB do segundo trimestre de 2026 mostrou desaceleração, especialmente em setores cíclicos, enquanto o mercado de trabalho permanece forte, com desemprego historicamente baixo.",
+            "anchor_ids": []
+          },
+          {
+            "start_s": 25.0,
+            "end_s": 35.0,
+            "visual_hook": "Risco de inflação",
+            "speech": "Riscos de alta incluem desancoragem das expectativas e choques de oferta, enquanto riscos de baixa envolvem desaceleração mais acentuada e queda de commodities.",
+            "anchor_ids": []
+          },
+          {
+            "start_s": 35.0,
+            "end_s": 45.0,
+            "visual_hook": "Decisão de juros",
+            "speech": "O Copom reduziu a taxa básica de juros para 13,75% ao ano, mantendo postura restritiva para garantir a convergência à meta de inflação.",
+            "anchor_ids": []
+          },
+          {
+            "start_s": 45.0,
+            "end_s": 55.0,
+            "visual_hook": "Resumo final",
+            "speech": "Em suma, o Copom busca equilibrar a inflação, a atividade econômica e a estabilidade de preços em um ambiente de alta incerteza, com foco em políticas fiscal e monetária harmoniosas.",
+            "anchor_ids": []
+          },
+          {
+            "start_s": 55.0,
+            "end_s": 60.0,
+            "visual_hook": "Encerramento",
+            "speech": "Obrigado por acompanhar este resumo. Até a próxima reunião!",
+            "anchor_ids": []
+          }
+        ]
+      },
+      "anchor_ids": [],
+      "warnings": []
+    }
+  },
+  "node_log": [
+    {
+      "node": "baseline",
+      "cell": "iniciante:texto",
+      "model": "groq:openai/gpt-oss-20b",
+      "input_tokens": 3520,
+      "output_tokens": 670,
+      "cost_usd": 0.000465,
+      "latency_ms": 8379.4,
+      "attempt": null
+    },
+    {
+      "node": "baseline",
+      "cell": "iniciante:carrossel",
+      "model": "groq:openai/gpt-oss-20b",
+      "input_tokens": 3527,
+      "output_tokens": 425,
+      "cost_usd": 0.000392025,
+      "latency_ms": 984.3,
+      "attempt": null
+    },
+    {
+      "node": "baseline",
+      "cell": "iniciante:roteiro",
+      "model": "groq:openai/gpt-oss-20b",
+      "input_tokens": 3597,
+      "output_tokens": 441,
+      "cost_usd": 0.00040207499999999995,
+      "latency_ms": 38215.7,
+      "attempt": null
+    },
+    {
+      "node": "baseline",
+      "cell": "intermediario:texto",
+      "model": "groq:openai/gpt-oss-20b",
+      "input_tokens": 3520,
+      "output_tokens": 600,
+      "cost_usd": 0.000444,
+      "latency_ms": 189848.2,
+      "attempt": null
+    },
+    {
+      "node": "baseline",
+      "cell": "intermediario:carrossel",
+      "model": "groq:openai/gpt-oss-20b",
+      "input_tokens": 3527,
+      "output_tokens": 391,
+      "cost_usd": 0.00038182499999999997,
+      "latency_ms": 158064.8,
+      "attempt": null
+    },
+    {
+      "node": "baseline",
+      "cell": "intermediario:roteiro",
+      "model": "groq:openai/gpt-oss-20b",
+      "input_tokens": 3597,
+      "output_tokens": 426,
+      "cost_usd": 0.000397575,
+      "latency_ms": 67684.3,
+      "attempt": null
+    },
+    {
+      "node": "baseline",
+      "cell": "avancado:texto",
+      "model": "groq:openai/gpt-oss-20b",
+      "input_tokens": 3520,
+      "output_tokens": 573,
+      "cost_usd": 0.00043589999999999997,
+      "latency_ms": 129520.3,
+      "attempt": null
+    },
+    {
+      "node": "baseline",
+      "cell": "avancado:carrossel",
+      "model": "groq:openai/gpt-oss-20b",
+      "input_tokens": 3527,
+      "output_tokens": 331,
+      "cost_usd": 0.00036382499999999997,
+      "latency_ms": 97724.1,
+      "attempt": null
+    },
+    {
+      "node": "baseline",
+      "cell": "avancado:roteiro",
+      "model": "groq:openai/gpt-oss-20b",
+      "input_tokens": 3597,
+      "output_tokens": 440,
+      "cost_usd": 0.000401775,
+      "latency_ms": 219723.0,
+      "attempt": null
+    }
+  ],
+  "failures": []
+}

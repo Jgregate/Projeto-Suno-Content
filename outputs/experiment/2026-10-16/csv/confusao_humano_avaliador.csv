@@ -1,0 +1,4 @@
+humano,iniciante,intermediario,avancado
+iniciante,1,2,0
+intermediario,0,1,2
+avancado,0,2,1

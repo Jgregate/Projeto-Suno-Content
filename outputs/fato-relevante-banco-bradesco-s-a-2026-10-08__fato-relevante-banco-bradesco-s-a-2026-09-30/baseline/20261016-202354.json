@@ -1,0 +1,529 @@
+{
+  "doc_id": "fato-relevante-banco-bradesco-s-a-2026-10-08__fato-relevante-banco-bradesco-s-a-2026-09-30",
+  "prompt_hash": "5cabb0a0e1b2",
+  "model": "groq:openai/gpt-oss-20b",
+  "created_at": "2026-10-16T20:23:54",
+  "outputs": {
+    "iniciante:texto": {
+      "audience": "iniciante",
+      "format": "texto",
+      "attempt": 1,
+      "content": {
+        "kind": "texto",
+        "title": "Bradesco Homologa Aumento de Capital e Ajusta Juros sobre Capital Próprio",
+        "subtitle": "A aprovação do Banco Central confirma a emissão de novas ações e recalcula os juros a serem pagos aos acionistas.",
+        "sections": [
+          {
+            "heading": "Homologação e Emissão de Ações",
+            "body": "Em 8 de outubro de 2026, o Banco Central do Brasil homologou o aumento de capital aprovado pelo Conselho de Administração do Bradesco. As novas ações serão emitidas e creditadas aos subscritores em 13 de outubro de 2026, alterando a estrutura de capital da companhia.",
+            "anchor_ids": []
+          },
+          {
+            "heading": "Reajuste dos Juros sobre Capital Próprio",
+            "body": "Com a emissão das novas ações, os juros sobre capital próprio (JCP) deliberados em 30 de setembro de 2026, totalizando R$3,8 bilhões, passam a ser calculados com base no número atualizado de ações. O valor por ação passa de R$0,342 389 810 (ordinária) e R$0,376 628 790 (preferencial) para R$0,323 858 718 (ordinária) e R$0,356 244 590 (preferencial). Após a dedução do Imposto de Renda na Fonte de 17,5 %, os valores líquidos são R$0,267 183 442 (ordinária) e R$0,293 901 787 (preferencial).",
+            "anchor_ids": []
+          },
+          {
+            "heading": "Pagamento e Distribuição",
+            "body": "O pagamento dos JCP será efetuado até 30 de abril de 2027. Os acionistas inscritos em 13 de outubro de 2026 receberão o valor líquido por meio de crédito em conta corrente ou via custódia na B3. Acionistas com dados desatualizados deverão atualizar cadastro na agência Bradesco para receber o pagamento.",
+            "anchor_ids": []
+          },
+          {
+            "heading": "Impacto no Dividendos e na Estrutura Financeira",
+            "body": "Os juros aprovados representam cerca de 19,8 vezes o valor dos juros mensais líquidos e serão incluídos no cálculo dos dividendos obrigatórios do exercício, conforme estatuto social. A emissão de capital aumenta a base de ações, diluindo o valor por ação, mas mantém o montante total de JCP inalterado.",
+            "anchor_ids": []
+          },
+          {
+            "heading": "Próximos Passos",
+            "body": "Os acionistas devem monitorar a data-base de 13 de outubro de 2026 para garantir direito ao pagamento. O Bradesco continuará informando sobre a distribuição e quaisquer ajustes adicionais.",
+            "anchor_ids": []
+          }
+        ]
+      },
+      "anchor_ids": [],
+      "warnings": []
+    },
+    "iniciante:carrossel": {
+      "audience": "iniciante",
+      "format": "carrossel",
+      "attempt": 1,
+      "content": {
+        "kind": "carrossel",
+        "slides": [
+          {
+            "role": "gancho",
+            "title": "Bradesco anuncia aumento de capital",
+            "text": "O Banco Central homologou o aumento de capital, emitindo novas ações em 13/10/2026.",
+            "anchor_ids": []
+          },
+          {
+            "role": "corpo",
+            "title": "Juros sobre o capital próprio",
+            "text": "Total de R$3,8 bilhões, ajustado para R$0,3239 por ação ordinária e R$0,3562 por ação preferencial, líquidos de IR 17,5%.",
+            "anchor_ids": []
+          },
+          {
+            "role": "corpo",
+            "title": "Pagamento intermediário",
+            "text": "Beneficiados a partir de 13/10/2026, pagamento até 30/04/2027, líquido de R$0,2825 por ação ordinária e R$0,3107 por ação preferencial.",
+            "anchor_ids": []
+          },
+          {
+            "role": "corpo",
+            "title": "Como receber",
+            "text": "Crédito em conta corrente ou via B3; dados atualizados são obrigatórios, caso contrário compareça a agência Bradesco.",
+            "anchor_ids": []
+          },
+          {
+            "role": "conclusao",
+            "title": "O que isso significa para você",
+            "text": "Aumento de capital fortalece a banca, juros sobre capital próprio aumentam o retorno aos acionistas e impactam dividendos futuros.",
+            "anchor_ids": []
+          }
+        ]
+      },
+      "anchor_ids": [],
+      "warnings": []
+    },
+    "iniciante:roteiro": {
+      "audience": "iniciante",
+      "format": "roteiro",
+      "attempt": 1,
+      "content": {
+        "kind": "roteiro",
+        "blocks": [
+          {
+            "start_s": 0.0,
+            "end_s": 5.0,
+            "visual_hook": "Logo do Bradesco aparece com música animada",
+            "speech": "Olá! Hoje trazemos uma notícia importante do Banco Bradesco.",
+            "anchor_ids": []
+          },
+          {
+            "start_s": 5.0,
+            "end_s": 12.0,
+            "visual_hook": "Gráfico de barras mostrando aumento de capital",
+            "speech": "O Banco Central homologou o aumento de capital do Bradesco, que vai emitir novas ações em 13 de outubro.",
+            "anchor_ids": []
+          },
+          {
+            "start_s": 12.0,
+            "end_s": 20.0,
+            "visual_hook": "Animação de moedas se multiplicando",
+            "speech": "Com isso, os juros sobre o capital próprio, que totalizam R$3,8 bilhões, serão recalculados por ação.",
+            "anchor_ids": []
+          },
+          {
+            "start_s": 20.0,
+            "end_s": 30.0,
+            "visual_hook": "Tabela comparando valores antes e depois",
+            "speech": "Os juros por ação agora são R$0,3239 para ordinárias e R$0,3562 para preferenciais, líquidos de IR de 17,5%.",
+            "anchor_ids": []
+          },
+          {
+            "start_s": 30.0,
+            "end_s": 38.0,
+            "visual_hook": "Calendário marcando 30 de abril de 2027",
+            "speech": "O pagamento será concluído até 30 de abril de 2027, mantendo o valor total de R$3,8 bilhões.",
+            "anchor_ids": []
+          },
+          {
+            "start_s": 38.0,
+            "end_s": 45.0,
+            "visual_hook": "Imagem de investidores felizes",
+            "speech": "Isso significa mais retorno para quem detém ações do Bradesco, reforçando a confiança no banco.",
+            "anchor_ids": []
+          },
+          {
+            "start_s": 45.0,
+            "end_s": 60.0,
+            "visual_hook": "Call to action: \"Assine nosso canal para mais novidades\"",
+            "speech": "Fique atento às datas e aproveite os benefícios. Inscreva-se e acompanhe nossas atualizações!",
+            "anchor_ids": []
+          }
+        ]
+      },
+      "anchor_ids": [],
+      "warnings": []
+    },
+    "intermediario:texto": {
+      "audience": "intermediario",
+      "format": "texto",
+      "attempt": 1,
+      "content": {
+        "kind": "texto",
+        "title": "Homologação do Aumento de Capital e Ajuste nos Juros sobre o Capital Próprio – Bradesco",
+        "subtitle": "O Banco Central aprova o aumento de capital, alterando a base de cálculo dos juros sobre o capital próprio e mantendo o pagamento previsto para 30 de abril de 2027.",
+        "sections": [
+          {
+            "heading": "Contexto do Aumento de Capital",
+            "body": "Em 29 de julho, 16 de setembro, 30 de setembro e 2 de outubro de 2026, o Bradesco divulgou avisos aos acionistas e comunicado ao mercado sobre um aumento de capital social com subscrição de novas ações. O Banco Central homologou o aumento em 8 de outubro, com emissão das ações subscritas em 13 de outubro.",
+            "anchor_ids": []
+          },
+          {
+            "heading": "Impacto nos Juros sobre o Capital Próprio",
+            "body": "O Conselho de Administração aprovou juros sobre o capital próprio intermediários de R$ 3,800 bilhões, equivalentes a R$ 0,342 389 810 por ação ordinária e R$ 0,376 628 790 por ação preferencial. Com a homologação, a base de cálculo passa a considerar o número de ações após a emissão, ajustando os valores por ação para R$ 0,323 858 718 (ordinária) e R$ 0,356 244 590 (preferencial). Após dedução do IRPF de 17,5 %, os valores líquidos são R$ 0,267 183 442 e R$ 0,293 901 787, respectivamente.",
+            "anchor_ids": []
+          },
+          {
+            "heading": "Pagamento e Distribuição",
+            "body": "Os juros serão pagos até 30 de abril de 2027, com pagamento líquido já deduzido do imposto. A distribuição ocorrerá via crédito em contas correntes indicadas pelos acionistas ou por meio de custódia na B3. Acionistas sem dados atualizados deverão comparecer a uma agência Bradesco para regularização.",
+            "anchor_ids": []
+          },
+          {
+            "heading": "Outras Informações Relevantes",
+            "body": "O ajuste afeta apenas os valores por ação; todas as demais condições do fato relevante de 30 de setembro permanecem inalteradas, incluindo o montante global e a data de pagamento. Os juros representam cerca de 19,8 vezes os juros mensais líquidos, e serão considerados no cálculo dos dividendos obrigatórios do exercício.",
+            "anchor_ids": []
+          }
+        ]
+      },
+      "anchor_ids": [],
+      "warnings": []
+    },
+    "intermediario:carrossel": {
+      "audience": "intermediario",
+      "format": "carrossel",
+      "attempt": 1,
+      "content": {
+        "kind": "carrossel",
+        "slides": [
+          {
+            "role": "gancho",
+            "title": "Bradesco Homologa Aumento de Capital",
+            "text": "Em 8 de outubro de 2026, o Banco Central aprovou o aumento de capital da Bradesco, emitindo novas ações em 13 de outubro.",
+            "anchor_ids": []
+          },
+          {
+            "role": "corpo",
+            "title": "Impacto nos Juros sobre Capital Próprio",
+            "text": "Os juros de R$3,8 bi foram recalculados com base no novo número de ações: R$0,3239 por ação ordinária e R$0,3562 por ação preferencial.",
+            "anchor_ids": []
+          },
+          {
+            "role": "corpo",
+            "title": "Valor Líquido após IR",
+            "text": "Com 17,5 % de IR, o valor líquido por ação fica em R$0,2672 (ordinária) e R$0,2939 (preferencial). Acionistas PJ dispensados recebem o valor bruto.",
+            "anchor_ids": []
+          },
+          {
+            "role": "corpo",
+            "title": "Pagamento e Data de Vencimento",
+            "text": "Os juros intermediários serão pagos até 30 abril 2027, com valores líquidos de R$0,2825 (ordinária) e R$0,3107 (preferencial).",
+            "anchor_ids": []
+          },
+          {
+            "role": "conclusao",
+            "title": "O que Você Precisa Saber",
+            "text": "Verifique se seus dados estão atualizados na Bradesco ou B3 para garantir o recebimento. O aumento de capital fortalece a Bradesco e aumenta o retorno aos acionistas.",
+            "anchor_ids": []
+          }
+        ]
+      },
+      "anchor_ids": [],
+      "warnings": []
+    },
+    "intermediario:roteiro": {
+      "audience": "intermediario",
+      "format": "roteiro",
+      "attempt": 1,
+      "content": {
+        "kind": "roteiro",
+        "blocks": [
+          {
+            "start_s": 0.0,
+            "end_s": 5.0,
+            "visual_hook": "Logo do Bradesco aparece, fade in",
+            "speech": "Olá, investidores! O Bradesco acaba de homologar um aumento de capital aprovado pelo Banco Central.",
+            "anchor_ids": []
+          },
+          {
+            "start_s": 5.0,
+            "end_s": 12.0,
+            "visual_hook": "Gráfico de crescimento de ações",
+            "speech": "Com a emissão de novas ações, o capital social aumenta, e isso traz benefícios diretos para vocês.",
+            "anchor_ids": []
+          },
+          {
+            "start_s": 12.0,
+            "end_s": 20.0,
+            "visual_hook": "Tabela de juros por ação",
+            "speech": "Os juros sobre o capital próprio agora são R$0,32386 por ação ordinária e R$0,35624 por ação preferencial, já ajustados ao novo número de ações.",
+            "anchor_ids": []
+          },
+          {
+            "start_s": 20.0,
+            "end_s": 28.0,
+            "visual_hook": "Ícone de imposto de renda",
+            "speech": "Esses valores já descontam 17,5% de imposto de renda na fonte, exceto para pessoas jurídicas isentas.",
+            "anchor_ids": []
+          },
+          {
+            "start_s": 28.0,
+            "end_s": 35.0,
+            "visual_hook": "Calendário marcando 13/10/2026",
+            "speech": "As novas ações serão creditadas em 13 de outubro de 2026, e os juros intermediários serão pagos até 30 de abril de 2027.",
+            "anchor_ids": []
+          },
+          {
+            "start_s": 35.0,
+            "end_s": 45.0,
+            "visual_hook": "Imagem de um investidor feliz",
+            "speech": "Isso significa um retorno total de R$3,8 bilhões em juros, quase 20 vezes o valor mensal tradicional, reforçando a saúde financeira do banco.",
+            "anchor_ids": []
+          },
+          {
+            "start_s": 45.0,
+            "end_s": 55.0,
+            "visual_hook": "Texto: \"Acompanhe seu saldo na B3\"",
+            "speech": "Para receber, basta garantir que seus dados estejam atualizados na B3 ou na sua conta Bradesco. Se precisar, visite uma agência.",
+            "anchor_ids": []
+          },
+          {
+            "start_s": 55.0,
+            "end_s": 60.0,
+            "visual_hook": "Logo do Bradesco e slogan",
+            "speech": "Bradesco, seu parceiro de confiança. Obrigado por fazer parte dessa jornada!",
+            "anchor_ids": []
+          }
+        ]
+      },
+      "anchor_ids": [],
+      "warnings": []
+    },
+    "avancado:texto": {
+      "audience": "avancado",
+      "format": "texto",
+      "attempt": 1,
+      "content": {
+        "kind": "texto",
+        "title": "Homologação do Aumento de Capital e Ajuste dos Juros sobre o Capital Próprio – Bradesco",
+        "subtitle": "O Banco Central aprova o aumento de capital, alterando a base de cálculo dos juros sobre o capital próprio e mantendo o pagamento previsto para abril de 2027.",
+        "sections": [
+          {
+            "heading": "Contexto do Aumento de Capital",
+            "body": "Em 29 de julho a 2 de outubro de 2026, o Bradesco divulgou uma série de comunicados sobre a subscrição de novas ações, culminando na homologação pelo Banco Central em 8 de outubro. O aumento de capital aumentou o número de ações em circulação, o que impacta diretamente o cálculo dos juros sobre o capital próprio (JCP).",
+            "anchor_ids": []
+          },
+          {
+            "heading": "Ajuste nos Juros por Ação",
+            "body": "Os juros sobre o capital próprio, deliberados em 30 de setembro, totalizaram R$3,8 billion. Com a nova base de ações, o valor por ação ordinária passou de R$0,342 389 810 para R$0,323 858 718 (líquido R$0,267 183 442 após IRF de 17,5 %). Para ações preferenciais, o valor bruto mudou de R$0,376 628 790 para R$0,356 244 590 (líquido R$0,293 901 787). O pagamento permanece programado até 30 abril 2027.",
+            "anchor_ids": []
+          },
+          {
+            "heading": "Impacto no Investidor",
+            "body": "Os acionistas que estiverem registrados em 13 outubro (data-base) receberão os juros líquidos conforme os valores ajustados. O pagamento será creditado em contas correntes ou custódias B3, exigindo atualização cadastral caso os dados não estejam atualizados. A alteração não afeta o montante global de JCP nem a data de pagamento, apenas a distribuição por ação.",
+            "anchor_ids": []
+          },
+          {
+            "heading": "Perspectiva Financeira",
+            "body": "O JCP representa cerca de 19,8 vezes o valor dos juros mensais líquidos, sendo incorporado ao cálculo dos dividendos obrigatórios do exercício. O aumento de capital pode diluir o lucro por ação, mas também fortalece o capital social, potencialmente melhorando a estabilidade e a capacidade de investimento do banco.",
+            "anchor_ids": []
+          },
+          {
+            "heading": "Conclusão",
+            "body": "Para investidores avançados, a homologação do aumento de capital implica um ajuste na base de cálculo dos JCP, reduzindo o valor por ação, mas mantendo o pagamento total. A estratégia reforça a posição de capital do Bradesco, enquanto os investidores devem monitorar a atualização cadastral para garantir o recebimento dos juros.",
+            "anchor_ids": []
+          }
+        ]
+      },
+      "anchor_ids": [],
+      "warnings": []
+    },
+    "avancado:carrossel": {
+      "audience": "avancado",
+      "format": "carrossel",
+      "attempt": 1,
+      "content": {
+        "kind": "carrossel",
+        "slides": [
+          {
+            "role": "gancho",
+            "title": "Homologação do Aumento de Capital",
+            "text": "O Banco Central aprovou o aumento de capital do Bradesco, emitindo novas ações em 13/10/2026.",
+            "anchor_ids": []
+          },
+          {
+            "role": "corpo",
+            "title": "Impacto nos Juros sobre Capital Próprio",
+            "text": "Os juros de R$3,8 bn agora se baseiam na nova quantidade de ações, ajustando o valor por ação para R$0,3239 (ordinária) e R$0,3562 (preferencial).",
+            "anchor_ids": []
+          },
+          {
+            "role": "corpo",
+            "title": "Pagamento Intermediário",
+            "text": "Serão pagos até 30/04/2027, com valores líquidos de R$0,2825 (ordinária) e R$0,3107 (preferencial), já descontado IRF de 17,5%.",
+            "anchor_ids": []
+          },
+          {
+            "role": "corpo",
+            "title": "Beneficiários e Procedimento",
+            "text": "Ações registradas em 13/10/2026 recebem os juros; pagamentos via conta corrente ou custódia B3. Dados atualizados são obrigatórios.",
+            "anchor_ids": []
+          },
+          {
+            "role": "conclusao",
+            "title": "Resumo e Próximos Passos",
+            "text": "A homologação mantém o montante global de juros inalterado, mas ajusta o valor por ação. O pagamento está programado para 30/04/2027. Mantenha seus dados atualizados para receber os valores.",
+            "anchor_ids": []
+          }
+        ]
+      },
+      "anchor_ids": [],
+      "warnings": []
+    },
+    "avancado:roteiro": {
+      "audience": "avancado",
+      "format": "roteiro",
+      "attempt": 1,
+      "content": {
+        "kind": "roteiro",
+        "blocks": [
+          {
+            "start_s": 0.0,
+            "end_s": 5.0,
+            "visual_hook": "Logo do Bradesco aparece com animação de crescimento",
+            "speech": "Olá, investidores! O Bradesco acaba de homologar um aumento de capital que impacta diretamente os juros sobre o capital próprio.",
+            "anchor_ids": []
+          },
+          {
+            "start_s": 5.0,
+            "end_s": 15.0,
+            "visual_hook": "Gráfico de barras mostrando o valor total de R$3,8 bilhões",
+            "speech": "O Conselho aprovou R$3,8 bilhões em juros intermediários, que serão pagos até 30 de abril de 2027.",
+            "anchor_ids": []
+          },
+          {
+            "start_s": 15.0,
+            "end_s": 25.0,
+            "visual_hook": "Animação de ações sendo emitidas",
+            "speech": "A emissão de novas ações será concluída em 13 de outubro de 2026, ajustando o número de ações em circulação.",
+            "anchor_ids": []
+          },
+          {
+            "start_s": 25.0,
+            "end_s": 35.0,
+            "visual_hook": "Tabela comparativa dos valores por ação antes e depois do ajuste",
+            "speech": "Os juros por ação foram recalculados: R$0,3239 para ordinárias e R$0,3562 para preferenciais, líquidos de IR de 17,5%.",
+            "anchor_ids": []
+          },
+          {
+            "start_s": 35.0,
+            "end_s": 45.0,
+            "visual_hook": "Ícone de calendário marcando 30 de abril de 2027",
+            "speech": "O pagamento será creditado nas contas dos acionistas até 30 de abril de 2027, com dedução automática do imposto.",
+            "anchor_ids": []
+          },
+          {
+            "start_s": 45.0,
+            "end_s": 55.0,
+            "visual_hook": "Imagem de investidores felizes com gráficos de retorno",
+            "speech": "Esses juros aumentam em quase 20 vezes o valor mensal, reforçando a política de retorno ao acionista.",
+            "anchor_ids": []
+          },
+          {
+            "start_s": 55.0,
+            "end_s": 60.0,
+            "visual_hook": "Logo do Bradesco e call to action",
+            "speech": "Fique atento às datas e mantenha seus dados atualizados. Até a próxima!",
+            "anchor_ids": []
+          }
+        ]
+      },
+      "anchor_ids": [],
+      "warnings": []
+    }
+  },
+  "node_log": [
+    {
+      "node": "baseline",
+      "cell": "iniciante:texto",
+      "model": "groq:openai/gpt-oss-20b",
+      "input_tokens": 1332,
+      "output_tokens": 563,
+      "cost_usd": 0.00026880000000000003,
+      "latency_ms": 4951.8,
+      "attempt": null
+    },
+    {
+      "node": "baseline",
+      "cell": "iniciante:carrossel",
+      "model": "groq:openai/gpt-oss-20b",
+      "input_tokens": 1339,
+      "output_tokens": 276,
+      "cost_usd": 0.000183225,
+      "latency_ms": 697.0,
+      "attempt": null
+    },
+    {
+      "node": "baseline",
+      "cell": "iniciante:roteiro",
+      "model": "groq:openai/gpt-oss-20b",
+      "input_tokens": 1409,
+      "output_tokens": 394,
+      "cost_usd": 0.000223875,
+      "latency_ms": 928.4,
+      "attempt": null
+    },
+    {
+      "node": "baseline",
+      "cell": "intermediario:texto",
+      "model": "groq:openai/gpt-oss-20b",
+      "input_tokens": 1332,
+      "output_tokens": 551,
+      "cost_usd": 0.0002652,
+      "latency_ms": 51687.4,
+      "attempt": null
+    },
+    {
+      "node": "baseline",
+      "cell": "intermediario:carrossel",
+      "model": "groq:openai/gpt-oss-20b",
+      "input_tokens": 1339,
+      "output_tokens": 326,
+      "cost_usd": 0.000198225,
+      "latency_ms": 918.7,
+      "attempt": null
+    },
+    {
+      "node": "baseline",
+      "cell": "intermediario:roteiro",
+      "model": "groq:openai/gpt-oss-20b",
+      "input_tokens": 1409,
+      "output_tokens": 457,
+      "cost_usd": 0.00024277499999999998,
+      "latency_ms": 67703.1,
+      "attempt": null
+    },
+    {
+      "node": "baseline",
+      "cell": "avancado:texto",
+      "model": "groq:openai/gpt-oss-20b",
+      "input_tokens": 1332,
+      "output_tokens": 593,
+      "cost_usd": 0.00027780000000000003,
+      "latency_ms": 12144.4,
+      "attempt": null
+    },
+    {
+      "node": "baseline",
+      "cell": "avancado:carrossel",
+      "model": "groq:openai/gpt-oss-20b",
+      "input_tokens": 1339,
+      "output_tokens": 319,
+      "cost_usd": 0.000196125,
+      "latency_ms": 26056.9,
+      "attempt": null
+    },
+    {
+      "node": "baseline",
+      "cell": "avancado:roteiro",
+      "model": "groq:openai/gpt-oss-20b",
+      "input_tokens": 1409,
+      "output_tokens": 426,
+      "cost_usd": 0.000233475,
+      "latency_ms": 37985.5,
+      "attempt": null
+    }
+  ],
+  "failures": []
+}

@@ -1,0 +1,4 @@
+doc_id,cells,pct_approved_first,pct_approved_final,mean_attempts,refined_cells,stagnated,regressions,extra_llm_calls,extra_tokens,extra_cost_usd,extra_latency_s,split
+fato-relevante-banco-bradesco-s-a-2026-10-08__fato-relevante-banco-bradesco-s-a-2026-09-30,9,0.0,22.2,2.56,9,2,4,42,105458,0.051939,1301.83,principal
+release-itau-2t26,9,0.0,11.1,2.56,9,4,15,42,100311,0.047789,1145.25,principal
+ata-copom-2026-09-16,9,0.0,0.0,2.56,9,4,11,42,111127,0.052592,1468.95,principal

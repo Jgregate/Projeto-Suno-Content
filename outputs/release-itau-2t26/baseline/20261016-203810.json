@@ -1,0 +1,627 @@
+{
+  "doc_id": "release-itau-2t26",
+  "prompt_hash": "5cabb0a0e1b2",
+  "model": "groq:openai/gpt-oss-20b",
+  "created_at": "2026-10-16T20:38:10",
+  "outputs": {
+    "iniciante:texto": {
+      "audience": "iniciante",
+      "format": "texto",
+      "attempt": 1,
+      "content": {
+        "kind": "texto",
+        "title": "Itaú Unibanco mantém crescimento sólido e rentabilidade no 2T26",
+        "subtitle": "Lucro recorrente de R$12,4 bi e ROE de 24,3 % refletem estratégia de crédito responsável e foco em tecnologia",
+        "sections": [
+          {
+            "heading": "Resultado financeiro consistente",
+            "body": "O banco registrou lucro recorrente gerencial de R$12,407 bi, quase 1 % acima do trimestre anterior e 7,8 % acima do mesmo período do ano‑passado. O ROE anualizado ficou em 24,3 %, apenas 0,5 p.p. abaixo do 1T26, demonstrando estabilidade na geração de retorno sobre o patrimônio.",
+            "anchor_ids": [
+              "R$12,407 bi",
+              "24,3 %"
+            ]
+          },
+          {
+            "heading": "Carteira de crédito em expansão",
+            "body": "A carteira total atingiu R$1,522 tri, crescendo 2,7 % no trimestre e 9,6 % em relação ao 1S25. O crescimento foi equilibrado entre pessoas físicas e empresas, com destaque para crédito imobiliário (+3,9 %) e consignado (+3,5 %). O índice de inadimplência consolidado permaneceu em 1,9 %, o melhor nível histórico, evidenciando a qualidade da originação.",
+            "anchor_ids": [
+              "R$1,522 tri",
+              "1,9 %"
+            ]
+          },
+          {
+            "heading": "Tecnologia como diferencial",
+            "body": "O CEO Milton Maluhy destaca a nova IA proprietária, ia.i, que qualifica decisões financeiras dos clientes com contexto e profundidade. A iniciativa faz parte da estratégia AI‑First do banco, reforçando a busca por eficiência, escala e personalização.",
+            "anchor_ids": [
+              "ia.i",
+              "AI‑First"
+            ]
+          },
+          {
+            "heading": "Gestão de custos e eficiência",
+            "body": "Despesas não‑devido a juros subiram 3,3 % no trimestre, mas o índice de eficiência atingiu 35,5 %, refletindo ganhos de produtividade. O CET1 permaneceu em 12,3 %, indicando capitalização sólida.",
+            "anchor_ids": [
+              "35,5 %",
+              "12,3 %"
+            ]
+          },
+          {
+            "heading": "Perspectivas 2026",
+            "body": "O Itaú revisou a projeção de crescimento de receita de serviços e seguros para 2,0 %–5,0 %, ajustando‑se à volatilidade do mercado de capitais. As demais linhas permanecem inalteradas.",
+            "anchor_ids": [
+              "2,0 %–5,0 %"
+            ]
+          }
+        ]
+      },
+      "anchor_ids": [],
+      "warnings": []
+    },
+    "iniciante:carrossel": {
+      "audience": "iniciante",
+      "format": "carrossel",
+      "attempt": 1,
+      "content": {
+        "kind": "carrossel",
+        "slides": [
+          {
+            "role": "gancho",
+            "title": "Itaú Unibanco: Lucro de R$12,4 bi no 2T26",
+            "text": "Resultado consistente, crescimento de qualidade e foco em tecnologia.",
+            "anchor_ids": []
+          },
+          {
+            "role": "corpo",
+            "title": "Lucro e ROE",
+            "text": "Lucro recorrente gerencial: R$12,4 bi (+1,0%). ROE: 24,3% (queda de 0,5 p.p.).",
+            "anchor_ids": []
+          },
+          {
+            "role": "corpo",
+            "title": "Carteira de Crédito",
+            "text": "Aumentou 2,7% para R$1,5 trilhões. Inadimplência 1,9% – melhor histórico.",
+            "anchor_ids": []
+          },
+          {
+            "role": "corpo",
+            "title": "Tecnologia e IA",
+            "text": "Lançamento da ia.i: IA proprietária para decisões financeiras, melhorando experiência do cliente.",
+            "anchor_ids": []
+          },
+          {
+            "role": "corpo",
+            "title": "Eficiência e Capital",
+            "text": "Índice de eficiência 35,5%. CET1 12,3% – capitalização confortável.",
+            "anchor_ids": []
+          },
+          {
+            "role": "conclusao",
+            "title": "Perspectiva 2026",
+            "text": "Projeção de crescimento de serviços/seguros entre 2,0% e 5,0%. Estratégia AI First continua.",
+            "anchor_ids": []
+          }
+        ]
+      },
+      "anchor_ids": [],
+      "warnings": []
+    },
+    "iniciante:roteiro": {
+      "audience": "iniciante",
+      "format": "roteiro",
+      "attempt": 1,
+      "content": {
+        "kind": "roteiro",
+        "blocks": [
+          {
+            "start_s": 0.0,
+            "end_s": 5.0,
+            "visual_hook": "Logo do Itaú Unibanco aparece com animação suave",
+            "speech": "Olá! O Itaú Unibanco bateu recorde no 2T de 2026.",
+            "anchor_ids": []
+          },
+          {
+            "start_s": 5.0,
+            "end_s": 12.0,
+            "visual_hook": "Gráfico de barras mostrando lucro de R$12,4 bilhões",
+            "speech": "Lucro recorrente gerencial de 12,4 bilhões de reais, quase 1% acima do trimestre anterior.",
+            "anchor_ids": []
+          },
+          {
+            "start_s": 12.0,
+            "end_s": 20.0,
+            "visual_hook": "Ícone de ROE com seta para cima",
+            "speech": "ROE de 24,3%, apenas 0,5 ponto percentual abaixo do 1T, sinal de forte rentabilidade.",
+            "anchor_ids": []
+          },
+          {
+            "start_s": 20.0,
+            "end_s": 28.0,
+            "visual_hook": "Mapa de crédito com destaque para 1,5 trilhão",
+            "speech": "Carteira de crédito total 1,5 trilhão de reais, crescimento de 2,7% e inadimplência estável em 1,9%.",
+            "anchor_ids": []
+          },
+          {
+            "start_s": 28.0,
+            "end_s": 35.0,
+            "visual_hook": "Animação de IA (robo) interagindo com cliente",
+            "speech": "O banco lançou a ia.i, uma IA proprietária que ajuda clientes a tomar decisões financeiras com contexto e profundidade.",
+            "anchor_ids": []
+          },
+          {
+            "start_s": 35.0,
+            "end_s": 43.0,
+            "visual_hook": "Gráfico de eficiência mostrando 35,5%",
+            "speech": "Índice de eficiência de 35,5%, graças a investimentos em tecnologia que aumentam produtividade.",
+            "anchor_ids": []
+          },
+          {
+            "start_s": 43.0,
+            "end_s": 50.0,
+            "visual_hook": "Ícone de capitalização com CET1 12,3%",
+            "speech": "Capitalização forte: CET1 de 12,3%, garantindo segurança e liquidez.",
+            "anchor_ids": []
+          },
+          {
+            "start_s": 50.0,
+            "end_s": 58.0,
+            "visual_hook": "Texto: “Consenso de mercado: em linha”",
+            "speech": "Os resultados ficaram em linha com o consenso do mercado, reforçando a confiança dos investidores.",
+            "anchor_ids": []
+          },
+          {
+            "start_s": 58.0,
+            "end_s": 60.0,
+            "visual_hook": "Call to action: “Saiba mais em itau.com.br/relacoes-com-investidores”",
+            "speech": "Para saber mais, visite o site de Relações com Investidores do Itaú. Até a próxima!",
+            "anchor_ids": []
+          }
+        ]
+      },
+      "anchor_ids": [],
+      "warnings": []
+    },
+    "intermediario:texto": {
+      "audience": "intermediario",
+      "format": "texto",
+      "attempt": 1,
+      "content": {
+        "kind": "texto",
+        "title": "Itaú Unibanco mantém trajetória de crescimento sustentável no 2T26",
+        "subtitle": "Lucro recorrente de R$12,4 bi e ROE de 24,3 % refletem estratégia de crédito responsável e foco em tecnologia",
+        "sections": [
+          {
+            "heading": "Resultado financeiro sólido",
+            "body": "O banco registrou lucro recorrente gerencial de R$12,407 bi, quase 1 % acima do 1T26 e 7,8 % acima do 2T25, mantendo o ROE em 24,3 % – apenas 0,5 p.p. abaixo do trimestre anterior. A margem financeira cresceu 3,3 % impulsionada pela expansão da carteira de crédito e efeito calendário.",
+            "anchor_ids": [
+              "R$12,407 bi",
+              "24,3 %"
+            ]
+          },
+          {
+            "heading": "Carteira de crédito em expansão",
+            "body": "A carteira total atingiu R$1,522 trilhões, 2,7 % a mais que o 1T26 e 9,6 % acima do 2T25. O crescimento equilibrado entre pessoas físicas e empresas, com destaque para crédito imobiliário (+3,9 %) e consignado privado (+14,3 %), demonstra a disciplina na concessão de crédito.",
+            "anchor_ids": [
+              "R$1,522 trilhões",
+              "+3,9 %",
+              "+14,3 %"
+            ]
+          },
+          {
+            "heading": "Qualidade de crédito e inadimplência",
+            "body": "O índice de inadimplência consolidado em 90 dias permaneceu estável em 1,9 % – sexto trimestre consecutivo – evidenciando a eficácia das políticas de originação e precificação de risco.",
+            "anchor_ids": [
+              "1,9 %"
+            ]
+          },
+          {
+            "heading": "Tecnologia como diferencial",
+            "body": "O CEO Milton Maluhy destaca a nova IA proprietária, ia.i, que qualifica decisões financeiras com contexto e profundidade. A iniciativa reforça a estratégia AI‑First, visando maior eficiência, escala e personalização.",
+            "anchor_ids": [
+              "ia.i"
+            ]
+          },
+          {
+            "heading": "Gestão de custos e eficiência",
+            "body": "Despesas não‑devido a juros subiram 3,3 % para R$16,7 bi, mas o índice de eficiência atingiu 35,5 %, refletindo ganhos de produtividade dos investimentos em tecnologia. O CET1 permaneceu em 12,3 %.",
+            "anchor_ids": [
+              "35,5 %",
+              "12,3 %"
+            ]
+          },
+          {
+            "heading": "Perspectivas 2026",
+            "body": "O Itaú revisou a projeção de crescimento de receita de serviços e seguros para 2,0 %–5,0 %, ajustando‑se à maior volatilidade do mercado de capitais. A agenda de transformação continua, com foco em experiência do cliente e eficiência operacional.",
+            "anchor_ids": [
+              "2,0 %–5,0 %"
+            ]
+          }
+        ]
+      },
+      "anchor_ids": [],
+      "warnings": []
+    },
+    "intermediario:carrossel": {
+      "audience": "intermediario",
+      "format": "carrossel",
+      "attempt": 1,
+      "content": {
+        "kind": "carrossel",
+        "slides": [
+          {
+            "role": "gancho",
+            "title": "Itaú Unibanco 2T26",
+            "text": "Lucro recorrente gerencial de R$12,4 bi, ROE 24,3 % – crescimento consistente e qualidade de carteira.",
+            "anchor_ids": []
+          },
+          {
+            "role": "corpo",
+            "title": "Carteira de Crédito",
+            "text": "Aumentou 2,7 % para R$1,522 tri, com expansão equilibrada em pessoas físicas e empresas. Inadimplência 1,9 % – 6.º trimestre consecutivo em níveis históricos.",
+            "anchor_ids": []
+          },
+          {
+            "role": "corpo",
+            "title": "Tecnologia e IA",
+            "text": "Lançamento da ia.i, IA proprietária no SuperApp, qualificando decisões financeiras e impulsionando experiência do cliente.",
+            "anchor_ids": []
+          },
+          {
+            "role": "corpo",
+            "title": "Eficiência Operacional",
+            "text": "Índice de eficiência 35,5 % e CET1 12,3 % – ganhos de produtividade e capitalização sólida.",
+            "anchor_ids": []
+          },
+          {
+            "role": "conclusao",
+            "title": "Perspectiva 2026",
+            "text": "Projeção de crescimento de serviços/seguros entre 2 % e 5 %. Estratégia AI First continua a fortalecer qualidade, escala e personalização.",
+            "anchor_ids": []
+          }
+        ]
+      },
+      "anchor_ids": [],
+      "warnings": []
+    },
+    "intermediario:roteiro": {
+      "audience": "intermediario",
+      "format": "roteiro",
+      "attempt": 1,
+      "content": {
+        "kind": "roteiro",
+        "blocks": [
+          {
+            "start_s": 0.0,
+            "end_s": 5.0,
+            "visual_hook": "Logo do Itaú Unibanco aparece com animação suave",
+            "speech": "Olá, investidores! O Itaú Unibanco bateu recorde no 2T26.",
+            "anchor_ids": []
+          },
+          {
+            "start_s": 5.0,
+            "end_s": 12.0,
+            "visual_hook": "Gráfico de barras mostrando lucro recorrente",
+            "speech": "Lucro recorrente gerencial: R$12,4 bilhões, quase 1% acima do trimestre anterior.",
+            "anchor_ids": []
+          },
+          {
+            "start_s": 12.0,
+            "end_s": 20.0,
+            "visual_hook": "Animação de ROE subindo",
+            "speech": "ROE de 24,3%, apenas 0,5 ponto percentual abaixo do 1T26, mantendo alta rentabilidade.",
+            "anchor_ids": []
+          },
+          {
+            "start_s": 20.0,
+            "end_s": 28.0,
+            "visual_hook": "Mapa de crédito com ícones de casas e empresas",
+            "speech": "Carteira de crédito totalizou R$1,5 trilhão, crescendo 2,7% graças a crédito imobiliário e consignado.",
+            "anchor_ids": []
+          },
+          {
+            "start_s": 28.0,
+            "end_s": 35.0,
+            "visual_hook": "Índice de inadimplência em vermelho estável",
+            "speech": "Inadimplência consolidada em 1,9%, o melhor nível histórico, refletindo concessão responsável.",
+            "anchor_ids": []
+          },
+          {
+            "start_s": 35.0,
+            "end_s": 43.0,
+            "visual_hook": "Cena de cliente usando app com IA",
+            "speech": "Lançamento da ia.i, IA proprietária que qualifica decisões financeiras, impulsionando experiência do cliente.",
+            "anchor_ids": []
+          },
+          {
+            "start_s": 43.0,
+            "end_s": 50.0,
+            "visual_hook": "Gráfico de eficiência operacional",
+            "speech": "Índice de eficiência de 35,5%, resultado de investimentos em tecnologia e produtividade.",
+            "anchor_ids": []
+          },
+          {
+            "start_s": 50.0,
+            "end_s": 58.0,
+            "visual_hook": "Resumo de projeções 2026",
+            "speech": "Projeção de crescimento de serviços e seguros entre 2% e 5%, ajustada pela volatilidade do mercado de capitais.",
+            "anchor_ids": []
+          },
+          {
+            "start_s": 58.0,
+            "end_s": 60.0,
+            "visual_hook": "Call to action",
+            "speech": "Para mais detalhes, acesse itau.com.br/relacoes-com-investidores. Obrigado!",
+            "anchor_ids": []
+          }
+        ]
+      },
+      "anchor_ids": [],
+      "warnings": []
+    },
+    "avancado:texto": {
+      "audience": "avancado",
+      "format": "texto",
+      "attempt": 1,
+      "content": {
+        "kind": "texto",
+        "title": "Itaú Unibanco mantém trajetória de rentabilidade e qualidade de carteira no 2T26",
+        "subtitle": "Lucro recorrente de R$12,4 bi e ROE de 24,3 % refletem execução disciplinada, crescimento sustentável e foco em tecnologia",
+        "sections": [
+          {
+            "heading": "Resultado sólido e alinhado ao consenso",
+            "body": "O banco reportou lucro recorrente gerencial de R$12,407 bi, quase idêntico ao consenso de mercado (R$12,466 bi) e 1,0 % acima do 1T26. O ROE anualizado de 24,3 % permanece em linha com o 1T26 (24,8 %) e apenas 0,5 p.p. abaixo do 2T25, demonstrando estabilidade em um cenário de volatilidade de capitais.",
+            "anchor_ids": [
+              "R$12,407 bi",
+              "24,3 %"
+            ]
+          },
+          {
+            "heading": "Crescimento equilibrado da carteira de crédito",
+            "body": "A carteira total de R$1,522 trilhões cresceu 2,7 % no trimestre, impulsionada por expansão em pessoas físicas (crédito imobiliário +3,9 % e consignado +3,5 %) e em empresas. O crédito consignado privado registrou alta de 14,3 %, evidenciando maior acesso a linhas de custo mais baixo. O índice de inadimplência consolidado permaneceu em 1,9 %, o melhor nível histórico, reforçando a qualidade de originação.",
+            "anchor_ids": [
+              "R$1,522 trilhões",
+              "1,9 %"
+            ]
+          },
+          {
+            "heading": "Margem financeira e eficiência operacional",
+            "body": "A margem financeira com clientes subiu 3,3 % no trimestre, beneficiada pela maior carteira e efeito calendário. O índice de eficiência (CET1) atingiu 12,3 % e o índice de eficiência operacional (Brasil) 35,5 %, refletindo ganhos de produtividade e investimentos em tecnologia. Despesas não‑devido‑a‑juros aumentaram 3,3 % para R$16,7 bi, em linha com sazonalidade.",
+            "anchor_ids": [
+              "3,3 %",
+              "12,3 %",
+              "35,5 %",
+              "R$16,7 bi"
+            ]
+          },
+          {
+            "heading": "Foco em tecnologia e experiência do cliente",
+            "body": "O lançamento da ia.i, uma IA proprietária integrada ao SuperApp, exemplifica a estratégia AI‑First do Itaú. A iniciativa visa qualificar decisões financeiras dos clientes com contexto e profundidade, além de melhorar a experiência conversacional. O banco continua investindo em infraestrutura e cultura digital para sustentar crescimento e qualidade de carteira.",
+            "anchor_ids": [
+              "ia.i",
+              "SuperApp"
+            ]
+          },
+          {
+            "heading": "Perspectivas 2026 e ajustes de projeções",
+            "body": "O Itaú revisou a projeção de crescimento de receita de serviços e seguros para 2026, agora entre 2,0 % e 5,0 %, ajustada pela maior volatilidade de capitais. As demais linhas permanecem inalteradas. O banco mantém níveis confortáveis de capitalização e liquidez, reforçando a resiliência frente a cenários econômicos adversos.",
+            "anchor_ids": [
+              "2,0 %",
+              "5,0 %"
+            ]
+          }
+        ]
+      },
+      "anchor_ids": [],
+      "warnings": []
+    },
+    "avancado:carrossel": {
+      "audience": "avancado",
+      "format": "carrossel",
+      "attempt": 1,
+      "content": {
+        "kind": "carrossel",
+        "slides": [
+          {
+            "role": "gancho",
+            "title": "Itaú Unibanco 2T26",
+            "text": "Lucro recorrente gerencial de R$12,4 bi, ROE 24,3 % – crescimento consistente e qualidade de carteira.",
+            "anchor_ids": []
+          },
+          {
+            "role": "corpo",
+            "title": "Carteira de Crédito",
+            "text": "Aumentou 2,7 % para R$1,522 tri, com expansão equilibrada entre pessoas físicas e empresas. Inadimplência 1,9 % – 6º trimestre consecutivo em níveis históricos.",
+            "anchor_ids": []
+          },
+          {
+            "role": "corpo",
+            "title": "Tecnologia e IA",
+            "text": "Lançamento da ia.i, IA proprietária no SuperApp, impulsiona decisões financeiras e experiência do cliente, reforçando a estratégia AI‑First.",
+            "anchor_ids": []
+          },
+          {
+            "role": "corpo",
+            "title": "Eficiência Operacional",
+            "text": "Índice de eficiência 35,5 % e CET1 12,3 % – ganhos de produtividade e capitalização sólida, com projeção de receita de serviços 2‑5 %.",
+            "anchor_ids": []
+          },
+          {
+            "role": "conclusao",
+            "title": "Perspectiva 2026",
+            "text": "Resultados alinhados ao consenso de mercado; foco em qualidade de originação, tecnologia e experiência do cliente para crescimento sustentável.",
+            "anchor_ids": []
+          }
+        ]
+      },
+      "anchor_ids": [],
+      "warnings": []
+    },
+    "avancado:roteiro": {
+      "audience": "avancado",
+      "format": "roteiro",
+      "attempt": 1,
+      "content": {
+        "kind": "roteiro",
+        "blocks": [
+          {
+            "start_s": 0.0,
+            "end_s": 5.0,
+            "visual_hook": "Logo do Itaú Unibanco aparece com animação suave",
+            "speech": "Olá, investidores! O Itaú Unibanco bateu recorde no 2T26.",
+            "anchor_ids": []
+          },
+          {
+            "start_s": 5.0,
+            "end_s": 12.0,
+            "visual_hook": "Gráfico de barras mostrando lucro recorrente 12,4 bilhões",
+            "speech": "Lucro recorrente gerencial de R$12,4 bilhões, quase 1% acima do trimestre anterior.",
+            "anchor_ids": []
+          },
+          {
+            "start_s": 12.0,
+            "end_s": 18.0,
+            "visual_hook": "Animação de ROE subindo para 24,3%",
+            "speech": "ROE de 24,3%, apenas 0,5 ponto percentual abaixo do 1T26, sinal de forte rentabilidade.",
+            "anchor_ids": []
+          },
+          {
+            "start_s": 18.0,
+            "end_s": 25.0,
+            "visual_hook": "Mapa de crédito mostrando 1,5 trilhão",
+            "speech": "Carteira de crédito total 1,5 trilhão, crescimento de 2,7% e inadimplência estável em 1,9%.",
+            "anchor_ids": []
+          },
+          {
+            "start_s": 25.0,
+            "end_s": 32.0,
+            "visual_hook": "Ícone de IA e SuperApp",
+            "speech": "Lançamento da ia.i, IA proprietária no SuperApp, impulsionando decisões financeiras e experiência do cliente.",
+            "anchor_ids": []
+          },
+          {
+            "start_s": 32.0,
+            "end_s": 40.0,
+            "visual_hook": "Gráfico de eficiência mostrando 35,5%",
+            "speech": "Índice de eficiência 35,5%, resultado de investimentos em tecnologia e produtividade.",
+            "anchor_ids": []
+          },
+          {
+            "start_s": 40.0,
+            "end_s": 48.0,
+            "visual_hook": "CET1 12,3% destacado",
+            "speech": "Capitalização sólida: CET1 12,3%, reforçando a saúde financeira.",
+            "anchor_ids": []
+          },
+          {
+            "start_s": 48.0,
+            "end_s": 55.0,
+            "visual_hook": "Resumo de projeções 2,0-5,0% crescimento de serviços",
+            "speech": "Projeção de crescimento de serviços e seguros entre 2% e 5%, ajustada pela volatilidade do mercado.",
+            "anchor_ids": []
+          },
+          {
+            "start_s": 55.0,
+            "end_s": 60.0,
+            "visual_hook": "Call to action: link no vídeo",
+            "speech": "Para detalhes completos, acesse nosso site. Itaú Unibanco, forte, sustentável e inovador.",
+            "anchor_ids": []
+          }
+        ]
+      },
+      "anchor_ids": [],
+      "warnings": []
+    }
+  },
+  "node_log": [
+    {
+      "node": "baseline",
+      "cell": "iniciante:texto",
+      "model": "groq:openai/gpt-oss-20b",
+      "input_tokens": 1901,
+      "output_tokens": 551,
+      "cost_usd": 0.000307875,
+      "latency_ms": 12198.3,
+      "attempt": null
+    },
+    {
+      "node": "baseline",
+      "cell": "iniciante:carrossel",
+      "model": "groq:openai/gpt-oss-20b",
+      "input_tokens": 1908,
+      "output_tokens": 287,
+      "cost_usd": 0.0002292,
+      "latency_ms": 805.3,
+      "attempt": null
+    },
+    {
+      "node": "baseline",
+      "cell": "iniciante:roteiro",
+      "model": "groq:openai/gpt-oss-20b",
+      "input_tokens": 1978,
+      "output_tokens": 509,
+      "cost_usd": 0.00030104999999999997,
+      "latency_ms": 25137.1,
+      "attempt": null
+    },
+    {
+      "node": "baseline",
+      "cell": "intermediario:texto",
+      "model": "groq:openai/gpt-oss-20b",
+      "input_tokens": 1901,
+      "output_tokens": 625,
+      "cost_usd": 0.000330075,
+      "latency_ms": 76796.5,
+      "attempt": null
+    },
+    {
+      "node": "baseline",
+      "cell": "intermediario:carrossel",
+      "model": "groq:openai/gpt-oss-20b",
+      "input_tokens": 1908,
+      "output_tokens": 278,
+      "cost_usd": 0.0002265,
+      "latency_ms": 1085.0,
+      "attempt": null
+    },
+    {
+      "node": "baseline",
+      "cell": "intermediario:roteiro",
+      "model": "groq:openai/gpt-oss-20b",
+      "input_tokens": 1978,
+      "output_tokens": 468,
+      "cost_usd": 0.00028875,
+      "latency_ms": 25022.7,
+      "attempt": null
+    },
+    {
+      "node": "baseline",
+      "cell": "avancado:texto",
+      "model": "groq:openai/gpt-oss-20b",
+      "input_tokens": 1901,
+      "output_tokens": 716,
+      "cost_usd": 0.000357375,
+      "latency_ms": 97082.6,
+      "attempt": null
+    },
+    {
+      "node": "baseline",
+      "cell": "avancado:carrossel",
+      "model": "groq:openai/gpt-oss-20b",
+      "input_tokens": 1908,
+      "output_tokens": 287,
+      "cost_usd": 0.0002292,
+      "latency_ms": 41824.2,
+      "attempt": null
+    },
+    {
+      "node": "baseline",
+      "cell": "avancado:roteiro",
+      "model": "groq:openai/gpt-oss-20b",
+      "input_tokens": 1978,
+      "output_tokens": 494,
+      "cost_usd": 0.00029654999999999997,
+      "latency_ms": 58940.8,
+      "attempt": null
+    }
+  ],
+  "failures": []
+}

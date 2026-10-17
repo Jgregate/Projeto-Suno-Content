@@ -1,0 +1,10 @@
+id,celula,nivel_alvo,nivel_previsto,erro_factual,judge_tom,trivializou
+S01,iniciante:carrossel,iniciante,iniciante,nao,5.0,sim
+S02,intermediario:carrossel,intermediario,avancado,nao,5.0,nao
+S03,intermediario:roteiro,intermediario,intermediario,sim,5.0,nao
+S04,iniciante:roteiro,iniciante,intermediario,sim,5.0,nao
+S05,intermediario:texto,intermediario,intermediario,nao,5.0,nao
+S06,avancado:texto,avancado,avancado,sim,5.0,sim
+S07,iniciante:texto,iniciante,intermediario,nao,5.0,nao
+S08,avancado:carrossel,avancado,intermediario,sim,5.0,sim
+S09,avancado:roteiro,avancado,avancado,sim,5.0,nao
