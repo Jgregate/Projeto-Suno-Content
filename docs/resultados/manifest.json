@@ -1,0 +1,48 @@
+{
+  "date": "2026-10-17",
+  "git_commit": "cb95487679f1f661993855bcc5d38088e0b127df-dirty",
+  "models": {
+    "fast": "groq:openai/gpt-oss-20b",
+    "strong": "groq:openai/gpt-oss-120b",
+    "judge": "groq:qwen/qwen3.8-27b",
+    "claims": "groq:openai/gpt-oss-120b"
+  },
+  "temperature": {
+    "geracao": 0.2,
+    "avaliacao": 0.0
+  },
+  "max_attempts": 3,
+  "reflection_epsilon": 0.01,
+  "hashes": {
+    "prompts_geracao": "45574b5dc45e",
+    "prompts_avaliador": "5df02f1cff2b",
+    "prompt_baseline": "5cabb0a0e1b2",
+    "thresholds": "a1bcaf1b7d20",
+    "glossario": "76573aab2c56"
+  },
+  "documents": [
+    {
+      "id": "fato-relevante-banco-bradesco-s-a-2026-10-08__fato-relevante-banco-bradesco-s-a-2026-09-30",
+      "type": "fato_relevante",
+      "pages": 2,
+      "text_sha": "42c656f99ee9",
+      "split": "principal"
+    },
+    {
+      "id": "release-itau-2t26",
+      "type": "release_resultados",
+      "pages": 2,
+      "text_sha": "f3cfc82d635d",
+      "split": "principal"
+    },
+    {
+      "id": "ata-copom-2026-09-16",
+      "type": "ata_copom",
+      "pages": 6,
+      "text_sha": "eb79f57f0b80",
+      "split": "principal"
+    }
+  ],
+  "python": "3.11.9",
+  "comparacao": "llm"
+}

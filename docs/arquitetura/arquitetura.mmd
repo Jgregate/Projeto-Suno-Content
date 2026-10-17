@@ -1,0 +1,34 @@
+flowchart LR
+    subgraph fe["Frontend · React + Vite"]
+        ui["Documentos · Matriz · Comparar níveis<br/>Detalhe + Reflection · Avaliação"]
+    end
+
+    subgraph api["API · FastAPI"]
+        routes["POST /documents · POST /runs<br/>GET /runs/{id} (polling)<br/>GET /runs/{id}/results · /reports/summary"]
+        cache[("outputs/<br/>cache por hash<br/>(modo demo)")]
+    end
+
+    subgraph pipeline["Grafo LangGraph (estado tipado em Pydantic)"]
+        direction LR
+        pdf["PDF"] --> ingest["Ingestão<br/>PyMuPDF"]
+        ingest --> extractor["Extractor & Anchor<br/>modelo forte<br/>+ validação de números"]
+        extractor --> a1["Adapter<br/>Iniciante"]
+        extractor --> a2["Adapter<br/>Intermediário"]
+        extractor --> a3["Adapter<br/>Avançado"]
+        a1 --> f1["3 formatos"]
+        a2 --> f2["3 formatos"]
+        a3 --> f3["3 formatos"]
+        f1 --> evaluator
+        f2 --> evaluator
+        f3 --> evaluator
+        evaluator{"Avaliador Híbrido<br/>Flesch PT · densidade de termos<br/>grounding numérico · afirmações · judge"}
+        evaluator -- "aprovado ou<br/>3 tentativas / estagnou" --> out["9 saídas +<br/>histórico"]
+        evaluator -- "reprovadas + feedback numérico" --> refiner["Refiner<br/>só as reprovadas"]
+        refiner --> evaluator
+    end
+
+    glossary[("Glossário YAML<br/>93 termos")] -.-> a1 & a2 & a3 & evaluator
+    ui -- "HTTP (cliente tipado do OpenAPI)" --> routes
+    routes --> pipeline
+    out --> cache
+    cache --> routes
